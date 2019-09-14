@@ -23,6 +23,7 @@
 		241D58DF2000A1CA0049CAF3 /* AFOPLMainFolderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 241D58DD2000A1CA0049CAF3 /* AFOPLMainFolderManager.m */; };
 		2421EF0E21C0C6C200D44ED7 /* AFOPLMainController+Operation.h in Headers */ = {isa = PBXBuildFile; fileRef = 2421EF0C21C0C6C200D44ED7 /* AFOPLMainController+Operation.h */; };
 		2421EF0F21C0C6C200D44ED7 /* AFOPLMainController+Operation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2421EF0D21C0C6C200D44ED7 /* AFOPLMainController+Operation.m */; };
+		2424F6C4232CB981006FA89F /* AFOPLCorresponding+NSArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 2424F6C3232CB981006FA89F /* AFOPLCorresponding+NSArray.h */; };
 		2425804621C7378C0070E981 /* AFOFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2425804521C7378C0070E981 /* AFOFoundation.framework */; };
 		2427228321C7E0B900E46946 /* AFOPLMainControllerCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 2427228221C7E0B900E46946 /* AFOPLMainControllerCategory.h */; };
 		2446ED13201979DC00FD5012 /* AFOPLMainController+Aspects.h in Headers */ = {isa = PBXBuildFile; fileRef = 2446ED11201979DC00FD5012 /* AFOPLMainController+Aspects.h */; };
@@ -58,7 +59,6 @@
 		24F428DD1FFDDF33009F3F32 /* AFOPLMainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F428DB1FFDDF33009F3F32 /* AFOPLMainManager.m */; };
 		24F928E9200C8B65007ADAA4 /* AFOPLThumbnail.h in Headers */ = {isa = PBXBuildFile; fileRef = 24F928E7200C8B65007ADAA4 /* AFOPLThumbnail.h */; };
 		24F928EA200C8B65007ADAA4 /* AFOPLThumbnail.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F928E8200C8B65007ADAA4 /* AFOPLThumbnail.m */; };
-		24F928EE200CE175007ADAA4 /* AFOPLCorresponding+NSArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 24F928EC200CE175007ADAA4 /* AFOPLCorresponding+NSArray.h */; };
 		24F928EF200CE175007ADAA4 /* AFOPLCorresponding+NSArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F928ED200CE175007ADAA4 /* AFOPLCorresponding+NSArray.m */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +84,7 @@
 		241D58DD2000A1CA0049CAF3 /* AFOPLMainFolderManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOPLMainFolderManager.m; sourceTree = "<group>"; };
 		2421EF0C21C0C6C200D44ED7 /* AFOPLMainController+Operation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AFOPLMainController+Operation.h"; sourceTree = "<group>"; };
 		2421EF0D21C0C6C200D44ED7 /* AFOPLMainController+Operation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AFOPLMainController+Operation.m"; sourceTree = "<group>"; };
+		2424F6C3232CB981006FA89F /* AFOPLCorresponding+NSArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFOPLCorresponding+NSArray.h"; sourceTree = "<group>"; };
 		2425804521C7378C0070E981 /* AFOFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFOFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2427228221C7E0B900E46946 /* AFOPLMainControllerCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOPLMainControllerCategory.h; sourceTree = "<group>"; };
 		2446ED11201979DC00FD5012 /* AFOPLMainController+Aspects.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AFOPLMainController+Aspects.h"; sourceTree = "<group>"; };
@@ -120,7 +121,6 @@
 		24F428DB1FFDDF33009F3F32 /* AFOPLMainManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOPLMainManager.m; sourceTree = "<group>"; };
 		24F928E7200C8B65007ADAA4 /* AFOPLThumbnail.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOPLThumbnail.h; sourceTree = "<group>"; };
 		24F928E8200C8B65007ADAA4 /* AFOPLThumbnail.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOPLThumbnail.m; sourceTree = "<group>"; };
-		24F928EC200CE175007ADAA4 /* AFOPLCorresponding+NSArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AFOPLCorresponding+NSArray.h"; sourceTree = "<group>"; };
 		24F928ED200CE175007ADAA4 /* AFOPLCorresponding+NSArray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AFOPLCorresponding+NSArray.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,17 +145,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2408BB4E2008A3580049060F /* sqlite */ = {
-			isa = PBXGroup;
-			children = (
-				2408BB4F2008A37E0049060F /* AFOPLSQLiteManager.h */,
-				2408BB502008A37E0049060F /* AFOPLSQLiteManager.m */,
-				24F928E7200C8B65007ADAA4 /* AFOPLThumbnail.h */,
-				24F928E8200C8B65007ADAA4 /* AFOPLThumbnail.m */,
-			);
-			path = sqlite;
-			sourceTree = "<group>";
-		};
 		240BAB2A1FE1222400D58435 = {
 			isa = PBXGroup;
 			children = (
@@ -177,77 +166,155 @@
 			isa = PBXGroup;
 			children = (
 				240BAB371FE1222400D58435 /* AFOPlaylist.h */,
-				24E041151FE2180500BE0B5B /* foreign */,
-				24E0411A1FE2184400BE0B5B /* viewModels */,
-				245923991FE132790094C3E0 /* viewControllers */,
+				245005DB232CB7EE00B4D0B1 /* New Group */,
+				245005D6232CB74300B4D0B1 /* viewModels */,
+				245005D5232CB70B00B4D0B1 /* foreign */,
 				2446ED1620197FFE00FD5012 /* AFOPlaylist.pch */,
 			);
 			path = AFOPlaylist;
 			sourceTree = "<group>";
 		};
-		241D58E92000B05F0049CAF3 /* folder */ = {
+		2424F6C5232CB998006FA89F /* category */ = {
+			isa = PBXGroup;
+			children = (
+				2446ED262019B3FB00FD5012 /* AFOPLCorrespondingCategory.h */,
+				2424F6C3232CB981006FA89F /* AFOPLCorresponding+NSArray.h */,
+				24F928ED200CE175007ADAA4 /* AFOPLCorresponding+NSArray.m */,
+				2494B0BB200D993B00B7816B /* AFOPLCorresponding+SQLite.h */,
+				2494B0BC200D993B00B7816B /* AFOPLCorresponding+SQLite.m */,
+				2494B0C0200D9EC100B7816B /* AFOPLCorresponding+GCD.h */,
+				2494B0C1200D9EC100B7816B /* AFOPLCorresponding+GCD.m */,
+			);
+			name = category;
+			sourceTree = "<group>";
+		};
+		245005D5232CB70B00B4D0B1 /* foreign */ = {
+			isa = PBXGroup;
+			children = (
+				24E041171FE2183B00BE0B5B /* AFOPlayListForeign.m */,
+				24E041161FE2183B00BE0B5B /* AFOPlayListForeign.h */,
+			);
+			name = foreign;
+			sourceTree = "<group>";
+		};
+		245005D6232CB74300B4D0B1 /* viewModels */ = {
+			isa = PBXGroup;
+			children = (
+				245005DA232CB7C300B4D0B1 /* sharedFolders */,
+				245005D9232CB7A900B4D0B1 /* sqlite */,
+				245005D8232CB78800B4D0B1 /* folder */,
+			);
+			name = viewModels;
+			sourceTree = "<group>";
+		};
+		245005D8232CB78800B4D0B1 /* folder */ = {
 			isa = PBXGroup;
 			children = (
 				241D58DC2000A1CA0049CAF3 /* AFOPLMainFolderManager.h */,
 				241D58DD2000A1CA0049CAF3 /* AFOPLMainFolderManager.m */,
 			);
-			path = folder;
+			name = folder;
 			sourceTree = "<group>";
 		};
-		2421EF0921C0C56F00D44ED7 /* jump */ = {
+		245005D9232CB7A900B4D0B1 /* sqlite */ = {
+			isa = PBXGroup;
+			children = (
+				2408BB4F2008A37E0049060F /* AFOPLSQLiteManager.h */,
+				2408BB502008A37E0049060F /* AFOPLSQLiteManager.m */,
+				24F928E7200C8B65007ADAA4 /* AFOPLThumbnail.h */,
+				24F928E8200C8B65007ADAA4 /* AFOPLThumbnail.m */,
+			);
+			name = sqlite;
+			sourceTree = "<group>";
+		};
+		245005DA232CB7C300B4D0B1 /* sharedFolders */ = {
+			isa = PBXGroup;
+			children = (
+				24F36E571FFDC76600224A3E /* AFODirectoryWatcher.h */,
+				24F36E581FFDC76600224A3E /* AFODirectoryWatcher.m */,
+				24F36E561FFDC76600224A3E /* AFOReadDirectoryFile.h */,
+				24F36E591FFDC76600224A3E /* AFOReadDirectoryFile.m */,
+			);
+			name = sharedFolders;
+			sourceTree = "<group>";
+		};
+		245005DB232CB7EE00B4D0B1 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				2459239B1FE132B00094C3E0 /* AFOPlayListNavigationController.h */,
+				2459239C1FE132B00094C3E0 /* AFOPlayListNavigationController.m */,
+				24E0411E1FE218A300BE0B5B /* AFOPLMainController.h */,
+				24E0411F1FE218A300BE0B5B /* AFOPLMainController.m */,
+				245005E1232CB8C200B4D0B1 /* viewModels */,
+				245005E0232CB89900B4D0B1 /* views */,
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
+		245005DC232CB80E00B4D0B1 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				2427228221C7E0B900E46946 /* AFOPLMainControllerCategory.h */,
+				245005DF232CB86600B4D0B1 /* operation */,
+				245005DD232CB82B00B4D0B1 /* jump */,
+				245005DE232CB84B00B4D0B1 /* show */,
+			);
+			name = category;
+			sourceTree = "<group>";
+		};
+		245005DD232CB82B00B4D0B1 /* jump */ = {
 			isa = PBXGroup;
 			children = (
 				2446ED11201979DC00FD5012 /* AFOPLMainController+Aspects.h */,
 				2446ED12201979DC00FD5012 /* AFOPLMainController+Aspects.m */,
 			);
-			path = jump;
+			name = jump;
 			sourceTree = "<group>";
 		};
-		2421EF0A21C0C59600D44ED7 /* show */ = {
+		245005DE232CB84B00B4D0B1 /* show */ = {
 			isa = PBXGroup;
 			children = (
 				2446ED182019818100FD5012 /* AFOPLMainController+AFOPLMainManager.h */,
 				2446ED192019818100FD5012 /* AFOPLMainController+AFOPLMainManager.m */,
 			);
-			path = show;
+			name = show;
 			sourceTree = "<group>";
 		};
-		2421EF0B21C0C5AA00D44ED7 /* operation */ = {
+		245005DF232CB86600B4D0B1 /* operation */ = {
 			isa = PBXGroup;
 			children = (
 				2421EF0C21C0C6C200D44ED7 /* AFOPLMainController+Operation.h */,
 				2421EF0D21C0C6C200D44ED7 /* AFOPLMainController+Operation.m */,
 			);
-			path = operation;
+			name = operation;
 			sourceTree = "<group>";
 		};
-		2446ED15201979E100FD5012 /* category */ = {
+		245005E0232CB89900B4D0B1 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				2427228221C7E0B900E46946 /* AFOPLMainControllerCategory.h */,
-				2421EF0921C0C56F00D44ED7 /* jump */,
-				2421EF0A21C0C59600D44ED7 /* show */,
-				2421EF0B21C0C5AA00D44ED7 /* operation */,
+				245005DC232CB80E00B4D0B1 /* category */,
+				245B4EAF21C3E95B007608AC /* AFOPLEditMenuView.h */,
+				245B4EB021C3E95B007608AC /* AFOPLEditMenuView.m */,
+				24F428CF1FFDD8C4009F3F32 /* AFOPLMainCollectionCell.h */,
+				24F428D01FFDD8C4009F3F32 /* AFOPLMainCollectionCell.m */,
+				24F428D41FFDDC98009F3F32 /* AFOPLMainCellDefaultLayout.h */,
+				24F428D51FFDDC98009F3F32 /* AFOPLMainCellDefaultLayout.m */,
 			);
-			path = category;
+			name = views;
 			sourceTree = "<group>";
 		};
-		245923991FE132790094C3E0 /* viewControllers */ = {
+		245005E1232CB8C200B4D0B1 /* viewModels */ = {
 			isa = PBXGroup;
 			children = (
-				2459239A1FE1328B0094C3E0 /* navigation */,
-				24E0411D1FE2187800BE0B5B /* controllers */,
+				24F428DA1FFDDF33009F3F32 /* AFOPLMainManager.h */,
+				24F428DB1FFDDF33009F3F32 /* AFOPLMainManager.m */,
+				24F428CA1FFDD61B009F3F32 /* AFOPLMainCollectionDataSource.h */,
+				24F428CB1FFDD61B009F3F32 /* AFOPLMainCollectionDataSource.m */,
+				24EDFA1B2004A7940071AF43 /* AFOPLCorresponding.h */,
+				24EDFA1C2004A7940071AF43 /* AFOPLCorresponding.m */,
+				2424F6C5232CB998006FA89F /* category */,
 			);
-			path = viewControllers;
-			sourceTree = "<group>";
-		};
-		2459239A1FE1328B0094C3E0 /* navigation */ = {
-			isa = PBXGroup;
-			children = (
-				2459239B1FE132B00094C3E0 /* AFOPlayListNavigationController.h */,
-				2459239C1FE132B00094C3E0 /* AFOPlayListNavigationController.m */,
-			);
-			path = navigation;
+			name = viewModels;
 			sourceTree = "<group>";
 		};
 		245923AB1FE133F90094C3E0 /* Frameworks */ = {
@@ -271,129 +338,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		2494B0BF200D9B6100B7816B /* category */ = {
-			isa = PBXGroup;
-			children = (
-				2446ED262019B3FB00FD5012 /* AFOPLCorrespondingCategory.h */,
-				24F928EC200CE175007ADAA4 /* AFOPLCorresponding+NSArray.h */,
-				24F928ED200CE175007ADAA4 /* AFOPLCorresponding+NSArray.m */,
-				2494B0BB200D993B00B7816B /* AFOPLCorresponding+SQLite.h */,
-				2494B0BC200D993B00B7816B /* AFOPLCorresponding+SQLite.m */,
-				2494B0C4200D9FC100B7816B /* multithreading */,
-			);
-			path = category;
-			sourceTree = "<group>";
-		};
-		2494B0C4200D9FC100B7816B /* multithreading */ = {
-			isa = PBXGroup;
-			children = (
-				2494B0C0200D9EC100B7816B /* AFOPLCorresponding+GCD.h */,
-				2494B0C1200D9EC100B7816B /* AFOPLCorresponding+GCD.m */,
-			);
-			path = multithreading;
-			sourceTree = "<group>";
-		};
-		24E041151FE2180500BE0B5B /* foreign */ = {
-			isa = PBXGroup;
-			children = (
-				24E041161FE2183B00BE0B5B /* AFOPlayListForeign.h */,
-				24E041171FE2183B00BE0B5B /* AFOPlayListForeign.m */,
-			);
-			path = foreign;
-			sourceTree = "<group>";
-		};
-		24E0411A1FE2184400BE0B5B /* viewModels */ = {
-			isa = PBXGroup;
-			children = (
-				241D58E92000B05F0049CAF3 /* folder */,
-				2408BB4E2008A3580049060F /* sqlite */,
-				24F36E551FFDC76600224A3E /* sharedFolders */,
-			);
-			path = viewModels;
-			sourceTree = "<group>";
-		};
-		24E0411D1FE2187800BE0B5B /* controllers */ = {
-			isa = PBXGroup;
-			children = (
-				24E0411E1FE218A300BE0B5B /* AFOPLMainController.h */,
-				24E0411F1FE218A300BE0B5B /* AFOPLMainController.m */,
-				2446ED15201979E100FD5012 /* category */,
-				24F428D91FFDDF09009F3F32 /* views */,
-				24F428D81FFDDEFD009F3F32 /* viewModels */,
-				24F36E5E1FFDCD7800224A3E /* dataSource */,
-			);
-			path = controllers;
-			sourceTree = "<group>";
-		};
-		24EDFA1A2004A7730071AF43 /* corresponding */ = {
-			isa = PBXGroup;
-			children = (
-				24EDFA1B2004A7940071AF43 /* AFOPLCorresponding.h */,
-				24EDFA1C2004A7940071AF43 /* AFOPLCorresponding.m */,
-				2494B0BF200D9B6100B7816B /* category */,
-			);
-			path = corresponding;
-			sourceTree = "<group>";
-		};
-		24F36E551FFDC76600224A3E /* sharedFolders */ = {
-			isa = PBXGroup;
-			children = (
-				24F36E571FFDC76600224A3E /* AFODirectoryWatcher.h */,
-				24F36E581FFDC76600224A3E /* AFODirectoryWatcher.m */,
-				24F36E561FFDC76600224A3E /* AFOReadDirectoryFile.h */,
-				24F36E591FFDC76600224A3E /* AFOReadDirectoryFile.m */,
-			);
-			path = sharedFolders;
-			sourceTree = "<group>";
-		};
-		24F36E5E1FFDCD7800224A3E /* dataSource */ = {
-			isa = PBXGroup;
-			children = (
-				24F428CA1FFDD61B009F3F32 /* AFOPLMainCollectionDataSource.h */,
-				24F428CB1FFDD61B009F3F32 /* AFOPLMainCollectionDataSource.m */,
-			);
-			path = dataSource;
-			sourceTree = "<group>";
-		};
-		24F428CE1FFDD872009F3F32 /* cells */ = {
-			isa = PBXGroup;
-			children = (
-				24F428D31FFDDC4B009F3F32 /* layouts */,
-				24F428CF1FFDD8C4009F3F32 /* AFOPLMainCollectionCell.h */,
-				24F428D01FFDD8C4009F3F32 /* AFOPLMainCollectionCell.m */,
-			);
-			path = cells;
-			sourceTree = "<group>";
-		};
-		24F428D31FFDDC4B009F3F32 /* layouts */ = {
-			isa = PBXGroup;
-			children = (
-				24F428D41FFDDC98009F3F32 /* AFOPLMainCellDefaultLayout.h */,
-				24F428D51FFDDC98009F3F32 /* AFOPLMainCellDefaultLayout.m */,
-			);
-			path = layouts;
-			sourceTree = "<group>";
-		};
-		24F428D81FFDDEFD009F3F32 /* viewModels */ = {
-			isa = PBXGroup;
-			children = (
-				24F428DA1FFDDF33009F3F32 /* AFOPLMainManager.h */,
-				24F428DB1FFDDF33009F3F32 /* AFOPLMainManager.m */,
-				24EDFA1A2004A7730071AF43 /* corresponding */,
-			);
-			path = viewModels;
-			sourceTree = "<group>";
-		};
-		24F428D91FFDDF09009F3F32 /* views */ = {
-			isa = PBXGroup;
-			children = (
-				245B4EAF21C3E95B007608AC /* AFOPLEditMenuView.h */,
-				245B4EB021C3E95B007608AC /* AFOPLEditMenuView.m */,
-				24F428CE1FFDD872009F3F32 /* cells */,
-			);
-			path = views;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -412,11 +356,11 @@
 				2459239D1FE132B00094C3E0 /* AFOPlayListNavigationController.h in Headers */,
 				24E041181FE2183B00BE0B5B /* AFOPlayListForeign.h in Headers */,
 				24E041201FE218A300BE0B5B /* AFOPLMainController.h in Headers */,
+				2424F6C4232CB981006FA89F /* AFOPLCorresponding+NSArray.h in Headers */,
 				2446ED13201979DC00FD5012 /* AFOPLMainController+Aspects.h in Headers */,
 				24F428DC1FFDDF33009F3F32 /* AFOPLMainManager.h in Headers */,
 				24F428CC1FFDD61B009F3F32 /* AFOPLMainCollectionDataSource.h in Headers */,
 				2446ED1720197FFE00FD5012 /* AFOPlaylist.pch in Headers */,
-				24F928EE200CE175007ADAA4 /* AFOPLCorresponding+NSArray.h in Headers */,
 				24F36E5B1FFDC76600224A3E /* AFODirectoryWatcher.h in Headers */,
 				2494B0BD200D993B00B7816B /* AFOPLCorresponding+SQLite.h in Headers */,
 				24F428D11FFDD8C4009F3F32 /* AFOPLMainCollectionCell.h in Headers */,
