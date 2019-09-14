@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "AFOPlaylist"
-  s.version      = "0.0.4"
+  s.version      = "0.0.5"
   s.summary      = "main view."
 
   # This description is used to generate tags and improve search results.
@@ -130,4 +130,5 @@ Pod::Spec.new do |s|
   s.dependency "AFOFoundation"
   s.dependency "AFORouter"
   s.dependency "AFOUIKIT"
+  s.dependency "AFOFFMpeg"
 end
