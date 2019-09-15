@@ -1,0 +1,976 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00467514F50835CD2605868A4AB5505F /* AFOTabBarController.h in Headers */ = {isa = PBXBuildFile; fileRef = F758963275C7A8EC53E8A355E0650652 /* AFOTabBarController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0345F101244BE96140F6676A2F182950 /* NSFileManager+AFOOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = E0771FFAC62B0D69FA2EC098CD014E85 /* NSFileManager+AFOOperation.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		04786BDF75A087932BCBC1BD776C9172 /* AFORouter.h in Headers */ = {isa = PBXBuildFile; fileRef = 768D5BDB853C72A17CB8CA68AF8446CF /* AFORouter.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		081CCAD0E4F2C6F00A7B2BF82442A2C4 /* AFOCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8FF66DD11AA6D5A6F28760FD5B1714 /* AFOCollectionView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0AB0D7FFF2EA00F34A00C8B6A40F69FF /* AFONavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCAA0423CA8EFE18448943CFA52CE498 /* AFONavigationController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0FB17C87722BC2023E4F7E63CAEC08A2 /* NSArray+AFOAbnormal.h in Headers */ = {isa = PBXBuildFile; fileRef = 66008A3B4DD10F7815DE2CF206145FDE /* NSArray+AFOAbnormal.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		12059227B42746874DFDAC5DEF7A5575 /* AFOTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85A28A623273ECCEEC82AECD923D8A0B /* AFOTabBarController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		15C7836787DD9C0F32AE97975AE52E89 /* NSBundle+AFOCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE9F554A0651004D2357BCF22A086D0 /* NSBundle+AFOCategory.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1C4D56643E1C14663A5D51E7887D4F7D /* JLRRouteResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 9821399D025950BDE3253DADDECB0101 /* JLRRouteResponse.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1D8D9B792650D479A9C75485178B3D24 /* AFORouterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA28AC858B578F25042CCBF87D00CCA /* AFORouterManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		224E092B0BBA7ACDE902FCE13C9D0B19 /* JLRRouteDefinition.h in Headers */ = {isa = PBXBuildFile; fileRef = 287FFA44AB40BCBC459C9EF1CDD23B6A /* JLRRouteDefinition.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2BE265EB75E1AC28F1A320ABD56E0DC9 /* NSMutableDictionary+AFOAbnormal.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B93CF4BE8EAFAC9892E4DC1465E7FF1 /* NSMutableDictionary+AFOAbnormal.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		304F1899EDBAEBA9E20195D727BE4F6A /* NSFileManager+AFOSandBox.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D07F68C4DFFFE72B6C815F8928A85ED /* NSFileManager+AFOSandBox.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3116F8262FDEBBA52287E60BDE934CAB /* AFOCollectionViewLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = A30EC346D194855860ADF0FE121043F6 /* AFOCollectionViewLayout.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3714384E147A032E7D047FD24514ADA2 /* Pods-AFOPlaylist-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 69DBECEA739A737D99852456FC1D35D7 /* Pods-AFOPlaylist-dummy.m */; };
+		39458B5509C99B8DD1C4DB774DF94B06 /* JLRRouteResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 29C4E3078E3844EC051027F86A53EE84 /* JLRRouteResponse.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3A6812B81F77FF076E799D166CD64603 /* JLRoutes.h in Headers */ = {isa = PBXBuildFile; fileRef = C81F6A6871022061E4306F3964F89A99 /* JLRoutes.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		462F1EAB04E4E6B3E822C25FAEADD74C /* NSBundle+AFOCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C49A6D9B98550F4E279DE138EEC35D3 /* NSBundle+AFOCategory.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4EA46421D7AF1A1620315897E8D33942 /* NSFileManager+AFOOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 24540D8A9296F89ADFED6120DF8DD3D3 /* NSFileManager+AFOOperation.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4F981628AD5A50828F3630F5E534449B /* AFOMacroDefinition.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A7D017BC2A50849EC1D426EC72D2E2D /* AFOMacroDefinition.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		50E5FF5971FEAD4C7D57D1CB00E0FF48 /* AFORouterInfoplist.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C5F989A0A1D796384E9848BC4C7E82 /* AFORouterInfoplist.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5BFD18DE3C33E6F416056E8F738895C6 /* AFOUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D01661CF799F089159E4CF88D9BD603 /* AFOUIKit.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5C5C35A5654092DC9D72555C8F62E63E /* AFORouterInfoplist.h in Headers */ = {isa = PBXBuildFile; fileRef = DA1E79E58C457DFA10EE4833D929DEA0 /* AFORouterInfoplist.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5E85F5DE62D18A76B14B77DC5E5688E1 /* AFORouter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C3D2CB8B151E398E740001B16C5B76 /* AFORouter-dummy.m */; };
+		68D92472AF5CE8A8AE162415DE0E1170 /* NSString+Formatting.m in Sources */ = {isa = PBXBuildFile; fileRef = EC3C6F67B86A9FB2D0EB3D2E49C2DB2F /* NSString+Formatting.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		69EDE6D8697526FCE3D8F6C9DBAF047C /* AFOWeakInstance.h in Headers */ = {isa = PBXBuildFile; fileRef = 97DA0888959C39D075214B515A6F296A /* AFOWeakInstance.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6E2D8F32A44EA908320DB79ED477CC5D /* NSString+Formatting.h in Headers */ = {isa = PBXBuildFile; fileRef = B4F1821D665A32E237F92E13DA4C88D9 /* NSString+Formatting.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		71676149EAECDA3852DA36D51BD8E62D /* AFOWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A2CCFB5B82C586CB009EF6FCF0ACE65 /* AFOWindow.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		75BE0A6E3B42C7326B17C53210B3A6DA /* NSMutableArray+AFOAbnormal.h in Headers */ = {isa = PBXBuildFile; fileRef = 4047D2DF72FF76C749FACF6F670F1400 /* NSMutableArray+AFOAbnormal.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		783FD243B535E6F32F3D5E573FFB29ED /* AFORouterManager+StringManipulation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB4806BDF16693CC6D7A2AABD4BC85E /* AFORouterManager+StringManipulation.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7DDF962CBBA945FBAC4DE3869890125B /* NSMutableArray+AFOAbnormal.m in Sources */ = {isa = PBXBuildFile; fileRef = C79B10711D88DDCFE2C1F5FAA12D2729 /* NSMutableArray+AFOAbnormal.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7E9E4FE848AF5E771EE22EB73DB7AA0B /* AFOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7044B6A4703BF7691987C564D3FB22 /* AFOViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8C12187BD4477EEF34B4820F9E6AEE58 /* AFORouterNamesPace.h in Headers */ = {isa = PBXBuildFile; fileRef = 09A60DE3D037CC3768EFD6D1091BFE85 /* AFORouterNamesPace.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8CF2920DFACCE24215D1A798A68FBAFE /* JLRParsingUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 65DB9FB127DA8A9D6740DBDA0DCB2B46 /* JLRParsingUtilities.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8D66B20EDDA10E584D406162C2B14D48 /* AFORouterManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 27C991EA8B41389252D1A628954080D1 /* AFORouterManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8E03D2604C0AAF359F5C45DEBBA237C4 /* NSDictionary+AFOAbnormal.m in Sources */ = {isa = PBXBuildFile; fileRef = 907BB90B70408C69A728C2E43414900D /* NSDictionary+AFOAbnormal.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8EBB1C470D7A3E986054FEE361C0469C /* AFOCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE5935AD6E24CF1D88E4534017BE7274 /* AFOCollectionView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8FD7A6FF8742459E7622CA0D562B25FA /* AFOViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3807AF71E9921AB8711B07A800C2D79B /* AFOViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		945A3E67506257EFACF81D98E8913CD6 /* AFORouterManager+StringManipulation.h in Headers */ = {isa = PBXBuildFile; fileRef = C11CD65E3069DBABDE2632526199C183 /* AFORouterManager+StringManipulation.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9461BC442354CE52BE2B177A98C3D32C /* JLRRouteDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = D44FF7685066A3242AF085BCDE9F97CF /* JLRRouteDefinition.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		961A61C5EAF29CB8B029247EC20D206C /* NSFileManager+AFOSandBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 3005E55C934B81B67D303CE5E788D288 /* NSFileManager+AFOSandBox.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		99F972D6157AB9D6ED212FC6CFD9274A /* JLRRouteRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5B8DE6597B43DAC6D44F4C944F0C99 /* JLRRouteRequest.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9FB59A85CFE18C5BFC5BF04D5D43F2DD /* AFOFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EEFC94E2EF0C5056ED8A2A1A52FF218 /* AFOFoundation.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A2587D4B4AEADA6C65701D707D492AAC /* JLRRouteRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 860AF7C70728038BF9FA683F21EF73EB /* JLRRouteRequest.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AEAC36E68D635683D3ACAD18856DE0C4 /* JLRRouteHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 30786BF1A9EB3729A37A51AF6081B22A /* JLRRouteHandler.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B5C23182342FB73882B813523EE6180D /* AFONavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 75BFA7CAF6D0EEB7DD2B84907D2B0510 /* AFONavigationController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B63EA34474AC627DACD306E38B8F5EEA /* JLRRouteHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4CFAAC267F7D44C0044032B5FB2130 /* JLRRouteHandler.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B64A75CE1091962E786DB9B6009DB75F /* AFOFoundation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B42878A8ECAA2E91AD023467C1EDC84 /* AFOFoundation-dummy.m */; };
+		B7B2664329B151E69ADE3FF3D10A329F /* NSMutableDictionary+AFOAbnormal.m in Sources */ = {isa = PBXBuildFile; fileRef = 8965FA40D3684833A07D83671BF05F62 /* NSMutableDictionary+AFOAbnormal.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C148387AE068DA7912ECC8E63D4C9070 /* JLRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = 867A3ABB62AA8A8A2378BE267E0DEB0E /* JLRoutes.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C4A796359BF6DB95F47D02519B2EF18C /* NSDictionary+AFOAbnormal.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B93B623B214EB07F519AD69DB7D829E /* NSDictionary+AFOAbnormal.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C621B3C51FF1DDFDCEA22CFBDC72A085 /* AFOWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABC18891B146AB8867BFBE32D54BD69 /* AFOWindow.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E1ED6CCDB0E5BCCE91FCD6A5DA6302B7 /* AFORouterManagerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EA2B32387CB0254C966B05F140F2ADE /* AFORouterManagerDelegate.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E925962CAAD2792B2EB096A4B1733962 /* AFOUIKIT-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C019DA4B2B93A22FBFD7273F8F9B1C /* AFOUIKIT-dummy.m */; };
+		F2CA4EFAC0F2D1297B5964DFF024F915 /* JLRParsingUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = F27055ACB997D26777B04813B54B822E /* JLRParsingUtilities.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F7D76196837BC938CB16F52BDF820D12 /* AFOCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF029037CBDBF59B1F54EB938313465 /* AFOCollectionViewLayout.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F8BB39F1599E486F1F87951327BF3592 /* NSArray+AFOAbnormal.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC093C1F4D0EA57C565B365330E7A27 /* NSArray+AFOAbnormal.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3F6598A920F54F9EC510C74036A9B66B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0E6822B490412B4C83DAF77B7F359535;
+			remoteInfo = AFOFoundation;
+		};
+		6DB398D233A02B2F944B94989DA9880C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA3724611A34A64E270C153CB2F83A3D;
+			remoteInfo = AFORouter;
+		};
+		C085626786DF5936F1422B6720322D96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A6ED1F81EC081CA8059D773C0580E3E3;
+			remoteInfo = AFOUIKIT;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		09A60DE3D037CC3768EFD6D1091BFE85 /* AFORouterNamesPace.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFORouterNamesPace.h; path = AFORouter/AFORouterNamesPace.h; sourceTree = "<group>"; };
+		10C5F989A0A1D796384E9848BC4C7E82 /* AFORouterInfoplist.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFORouterInfoplist.m; path = AFORouter/AFORouterInfoplist.m; sourceTree = "<group>"; };
+		1A7D017BC2A50849EC1D426EC72D2E2D /* AFOMacroDefinition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOMacroDefinition.h; path = AFOFoundation/define/AFOMacroDefinition.h; sourceTree = "<group>"; };
+		1C49A6D9B98550F4E279DE138EEC35D3 /* NSBundle+AFOCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSBundle+AFOCategory.h"; path = "AFOFoundation/bundle/NSBundle+AFOCategory.h"; sourceTree = "<group>"; };
+		1CE9F554A0651004D2357BCF22A086D0 /* NSBundle+AFOCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSBundle+AFOCategory.m"; path = "AFOFoundation/bundle/NSBundle+AFOCategory.m"; sourceTree = "<group>"; };
+		24540D8A9296F89ADFED6120DF8DD3D3 /* NSFileManager+AFOOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSFileManager+AFOOperation.m"; path = "AFOFoundation/sandbox/NSFileManager+AFOOperation.m"; sourceTree = "<group>"; };
+		27C991EA8B41389252D1A628954080D1 /* AFORouterManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFORouterManager.h; path = AFORouter/AFORouterManager.h; sourceTree = "<group>"; };
+		287FFA44AB40BCBC459C9EF1CDD23B6A /* JLRRouteDefinition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JLRRouteDefinition.h; path = AFORouter/JLRRouteDefinition.h; sourceTree = "<group>"; };
+		29C4E3078E3844EC051027F86A53EE84 /* JLRRouteResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JLRRouteResponse.h; path = AFORouter/JLRRouteResponse.h; sourceTree = "<group>"; };
+		3005E55C934B81B67D303CE5E788D288 /* NSFileManager+AFOSandBox.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSFileManager+AFOSandBox.m"; path = "AFOFoundation/sandbox/NSFileManager+AFOSandBox.m"; sourceTree = "<group>"; };
+		30786BF1A9EB3729A37A51AF6081B22A /* JLRRouteHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JLRRouteHandler.h; path = AFORouter/JLRRouteHandler.h; sourceTree = "<group>"; };
+		378A67CCCA908E41A40E2263591F9662 /* AFOUIKIT-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFOUIKIT-prefix.pch"; sourceTree = "<group>"; };
+		3807AF71E9921AB8711B07A800C2D79B /* AFOViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOViewController.h; path = AFOUIKIT/AFOViewController.h; sourceTree = "<group>"; };
+		3ABC18891B146AB8867BFBE32D54BD69 /* AFOWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFOWindow.m; path = AFOUIKIT/AFOWindow.m; sourceTree = "<group>"; };
+		3B93B623B214EB07F519AD69DB7D829E /* NSDictionary+AFOAbnormal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+AFOAbnormal.h"; path = "AFOFoundation/dictionary/NSDictionary+AFOAbnormal.h"; sourceTree = "<group>"; };
+		3BA28AC858B578F25042CCBF87D00CCA /* AFORouterManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFORouterManager.m; path = AFORouter/AFORouterManager.m; sourceTree = "<group>"; };
+		3EB4806BDF16693CC6D7A2AABD4BC85E /* AFORouterManager+StringManipulation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "AFORouterManager+StringManipulation.m"; path = "AFORouter/AFORouterManager+StringManipulation.m"; sourceTree = "<group>"; };
+		4047D2DF72FF76C749FACF6F670F1400 /* NSMutableArray+AFOAbnormal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+AFOAbnormal.h"; path = "AFOFoundation/array/NSMutableArray+AFOAbnormal.h"; sourceTree = "<group>"; };
+		4791CB812057794D5FEACCAEABE1675B /* AFOFoundation.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFOFoundation.xcconfig; sourceTree = "<group>"; };
+		480F38F0F6F80DCCCF94084DD567C2B5 /* Pods-AFOPlaylist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AFOPlaylist.debug.xcconfig"; sourceTree = "<group>"; };
+		4B93CF4BE8EAFAC9892E4DC1465E7FF1 /* NSMutableDictionary+AFOAbnormal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableDictionary+AFOAbnormal.h"; path = "AFOFoundation/dictionary/NSMutableDictionary+AFOAbnormal.h"; sourceTree = "<group>"; };
+		4BFDD01176809C9FE835FBC7DCB2CA3F /* libPods-AFOPlaylist.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-AFOPlaylist.a"; path = "libPods-AFOPlaylist.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C41407577DC9AC1C0FDC3CA27E880A8 /* AFOUIKIT.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFOUIKIT.xcconfig; sourceTree = "<group>"; };
+		4C5B8DE6597B43DAC6D44F4C944F0C99 /* JLRRouteRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JLRRouteRequest.m; path = AFORouter/JLRRouteRequest.m; sourceTree = "<group>"; };
+		4EB0959E61EAC889D51F90641FD082AC /* libAFOFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libAFOFoundation.a; path = libAFOFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		562A169AA4BA10FE6156E2CB62F760B8 /* libAFORouter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libAFORouter.a; path = libAFORouter.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D01661CF799F089159E4CF88D9BD603 /* AFOUIKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOUIKit.h; path = AFOUIKIT/AFOUIKit.h; sourceTree = "<group>"; };
+		5FF029037CBDBF59B1F54EB938313465 /* AFOCollectionViewLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFOCollectionViewLayout.m; path = AFOUIKIT/AFOCollectionViewLayout.m; sourceTree = "<group>"; };
+		65DB9FB127DA8A9D6740DBDA0DCB2B46 /* JLRParsingUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JLRParsingUtilities.h; path = AFORouter/JLRParsingUtilities.h; sourceTree = "<group>"; };
+		66008A3B4DD10F7815DE2CF206145FDE /* NSArray+AFOAbnormal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+AFOAbnormal.h"; path = "AFOFoundation/array/NSArray+AFOAbnormal.h"; sourceTree = "<group>"; };
+		69DBECEA739A737D99852456FC1D35D7 /* Pods-AFOPlaylist-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AFOPlaylist-dummy.m"; sourceTree = "<group>"; };
+		6B7044B6A4703BF7691987C564D3FB22 /* AFOViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFOViewController.m; path = AFOUIKIT/AFOViewController.m; sourceTree = "<group>"; };
+		7332C84D6282F64F0FF0EF2BFCFB1FFD /* AFORouter.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFORouter.xcconfig; sourceTree = "<group>"; };
+		74C019DA4B2B93A22FBFD7273F8F9B1C /* AFOUIKIT-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AFOUIKIT-dummy.m"; sourceTree = "<group>"; };
+		75AD8EEAE3BA3A4AF4C3462B2CF0877F /* Pods-AFOPlaylist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AFOPlaylist.release.xcconfig"; sourceTree = "<group>"; };
+		75BFA7CAF6D0EEB7DD2B84907D2B0510 /* AFONavigationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFONavigationController.h; path = AFOUIKIT/AFONavigationController.h; sourceTree = "<group>"; };
+		768D5BDB853C72A17CB8CA68AF8446CF /* AFORouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFORouter.h; path = AFORouter/AFORouter.h; sourceTree = "<group>"; };
+		7B42878A8ECAA2E91AD023467C1EDC84 /* AFOFoundation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AFOFoundation-dummy.m"; sourceTree = "<group>"; };
+		7CF482B2193BBD947042F70F65020BD3 /* Pods-AFOPlaylist-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AFOPlaylist-acknowledgements.plist"; sourceTree = "<group>"; };
+		7D07F68C4DFFFE72B6C815F8928A85ED /* NSFileManager+AFOSandBox.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSFileManager+AFOSandBox.h"; path = "AFOFoundation/sandbox/NSFileManager+AFOSandBox.h"; sourceTree = "<group>"; };
+		85A28A623273ECCEEC82AECD923D8A0B /* AFOTabBarController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFOTabBarController.m; path = AFOUIKIT/AFOTabBarController.m; sourceTree = "<group>"; };
+		860AF7C70728038BF9FA683F21EF73EB /* JLRRouteRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JLRRouteRequest.h; path = AFORouter/JLRRouteRequest.h; sourceTree = "<group>"; };
+		867A3ABB62AA8A8A2378BE267E0DEB0E /* JLRoutes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JLRoutes.m; path = AFORouter/JLRoutes.m; sourceTree = "<group>"; };
+		8965FA40D3684833A07D83671BF05F62 /* NSMutableDictionary+AFOAbnormal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableDictionary+AFOAbnormal.m"; path = "AFOFoundation/dictionary/NSMutableDictionary+AFOAbnormal.m"; sourceTree = "<group>"; };
+		8A2CCFB5B82C586CB009EF6FCF0ACE65 /* AFOWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOWindow.h; path = AFOUIKIT/AFOWindow.h; sourceTree = "<group>"; };
+		8D352C1D27B8C1DE106C06837D56311F /* AFORouter-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFORouter-prefix.pch"; sourceTree = "<group>"; };
+		8EEFC94E2EF0C5056ED8A2A1A52FF218 /* AFOFoundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOFoundation.h; path = AFOFoundation/AFOFoundation.h; sourceTree = "<group>"; };
+		907BB90B70408C69A728C2E43414900D /* NSDictionary+AFOAbnormal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+AFOAbnormal.m"; path = "AFOFoundation/dictionary/NSDictionary+AFOAbnormal.m"; sourceTree = "<group>"; };
+		97DA0888959C39D075214B515A6F296A /* AFOWeakInstance.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOWeakInstance.h; path = AFOFoundation/weak/AFOWeakInstance.h; sourceTree = "<group>"; };
+		9821399D025950BDE3253DADDECB0101 /* JLRRouteResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JLRRouteResponse.m; path = AFORouter/JLRRouteResponse.m; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9EA2B32387CB0254C966B05F140F2ADE /* AFORouterManagerDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFORouterManagerDelegate.h; path = AFORouter/AFORouterManagerDelegate.h; sourceTree = "<group>"; };
+		A1C3D2CB8B151E398E740001B16C5B76 /* AFORouter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AFORouter-dummy.m"; sourceTree = "<group>"; };
+		A30EC346D194855860ADF0FE121043F6 /* AFOCollectionViewLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOCollectionViewLayout.h; path = AFOUIKIT/AFOCollectionViewLayout.h; sourceTree = "<group>"; };
+		AC8FF66DD11AA6D5A6F28760FD5B1714 /* AFOCollectionView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOCollectionView.h; path = AFOUIKIT/AFOCollectionView.h; sourceTree = "<group>"; };
+		B4F1821D665A32E237F92E13DA4C88D9 /* NSString+Formatting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+Formatting.h"; path = "AFOFoundation/string/NSString+Formatting.h"; sourceTree = "<group>"; };
+		BA4CFAAC267F7D44C0044032B5FB2130 /* JLRRouteHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JLRRouteHandler.m; path = AFORouter/JLRRouteHandler.m; sourceTree = "<group>"; };
+		C11CD65E3069DBABDE2632526199C183 /* AFORouterManager+StringManipulation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "AFORouterManager+StringManipulation.h"; path = "AFORouter/AFORouterManager+StringManipulation.h"; sourceTree = "<group>"; };
+		C79B10711D88DDCFE2C1F5FAA12D2729 /* NSMutableArray+AFOAbnormal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+AFOAbnormal.m"; path = "AFOFoundation/array/NSMutableArray+AFOAbnormal.m"; sourceTree = "<group>"; };
+		C81F6A6871022061E4306F3964F89A99 /* JLRoutes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JLRoutes.h; path = AFORouter/JLRoutes.h; sourceTree = "<group>"; };
+		C9497677B90D7D67C9E79FD460A5A119 /* Pods-AFOPlaylist-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AFOPlaylist-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D44FF7685066A3242AF085BCDE9F97CF /* JLRRouteDefinition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JLRRouteDefinition.m; path = AFORouter/JLRRouteDefinition.m; sourceTree = "<group>"; };
+		DA1E79E58C457DFA10EE4833D929DEA0 /* AFORouterInfoplist.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFORouterInfoplist.h; path = AFORouter/AFORouterInfoplist.h; sourceTree = "<group>"; };
+		DBC093C1F4D0EA57C565B365330E7A27 /* NSArray+AFOAbnormal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+AFOAbnormal.m"; path = "AFOFoundation/array/NSArray+AFOAbnormal.m"; sourceTree = "<group>"; };
+		DCAA0423CA8EFE18448943CFA52CE498 /* AFONavigationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFONavigationController.m; path = AFOUIKIT/AFONavigationController.m; sourceTree = "<group>"; };
+		E0771FFAC62B0D69FA2EC098CD014E85 /* NSFileManager+AFOOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSFileManager+AFOOperation.h"; path = "AFOFoundation/sandbox/NSFileManager+AFOOperation.h"; sourceTree = "<group>"; };
+		EC3C6F67B86A9FB2D0EB3D2E49C2DB2F /* NSString+Formatting.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+Formatting.m"; path = "AFOFoundation/string/NSString+Formatting.m"; sourceTree = "<group>"; };
+		EFF2C26F534BF42755628DC7D191F30E /* AFOFoundation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFOFoundation-prefix.pch"; sourceTree = "<group>"; };
+		F27055ACB997D26777B04813B54B822E /* JLRParsingUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JLRParsingUtilities.m; path = AFORouter/JLRParsingUtilities.m; sourceTree = "<group>"; };
+		F39383F0AADA6BCF727C03C26374B1B7 /* libAFOUIKIT.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libAFOUIKIT.a; path = libAFOUIKIT.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F758963275C7A8EC53E8A355E0650652 /* AFOTabBarController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOTabBarController.h; path = AFOUIKIT/AFOTabBarController.h; sourceTree = "<group>"; };
+		FE5935AD6E24CF1D88E4534017BE7274 /* AFOCollectionView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFOCollectionView.m; path = AFOUIKIT/AFOCollectionView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		006C7E80F8819E05E0CDA04736A8DFF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		067A9A38CEDDD8BF5AF7652F5432B790 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1309BCD68028DB7A7447BDA6B8ADCDD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6395FC1DBA442076CB44F03F34A1DB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C40EC88AD57D8D06EA499CCB5967F03 /* AFOUIKIT */ = {
+			isa = PBXGroup;
+			children = (
+				AC8FF66DD11AA6D5A6F28760FD5B1714 /* AFOCollectionView.h */,
+				FE5935AD6E24CF1D88E4534017BE7274 /* AFOCollectionView.m */,
+				A30EC346D194855860ADF0FE121043F6 /* AFOCollectionViewLayout.h */,
+				5FF029037CBDBF59B1F54EB938313465 /* AFOCollectionViewLayout.m */,
+				75BFA7CAF6D0EEB7DD2B84907D2B0510 /* AFONavigationController.h */,
+				DCAA0423CA8EFE18448943CFA52CE498 /* AFONavigationController.m */,
+				F758963275C7A8EC53E8A355E0650652 /* AFOTabBarController.h */,
+				85A28A623273ECCEEC82AECD923D8A0B /* AFOTabBarController.m */,
+				5D01661CF799F089159E4CF88D9BD603 /* AFOUIKit.h */,
+				3807AF71E9921AB8711B07A800C2D79B /* AFOViewController.h */,
+				6B7044B6A4703BF7691987C564D3FB22 /* AFOViewController.m */,
+				8A2CCFB5B82C586CB009EF6FCF0ACE65 /* AFOWindow.h */,
+				3ABC18891B146AB8867BFBE32D54BD69 /* AFOWindow.m */,
+				F7F85A1840631E7172D192AB5C64F482 /* Support Files */,
+			);
+			name = AFOUIKIT;
+			path = AFOUIKIT;
+			sourceTree = "<group>";
+		};
+		36B5A695BE33767D505DB05B1FD1FA11 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A00E25E60530D25B57284E5082740EA8 /* Pods-AFOPlaylist */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		47DC0F6B9AECB300D4E08F0945762BF9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4EB0959E61EAC889D51F90641FD082AC /* libAFOFoundation.a */,
+				562A169AA4BA10FE6156E2CB62F760B8 /* libAFORouter.a */,
+				F39383F0AADA6BCF727C03C26374B1B7 /* libAFOUIKIT.a */,
+				4BFDD01176809C9FE835FBC7DCB2CA3F /* libPods-AFOPlaylist.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5B1D07113F7F6B48AE8B39EE03460F5D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8DA423A4DF38EF1BF388EC446AB9B50B /* AFOFoundation */,
+				881F1878DAC5965A97C4353EBF1B7973 /* AFORouter */,
+				1C40EC88AD57D8D06EA499CCB5967F03 /* AFOUIKIT */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		72A657A7D9B1849CED2F3DA9FDD5133D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7332C84D6282F64F0FF0EF2BFCFB1FFD /* AFORouter.xcconfig */,
+				A1C3D2CB8B151E398E740001B16C5B76 /* AFORouter-dummy.m */,
+				8D352C1D27B8C1DE106C06837D56311F /* AFORouter-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/AFORouter";
+			sourceTree = "<group>";
+		};
+		881F1878DAC5965A97C4353EBF1B7973 /* AFORouter */ = {
+			isa = PBXGroup;
+			children = (
+				768D5BDB853C72A17CB8CA68AF8446CF /* AFORouter.h */,
+				DA1E79E58C457DFA10EE4833D929DEA0 /* AFORouterInfoplist.h */,
+				10C5F989A0A1D796384E9848BC4C7E82 /* AFORouterInfoplist.m */,
+				27C991EA8B41389252D1A628954080D1 /* AFORouterManager.h */,
+				3BA28AC858B578F25042CCBF87D00CCA /* AFORouterManager.m */,
+				C11CD65E3069DBABDE2632526199C183 /* AFORouterManager+StringManipulation.h */,
+				3EB4806BDF16693CC6D7A2AABD4BC85E /* AFORouterManager+StringManipulation.m */,
+				9EA2B32387CB0254C966B05F140F2ADE /* AFORouterManagerDelegate.h */,
+				09A60DE3D037CC3768EFD6D1091BFE85 /* AFORouterNamesPace.h */,
+				C81F6A6871022061E4306F3964F89A99 /* JLRoutes.h */,
+				867A3ABB62AA8A8A2378BE267E0DEB0E /* JLRoutes.m */,
+				65DB9FB127DA8A9D6740DBDA0DCB2B46 /* JLRParsingUtilities.h */,
+				F27055ACB997D26777B04813B54B822E /* JLRParsingUtilities.m */,
+				287FFA44AB40BCBC459C9EF1CDD23B6A /* JLRRouteDefinition.h */,
+				D44FF7685066A3242AF085BCDE9F97CF /* JLRRouteDefinition.m */,
+				30786BF1A9EB3729A37A51AF6081B22A /* JLRRouteHandler.h */,
+				BA4CFAAC267F7D44C0044032B5FB2130 /* JLRRouteHandler.m */,
+				860AF7C70728038BF9FA683F21EF73EB /* JLRRouteRequest.h */,
+				4C5B8DE6597B43DAC6D44F4C944F0C99 /* JLRRouteRequest.m */,
+				29C4E3078E3844EC051027F86A53EE84 /* JLRRouteResponse.h */,
+				9821399D025950BDE3253DADDECB0101 /* JLRRouteResponse.m */,
+				72A657A7D9B1849CED2F3DA9FDD5133D /* Support Files */,
+			);
+			name = AFORouter;
+			path = AFORouter;
+			sourceTree = "<group>";
+		};
+		8DA423A4DF38EF1BF388EC446AB9B50B /* AFOFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				8EEFC94E2EF0C5056ED8A2A1A52FF218 /* AFOFoundation.h */,
+				1A7D017BC2A50849EC1D426EC72D2E2D /* AFOMacroDefinition.h */,
+				97DA0888959C39D075214B515A6F296A /* AFOWeakInstance.h */,
+				66008A3B4DD10F7815DE2CF206145FDE /* NSArray+AFOAbnormal.h */,
+				DBC093C1F4D0EA57C565B365330E7A27 /* NSArray+AFOAbnormal.m */,
+				1C49A6D9B98550F4E279DE138EEC35D3 /* NSBundle+AFOCategory.h */,
+				1CE9F554A0651004D2357BCF22A086D0 /* NSBundle+AFOCategory.m */,
+				3B93B623B214EB07F519AD69DB7D829E /* NSDictionary+AFOAbnormal.h */,
+				907BB90B70408C69A728C2E43414900D /* NSDictionary+AFOAbnormal.m */,
+				E0771FFAC62B0D69FA2EC098CD014E85 /* NSFileManager+AFOOperation.h */,
+				24540D8A9296F89ADFED6120DF8DD3D3 /* NSFileManager+AFOOperation.m */,
+				7D07F68C4DFFFE72B6C815F8928A85ED /* NSFileManager+AFOSandBox.h */,
+				3005E55C934B81B67D303CE5E788D288 /* NSFileManager+AFOSandBox.m */,
+				4047D2DF72FF76C749FACF6F670F1400 /* NSMutableArray+AFOAbnormal.h */,
+				C79B10711D88DDCFE2C1F5FAA12D2729 /* NSMutableArray+AFOAbnormal.m */,
+				4B93CF4BE8EAFAC9892E4DC1465E7FF1 /* NSMutableDictionary+AFOAbnormal.h */,
+				8965FA40D3684833A07D83671BF05F62 /* NSMutableDictionary+AFOAbnormal.m */,
+				B4F1821D665A32E237F92E13DA4C88D9 /* NSString+Formatting.h */,
+				EC3C6F67B86A9FB2D0EB3D2E49C2DB2F /* NSString+Formatting.m */,
+				DD7A0FACF25C3725639F54BFE871A7D8 /* Support Files */,
+			);
+			name = AFOFoundation;
+			path = AFOFoundation;
+			sourceTree = "<group>";
+		};
+		A00E25E60530D25B57284E5082740EA8 /* Pods-AFOPlaylist */ = {
+			isa = PBXGroup;
+			children = (
+				C9497677B90D7D67C9E79FD460A5A119 /* Pods-AFOPlaylist-acknowledgements.markdown */,
+				7CF482B2193BBD947042F70F65020BD3 /* Pods-AFOPlaylist-acknowledgements.plist */,
+				69DBECEA739A737D99852456FC1D35D7 /* Pods-AFOPlaylist-dummy.m */,
+				480F38F0F6F80DCCCF94084DD567C2B5 /* Pods-AFOPlaylist.debug.xcconfig */,
+				75AD8EEAE3BA3A4AF4C3462B2CF0877F /* Pods-AFOPlaylist.release.xcconfig */,
+			);
+			name = "Pods-AFOPlaylist";
+			path = "Target Support Files/Pods-AFOPlaylist";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				5B1D07113F7F6B48AE8B39EE03460F5D /* Pods */,
+				47DC0F6B9AECB300D4E08F0945762BF9 /* Products */,
+				36B5A695BE33767D505DB05B1FD1FA11 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD7A0FACF25C3725639F54BFE871A7D8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4791CB812057794D5FEACCAEABE1675B /* AFOFoundation.xcconfig */,
+				7B42878A8ECAA2E91AD023467C1EDC84 /* AFOFoundation-dummy.m */,
+				EFF2C26F534BF42755628DC7D191F30E /* AFOFoundation-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/AFOFoundation";
+			sourceTree = "<group>";
+		};
+		F7F85A1840631E7172D192AB5C64F482 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4C41407577DC9AC1C0FDC3CA27E880A8 /* AFOUIKIT.xcconfig */,
+				74C019DA4B2B93A22FBFD7273F8F9B1C /* AFOUIKIT-dummy.m */,
+				378A67CCCA908E41A40E2263591F9662 /* AFOUIKIT-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/AFOUIKIT";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		03259A4E981BF73DBDDC8C8315063E20 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B52E290841740892257BFA85C3445B7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FB59A85CFE18C5BFC5BF04D5D43F2DD /* AFOFoundation.h in Headers */,
+				4F981628AD5A50828F3630F5E534449B /* AFOMacroDefinition.h in Headers */,
+				69EDE6D8697526FCE3D8F6C9DBAF047C /* AFOWeakInstance.h in Headers */,
+				0FB17C87722BC2023E4F7E63CAEC08A2 /* NSArray+AFOAbnormal.h in Headers */,
+				462F1EAB04E4E6B3E822C25FAEADD74C /* NSBundle+AFOCategory.h in Headers */,
+				C4A796359BF6DB95F47D02519B2EF18C /* NSDictionary+AFOAbnormal.h in Headers */,
+				0345F101244BE96140F6676A2F182950 /* NSFileManager+AFOOperation.h in Headers */,
+				304F1899EDBAEBA9E20195D727BE4F6A /* NSFileManager+AFOSandBox.h in Headers */,
+				75BE0A6E3B42C7326B17C53210B3A6DA /* NSMutableArray+AFOAbnormal.h in Headers */,
+				2BE265EB75E1AC28F1A320ABD56E0DC9 /* NSMutableDictionary+AFOAbnormal.h in Headers */,
+				6E2D8F32A44EA908320DB79ED477CC5D /* NSString+Formatting.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21DB0361CFC2C3E3F4719742D5863EA4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04786BDF75A087932BCBC1BD776C9172 /* AFORouter.h in Headers */,
+				5C5C35A5654092DC9D72555C8F62E63E /* AFORouterInfoplist.h in Headers */,
+				945A3E67506257EFACF81D98E8913CD6 /* AFORouterManager+StringManipulation.h in Headers */,
+				8D66B20EDDA10E584D406162C2B14D48 /* AFORouterManager.h in Headers */,
+				E1ED6CCDB0E5BCCE91FCD6A5DA6302B7 /* AFORouterManagerDelegate.h in Headers */,
+				8C12187BD4477EEF34B4820F9E6AEE58 /* AFORouterNamesPace.h in Headers */,
+				3A6812B81F77FF076E799D166CD64603 /* JLRoutes.h in Headers */,
+				8CF2920DFACCE24215D1A798A68FBAFE /* JLRParsingUtilities.h in Headers */,
+				224E092B0BBA7ACDE902FCE13C9D0B19 /* JLRRouteDefinition.h in Headers */,
+				AEAC36E68D635683D3ACAD18856DE0C4 /* JLRRouteHandler.h in Headers */,
+				A2587D4B4AEADA6C65701D707D492AAC /* JLRRouteRequest.h in Headers */,
+				39458B5509C99B8DD1C4DB774DF94B06 /* JLRRouteResponse.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7C6469E661F09652CC00CB91E61E6FB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				081CCAD0E4F2C6F00A7B2BF82442A2C4 /* AFOCollectionView.h in Headers */,
+				3116F8262FDEBBA52287E60BDE934CAB /* AFOCollectionViewLayout.h in Headers */,
+				B5C23182342FB73882B813523EE6180D /* AFONavigationController.h in Headers */,
+				00467514F50835CD2605868A4AB5505F /* AFOTabBarController.h in Headers */,
+				5BFD18DE3C33E6F416056E8F738895C6 /* AFOUIKit.h in Headers */,
+				8FD7A6FF8742459E7622CA0D562B25FA /* AFOViewController.h in Headers */,
+				71676149EAECDA3852DA36D51BD8E62D /* AFOWindow.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0E6822B490412B4C83DAF77B7F359535 /* AFOFoundation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF9F70BF05921E3A46441D9128902AAF /* Build configuration list for PBXNativeTarget "AFOFoundation" */;
+			buildPhases = (
+				0B52E290841740892257BFA85C3445B7 /* Headers */,
+				DFC76C7E3C795AD3C3A7F0ED7516AC66 /* Sources */,
+				067A9A38CEDDD8BF5AF7652F5432B790 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AFOFoundation;
+			productName = AFOFoundation;
+			productReference = 4EB0959E61EAC889D51F90641FD082AC /* libAFOFoundation.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		632019D89FD3000AD06540B9AEA96CC8 /* Pods-AFOPlaylist */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 932DE611BCA3F04902A8E171E6AA4DDA /* Build configuration list for PBXNativeTarget "Pods-AFOPlaylist" */;
+			buildPhases = (
+				03259A4E981BF73DBDDC8C8315063E20 /* Headers */,
+				E25675ACC0A21832D8C83B592ED1D429 /* Sources */,
+				006C7E80F8819E05E0CDA04736A8DFF5 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1B653D8535DEF251ADE04D496A07083F /* PBXTargetDependency */,
+				0B8CBD8621276E1A7B66B1366FA22F01 /* PBXTargetDependency */,
+				E04FFC4EA8B429F11CEFA8036EE66A18 /* PBXTargetDependency */,
+			);
+			name = "Pods-AFOPlaylist";
+			productName = "Pods-AFOPlaylist";
+			productReference = 4BFDD01176809C9FE835FBC7DCB2CA3F /* libPods-AFOPlaylist.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		A6ED1F81EC081CA8059D773C0580E3E3 /* AFOUIKIT */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D119CD14DA4CB283EC68609C94E5689B /* Build configuration list for PBXNativeTarget "AFOUIKIT" */;
+			buildPhases = (
+				C7C6469E661F09652CC00CB91E61E6FB /* Headers */,
+				AC598CC3DB699804A22833D5EE26A0F7 /* Sources */,
+				E6395FC1DBA442076CB44F03F34A1DB4 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AFOUIKIT;
+			productName = AFOUIKIT;
+			productReference = F39383F0AADA6BCF727C03C26374B1B7 /* libAFOUIKIT.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		EA3724611A34A64E270C153CB2F83A3D /* AFORouter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC67E94E719DDD8256639FF4F874703B /* Build configuration list for PBXNativeTarget "AFORouter" */;
+			buildPhases = (
+				21DB0361CFC2C3E3F4719742D5863EA4 /* Headers */,
+				00885E6FE6AB68D5E348F871008CB09A /* Sources */,
+				1309BCD68028DB7A7447BDA6B8ADCDD3 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AFORouter;
+			productName = AFORouter;
+			productReference = 562A169AA4BA10FE6156E2CB62F760B8 /* libAFORouter.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 47DC0F6B9AECB300D4E08F0945762BF9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0E6822B490412B4C83DAF77B7F359535 /* AFOFoundation */,
+				EA3724611A34A64E270C153CB2F83A3D /* AFORouter */,
+				A6ED1F81EC081CA8059D773C0580E3E3 /* AFOUIKIT */,
+				632019D89FD3000AD06540B9AEA96CC8 /* Pods-AFOPlaylist */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		00885E6FE6AB68D5E348F871008CB09A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E85F5DE62D18A76B14B77DC5E5688E1 /* AFORouter-dummy.m in Sources */,
+				50E5FF5971FEAD4C7D57D1CB00E0FF48 /* AFORouterInfoplist.m in Sources */,
+				783FD243B535E6F32F3D5E573FFB29ED /* AFORouterManager+StringManipulation.m in Sources */,
+				1D8D9B792650D479A9C75485178B3D24 /* AFORouterManager.m in Sources */,
+				C148387AE068DA7912ECC8E63D4C9070 /* JLRoutes.m in Sources */,
+				F2CA4EFAC0F2D1297B5964DFF024F915 /* JLRParsingUtilities.m in Sources */,
+				9461BC442354CE52BE2B177A98C3D32C /* JLRRouteDefinition.m in Sources */,
+				B63EA34474AC627DACD306E38B8F5EEA /* JLRRouteHandler.m in Sources */,
+				99F972D6157AB9D6ED212FC6CFD9274A /* JLRRouteRequest.m in Sources */,
+				1C4D56643E1C14663A5D51E7887D4F7D /* JLRRouteResponse.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC598CC3DB699804A22833D5EE26A0F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EBB1C470D7A3E986054FEE361C0469C /* AFOCollectionView.m in Sources */,
+				F7D76196837BC938CB16F52BDF820D12 /* AFOCollectionViewLayout.m in Sources */,
+				0AB0D7FFF2EA00F34A00C8B6A40F69FF /* AFONavigationController.m in Sources */,
+				12059227B42746874DFDAC5DEF7A5575 /* AFOTabBarController.m in Sources */,
+				E925962CAAD2792B2EB096A4B1733962 /* AFOUIKIT-dummy.m in Sources */,
+				7E9E4FE848AF5E771EE22EB73DB7AA0B /* AFOViewController.m in Sources */,
+				C621B3C51FF1DDFDCEA22CFBDC72A085 /* AFOWindow.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFC76C7E3C795AD3C3A7F0ED7516AC66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B64A75CE1091962E786DB9B6009DB75F /* AFOFoundation-dummy.m in Sources */,
+				F8BB39F1599E486F1F87951327BF3592 /* NSArray+AFOAbnormal.m in Sources */,
+				15C7836787DD9C0F32AE97975AE52E89 /* NSBundle+AFOCategory.m in Sources */,
+				8E03D2604C0AAF359F5C45DEBBA237C4 /* NSDictionary+AFOAbnormal.m in Sources */,
+				4EA46421D7AF1A1620315897E8D33942 /* NSFileManager+AFOOperation.m in Sources */,
+				961A61C5EAF29CB8B029247EC20D206C /* NSFileManager+AFOSandBox.m in Sources */,
+				7DDF962CBBA945FBAC4DE3869890125B /* NSMutableArray+AFOAbnormal.m in Sources */,
+				B7B2664329B151E69ADE3FF3D10A329F /* NSMutableDictionary+AFOAbnormal.m in Sources */,
+				68D92472AF5CE8A8AE162415DE0E1170 /* NSString+Formatting.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E25675ACC0A21832D8C83B592ED1D429 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3714384E147A032E7D047FD24514ADA2 /* Pods-AFOPlaylist-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0B8CBD8621276E1A7B66B1366FA22F01 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AFORouter;
+			target = EA3724611A34A64E270C153CB2F83A3D /* AFORouter */;
+			targetProxy = 6DB398D233A02B2F944B94989DA9880C /* PBXContainerItemProxy */;
+		};
+		1B653D8535DEF251ADE04D496A07083F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AFOFoundation;
+			target = 0E6822B490412B4C83DAF77B7F359535 /* AFOFoundation */;
+			targetProxy = 3F6598A920F54F9EC510C74036A9B66B /* PBXContainerItemProxy */;
+		};
+		E04FFC4EA8B429F11CEFA8036EE66A18 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AFOUIKIT;
+			target = A6ED1F81EC081CA8059D773C0580E3E3 /* AFOUIKIT */;
+			targetProxy = C085626786DF5936F1422B6720322D96 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		132D86A6DA4B846EFC26B9C89BB65CD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4791CB812057794D5FEACCAEABE1675B /* AFOFoundation.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/AFOFoundation/AFOFoundation-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = AFOFoundation;
+				PRODUCT_NAME = AFOFoundation;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		330D3349A0BC1090964649A812A53604 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 480F38F0F6F80DCCCF94084DD567C2B5 /* Pods-AFOPlaylist.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		38BBEFEA0269F6BFDF2E8798F9BC7384 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75AD8EEAE3BA3A4AF4C3462B2CF0877F /* Pods-AFOPlaylist.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4BE66A09A74FD25164AAB3C2645B9B93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		6A9ECDAFF27F56B74C68474E398CC405 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7332C84D6282F64F0FF0EF2BFCFB1FFD /* AFORouter.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/AFORouter/AFORouter-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = AFORouter;
+				PRODUCT_NAME = AFORouter;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6BBFEC738D60E389CADC86F2DBFDDDC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C41407577DC9AC1C0FDC3CA27E880A8 /* AFOUIKIT.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/AFOUIKIT/AFOUIKIT-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = AFOUIKIT;
+				PRODUCT_NAME = AFOUIKIT;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6F4C44D808D87D90845601DF72C0CAE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4791CB812057794D5FEACCAEABE1675B /* AFOFoundation.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/AFOFoundation/AFOFoundation-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = AFOFoundation;
+				PRODUCT_NAME = AFOFoundation;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6F57B9004477E0351941BD2D90015948 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C41407577DC9AC1C0FDC3CA27E880A8 /* AFOUIKIT.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/AFOUIKIT/AFOUIKIT-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = AFOUIKIT;
+				PRODUCT_NAME = AFOUIKIT;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7EF7227D9B20A1D549000096ACCB23D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		ADA93A2DA7A78190A92AB3ACF1781AA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7332C84D6282F64F0FF0EF2BFCFB1FFD /* AFORouter.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/AFORouter/AFORouter-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = AFORouter;
+				PRODUCT_NAME = AFORouter;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EF7227D9B20A1D549000096ACCB23D7 /* Debug */,
+				4BE66A09A74FD25164AAB3C2645B9B93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		932DE611BCA3F04902A8E171E6AA4DDA /* Build configuration list for PBXNativeTarget "Pods-AFOPlaylist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				330D3349A0BC1090964649A812A53604 /* Debug */,
+				38BBEFEA0269F6BFDF2E8798F9BC7384 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC67E94E719DDD8256639FF4F874703B /* Build configuration list for PBXNativeTarget "AFORouter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADA93A2DA7A78190A92AB3ACF1781AA2 /* Debug */,
+				6A9ECDAFF27F56B74C68474E398CC405 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF9F70BF05921E3A46441D9128902AAF /* Build configuration list for PBXNativeTarget "AFOFoundation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				132D86A6DA4B846EFC26B9C89BB65CD0 /* Debug */,
+				6F4C44D808D87D90845601DF72C0CAE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D119CD14DA4CB283EC68609C94E5689B /* Build configuration list for PBXNativeTarget "AFOUIKIT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F57B9004477E0351941BD2D90015948 /* Debug */,
+				6BBFEC738D60E389CADC86F2DBFDDDC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
