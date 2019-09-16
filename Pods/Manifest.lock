@@ -1,5 +1,5 @@
 PODS:
-  - AFOFFMpeg (0.0.6):
+  - AFOFFMpeg (0.0.9):
     - AFOFoundation
     - AFOGitHub
     - AFORouter
@@ -30,7 +30,7 @@ SPEC REPOS:
     - AFOViews
 
 SPEC CHECKSUMS:
-  AFOFFMpeg: ef87c49dc7671f848317a57959dc80f6898be495
+  AFOFFMpeg: fe62657a9145d4c0cf91a4f9363ba7dfbeeb4ec1
   AFOFoundation: a5792ce9496c1665ae08918c1f9bb691ece3b291
   AFOGitHub: 72827902cb9b9409d35877482a7fa8b64e252e42
   AFORouter: dc40925d83908af499af28b9c988efb56ea28f89

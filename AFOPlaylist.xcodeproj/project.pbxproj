@@ -170,7 +170,7 @@
 			children = (
 				240BAB371FE1222400D58435 /* AFOPlaylist.h */,
 				245005D5232CB70B00B4D0B1 /* foreign */,
-				245005DB232CB7EE00B4D0B1 /* New Group */,
+				245005DB232CB7EE00B4D0B1 /* controllers */,
 				245005D6232CB74300B4D0B1 /* viewModels */,
 				2446ED1620197FFE00FD5012 /* AFOPlaylist.pch */,
 			);
@@ -241,13 +241,13 @@
 			name = sharedFolders;
 			sourceTree = "<group>";
 		};
-		245005DB232CB7EE00B4D0B1 /* New Group */ = {
+		245005DB232CB7EE00B4D0B1 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
-				245005E1232CB8C200B4D0B1 /* viewModels */,
 				245005E0232CB89900B4D0B1 /* views */,
+				245005E1232CB8C200B4D0B1 /* viewModels */,
 			);
-			name = "New Group";
+			name = controllers;
 			sourceTree = "<group>";
 		};
 		245005DC232CB80E00B4D0B1 /* category */ = {
@@ -637,7 +637,7 @@
 				MACH_O_TYPE = staticlib;
 				OTHER_LDFLAGS = (
 					"-Objc",
-					"-force_load\n\n-force_load\n\n",
+					"-force_load",
 					"$(inherited)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.youku.AFOPlaylist;
@@ -676,7 +676,7 @@
 				MACH_O_TYPE = staticlib;
 				OTHER_LDFLAGS = (
 					"-Objc",
-					"-force_load\n\n-force_load\n\n",
+					"-force_load",
 					"$(inherited)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.youku.AFOPlaylist;
