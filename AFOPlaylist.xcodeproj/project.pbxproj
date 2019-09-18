@@ -27,7 +27,6 @@
 		2427228321C7E0B900E46946 /* AFOPLMainControllerCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 2427228221C7E0B900E46946 /* AFOPLMainControllerCategory.h */; };
 		2446ED13201979DC00FD5012 /* AFOPLMainController+Aspects.h in Headers */ = {isa = PBXBuildFile; fileRef = 2446ED11201979DC00FD5012 /* AFOPLMainController+Aspects.h */; };
 		2446ED14201979DC00FD5012 /* AFOPLMainController+Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = 2446ED12201979DC00FD5012 /* AFOPLMainController+Aspects.m */; };
-		2446ED1720197FFE00FD5012 /* AFOPlaylist.pch in Headers */ = {isa = PBXBuildFile; fileRef = 2446ED1620197FFE00FD5012 /* AFOPlaylist.pch */; };
 		2446ED1A2019818100FD5012 /* AFOPLMainController+AFOPLMainManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 2446ED182019818100FD5012 /* AFOPLMainController+AFOPLMainManager.h */; };
 		2446ED1B2019818100FD5012 /* AFOPLMainController+AFOPLMainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2446ED192019818100FD5012 /* AFOPLMainController+AFOPLMainManager.m */; };
 		2459239D1FE132B00094C3E0 /* AFOPlayListNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2459239B1FE132B00094C3E0 /* AFOPlayListNavigationController.h */; };
@@ -88,7 +87,6 @@
 		2427228221C7E0B900E46946 /* AFOPLMainControllerCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOPLMainControllerCategory.h; sourceTree = "<group>"; };
 		2446ED11201979DC00FD5012 /* AFOPLMainController+Aspects.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AFOPLMainController+Aspects.h"; sourceTree = "<group>"; };
 		2446ED12201979DC00FD5012 /* AFOPLMainController+Aspects.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AFOPLMainController+Aspects.m"; sourceTree = "<group>"; };
-		2446ED1620197FFE00FD5012 /* AFOPlaylist.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOPlaylist.pch; sourceTree = "<group>"; };
 		2446ED182019818100FD5012 /* AFOPLMainController+AFOPLMainManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AFOPLMainController+AFOPLMainManager.h"; sourceTree = "<group>"; };
 		2446ED192019818100FD5012 /* AFOPLMainController+AFOPLMainManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AFOPLMainController+AFOPLMainManager.m"; sourceTree = "<group>"; };
 		2446ED262019B3FB00FD5012 /* AFOPLCorrespondingCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOPLCorrespondingCategory.h; sourceTree = "<group>"; };
@@ -172,7 +170,6 @@
 				245005D5232CB70B00B4D0B1 /* foreign */,
 				245005DB232CB7EE00B4D0B1 /* controllers */,
 				245005D6232CB74300B4D0B1 /* viewModels */,
-				2446ED1620197FFE00FD5012 /* AFOPlaylist.pch */,
 			);
 			path = AFOPlaylist;
 			sourceTree = "<group>";
@@ -372,7 +369,6 @@
 				2446ED13201979DC00FD5012 /* AFOPLMainController+Aspects.h in Headers */,
 				24F428DC1FFDDF33009F3F32 /* AFOPLMainManager.h in Headers */,
 				24F428CC1FFDD61B009F3F32 /* AFOPLMainCollectionDataSource.h in Headers */,
-				2446ED1720197FFE00FD5012 /* AFOPlaylist.pch in Headers */,
 				24F36E5B1FFDC76600224A3E /* AFODirectoryWatcher.h in Headers */,
 				2494B0BD200D993B00B7816B /* AFOPLCorresponding+SQLite.h in Headers */,
 				24F428D11FFDD8C4009F3F32 /* AFOPLMainCollectionCell.h in Headers */,
@@ -626,8 +622,8 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/AFOPlaylist/AFOPlaylist.pch";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -661,8 +657,8 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/AFOPlaylist/AFOPlaylist.pch";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";

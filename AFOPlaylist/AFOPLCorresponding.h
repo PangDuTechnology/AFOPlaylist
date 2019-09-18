@@ -12,10 +12,10 @@
 @property (nonnull, nonatomic, strong, readonly) dispatch_queue_t queue;
 @end
 @interface AFOPLCorresponding : NSObject
-+ (AFOPLCorresponding *)correspondingDelegate:(id)delegate;
++ (AFOPLCorresponding *_Nullable)correspondingDelegate:(id _Nullable )delegate;
 + (void)createDataBase;
-+ (NSArray *)getAllDataFromDataBase;
-+ (void)deleteAllDataFromDataBase:(void(^)(BOOL isSucess))block;
-+ (void)deleteDataFromDataBase:(NSArray *)array
-                            block:(void(^)(BOOL isSucess))block;
++ (NSArray *_Nullable)getAllDataFromDataBase;
++ (void)deleteAllDataFromDataBase:(void(^_Nullable)(BOOL isSucess))block;
++ (void)deleteDataFromDataBase:(NSArray *_Nullable)array
+                         block:(void(^_Nullable)(BOOL isSucess))block;
 @end

@@ -6,6 +6,11 @@
 //  Copyright © 2018年 AFO. All rights reserved.
 //
 #import "AFOPLMainManager.h"
+#import <AFOFoundation/AFOFoundation.h>
+#import "AFOPLCorrespondingCategory.h"
+#import "AFOReadDirectoryFile.h"
+#import "AFOPLThumbnail.h"
+#import "AFOPLMainFolderManager.h"
 @interface AFOPLMainManager ()<AFOReadDirectoryFileDelegate>
 @property (nonnull, nonatomic, strong) AFOReadDirectoryFile       *directoryFile;
 @property (nonnull, nonatomic, strong) AFOPLCorresponding         *corresponding;

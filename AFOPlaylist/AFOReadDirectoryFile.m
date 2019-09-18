@@ -7,6 +7,7 @@
 //
 
 #import "AFOReadDirectoryFile.h"
+#import <AFOFoundation/AFOFoundation.h>
 #import "AFODirectoryWatcher.h"
 @interface AFOReadDirectoryFile ()<DirectoryWatcherDelegate>
 @property (nonnull, nonatomic, strong) NSMutableArray       *fileArray;

@@ -7,6 +7,7 @@
 //
 
 #import "AFOPLMainCellDefaultLayout.h"
+#import <AFOFoundation/AFOFoundation.h>
 @interface AFOPLMainCellDefaultLayout ()
 @property (nonatomic, assign) CGFloat               spacingWidth;
 @property (nonatomic, assign) CGFloat               spacingWidthTotal;

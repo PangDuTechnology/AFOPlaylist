@@ -7,13 +7,16 @@
 //
 
 #import "AFOPLMainController.h"
+#import <AFOFoundation/AFOFoundation.h>
+#import <AFOGitHub/AFOGitHub.h>
+#import "AFOPLMainControllerCategory.h"
 #import "AFOPLMainCellDefaultLayout.h"
 #import "AFOPLMainCollectionDataSource.h"
 #import "AFOPLMainCollectionCell.h"
 @interface AFOPLMainController ()<UICollectionViewDelegate>
 @property (nonnull, nonatomic, strong) AFOPLMainCellDefaultLayout    *defaultLayout;
 @property (nonnull, nonatomic, strong) AFOPLMainCollectionDataSource *collectionDataSource;
-@property (nonnull, nonatomic, strong, readwrite) AFOCollectionView             *collectionView;
+@property (nonnull, nonatomic, strong, readwrite) UICollectionView             *collectionView;
 @end
 @implementation AFOPLMainController
 #pragma mark ------ viewDidLoad
@@ -69,9 +72,9 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
 }
 #pragma mark ------------ property
-- (AFOCollectionView *)collectionView{
+- (UICollectionView *)collectionView{
     if (!_collectionView) {
-        _collectionView = [[AFOCollectionView alloc]initWithFrame:CGRectMake(0, 64, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) - 64) collectionViewLayout:self.defaultLayout];
+        _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 64, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) - 64) collectionViewLayout:self.defaultLayout];
         _collectionView.pagingEnabled = YES;
         _collectionView.backgroundColor = [UIColor whiteColor];
         _collectionView.delegate = self;

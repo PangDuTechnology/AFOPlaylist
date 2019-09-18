@@ -7,6 +7,9 @@
 //
 
 #import "AFOPLCorresponding+SQLite.h"
+#import <AFOFoundation/AFOFoundation.h>
+#import "AFOPLSQLiteManager.h"
+#import "AFOPLMainFolderManager.h"
 @implementation AFOPLCorresponding (SQLite)
 #pragma mark ------------ 创建数据库和表
 + (void)createDataBaseAndTable{

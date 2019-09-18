@@ -7,6 +7,7 @@
 //
 
 #import "AFOPLCorresponding.h"
+#import "AFOPLCorrespondingCategory.h"
 @interface AFOPLCorresponding ()
 @property (nonatomic, weak) id<AFOPLCorrespondingDelegate>  delegate;
 @end

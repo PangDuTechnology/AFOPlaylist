@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <UIKit/UIKit.h>
 @protocol AFOPLMainManagerDelegate <NSObject>
 @optional
 - (void)mainManagerArray:(NSArray *)array

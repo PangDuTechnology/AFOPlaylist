@@ -7,6 +7,9 @@
 //
 
 #import "AFOPLMainController+Aspects.h"
+#import <AFOGitHub/AFOGitHub.h>
+#import <AFORouter/AFORouter.h>
+#import "AFOPLMainControllerCategory.h"
 @implementation AFOPLMainController (Aspects)
 #pragma mark ------ collectionView:didSelectItemAtIndexPath:
 - (void)collectionViewDidSelectRowAtIndexPathExchange{

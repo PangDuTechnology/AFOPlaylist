@@ -7,6 +7,8 @@
 //
 
 #import "AFOPLSQLiteManager.h"
+#import <AFOSQLite/AFOSQLite.h>
+#import "AFOPLThumbnail.h"
 @implementation AFOPLSQLiteManager
 #pragma mark ------------ 创建表
 + (NSString *)createTable:(NSString *)name{

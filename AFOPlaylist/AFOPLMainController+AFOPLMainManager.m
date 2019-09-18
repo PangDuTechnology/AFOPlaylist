@@ -7,6 +7,8 @@
 //
 
 #import "AFOPLMainController+AFOPLMainManager.h"
+#import <objc/runtime.h>
+#import "AFOPLMainManager.h"
 @interface AFOPLMainController ()<AFOPLMainManagerDelegate>
 @property (nonnull, nonatomic, strong, readwrite) AFOPLMainManager  *mainManager;
 @property (nonnull, nonatomic, strong, readwrite) NSMutableArray *dataArray;

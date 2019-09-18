@@ -7,6 +7,11 @@
 //
 
 #import "AFOPLCorresponding+GCD.h"
+#import <AFOFoundation/AFOFoundation.h>
+#import <AFOFFMpeg/AFOFFMpeg.h>
+#import "AFOPLThumbnail.h"
+#import "AFOPLSQLiteManager.h"
+#import "AFOPLMainFolderManager.h"
 @interface AFOPLCorresponding ()
 @end
 @implementation AFOPLCorresponding (GCD)

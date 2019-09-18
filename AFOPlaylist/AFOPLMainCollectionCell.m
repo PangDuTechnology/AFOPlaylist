@@ -7,6 +7,7 @@
 //
 
 #import "AFOPLMainCollectionCell.h"
+#import <AFOGitHub/AFOGitHub.h>
 #import "AFOPLMainFolderManager.h"
 #import "AFOPLThumbnail.h"
 @interface AFOPLMainCollectionCell ()

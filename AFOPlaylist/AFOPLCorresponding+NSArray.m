@@ -7,6 +7,8 @@
 //
 
 #import "AFOPLCorresponding+NSArray.h"
+#import <AFOFoundation/AFOFoundation.h>
+#import "AFOPLThumbnail.h"
 @implementation AFOPLCorresponding (NSArray)
 + (NSArray *)getUnscreenshotsArray:(NSArray *)data
                       compare:(NSArray *)compare{

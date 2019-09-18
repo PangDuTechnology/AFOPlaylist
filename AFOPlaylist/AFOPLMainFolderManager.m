@@ -7,9 +7,7 @@
 //
 
 #import "AFOPLMainFolderManager.h"
-
-
-
+#import <AFOFoundation/AFOFoundation.h>
 @implementation AFOPLMainFolderManager
 #pragma mark ------ 创建截图文件地址
 + (NSString *)mediaImagesCacheFolder{

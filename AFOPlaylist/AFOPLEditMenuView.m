@@ -7,7 +7,8 @@
 //
 
 #import "AFOPLEditMenuView.h"
-
+#import <AFOFoundation/AFOFoundation.h>
+#import <AFOGitHub/AFOGitHub.h>
 #define AFOPLEditMenuViewDeleteAllItem @"确认删除全部影片!"
 
 @interface AFOPLEditMenuView ()<UIAlertViewDelegate>
