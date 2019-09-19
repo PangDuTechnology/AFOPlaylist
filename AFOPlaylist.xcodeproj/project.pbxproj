@@ -187,7 +187,6 @@
 			isa = PBXGroup;
 			children = (
 				240BAB371FE1222400D58435 /* AFOPlaylist.h */,
-				243EA1522333293400A15C48 /* AFOPlayListForeign.h */,
 				243EA12B23331ADD00A15C48 /* foreign */,
 				243EA12E23331B1B00A15C48 /* controller */,
 				243EA125233319A300A15C48 /* viewModels */,
@@ -239,6 +238,7 @@
 		243EA12B23331ADD00A15C48 /* foreign */ = {
 			isa = PBXGroup;
 			children = (
+				243EA1522333293400A15C48 /* AFOPlayListForeign.h */,
 				24E041171FE2183B00BE0B5B /* AFOPlayListForeign.m */,
 			);
 			path = foreign;

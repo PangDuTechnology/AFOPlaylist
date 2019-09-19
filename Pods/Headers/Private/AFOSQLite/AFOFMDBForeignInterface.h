@@ -1,1 +1,1 @@
-../../../AFOSQLite/AFOSQLite/AFOFMDBForeignInterface.h
+../../../AFOSQLite/AFOSQLite/privite/AFOFMDBForeignInterface.h

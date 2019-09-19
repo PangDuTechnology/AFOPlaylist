@@ -5,4 +5,5 @@ target 'AFOPlaylist' do
   pod 'AFOFoundation'
   pod 'AFORouter'
   pod 'AFOSQLite'
+  pod 'FMDB'
 end
