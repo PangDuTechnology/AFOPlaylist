@@ -4,6 +4,5 @@ target 'AFOPlaylist' do
   pod 'AFOFFMpeg'
   pod 'AFOFoundation'
   pod 'AFORouter'
-  pod 'AFOUIKIT'
   pod 'AFOSQLite'
 end
