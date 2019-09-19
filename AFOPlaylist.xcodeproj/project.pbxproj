@@ -22,6 +22,7 @@
 		2421EF0F21C0C6C200D44ED7 /* AFOPLMainController+Operation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2421EF0D21C0C6C200D44ED7 /* AFOPLMainController+Operation.m */; };
 		2424F6C4232CB981006FA89F /* AFOPLCorresponding+NSArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 2424F6C3232CB981006FA89F /* AFOPLCorresponding+NSArray.h */; };
 		2427228321C7E0B900E46946 /* AFOPLMainControllerCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 2427228221C7E0B900E46946 /* AFOPLMainControllerCategory.h */; };
+		243E3F5F23333985001E34FE /* libFMDB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 243E3F5E23333985001E34FE /* libFMDB.a */; };
 		243EA13323331FAC00A15C48 /* libAFOFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 243EA13223331FAC00A15C48 /* libAFOFoundation.a */; };
 		243EA13523331FAC00A15C48 /* libAFOGitHub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 243EA13423331FAC00A15C48 /* libAFOGitHub.a */; };
 		243EA13723331FAC00A15C48 /* libAFORouter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 243EA13623331FAC00A15C48 /* libAFORouter.a */; };
@@ -89,6 +90,7 @@
 		2421EF0D21C0C6C200D44ED7 /* AFOPLMainController+Operation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AFOPLMainController+Operation.m"; sourceTree = "<group>"; };
 		2424F6C3232CB981006FA89F /* AFOPLCorresponding+NSArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFOPLCorresponding+NSArray.h"; sourceTree = "<group>"; };
 		2427228221C7E0B900E46946 /* AFOPLMainControllerCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOPLMainControllerCategory.h; sourceTree = "<group>"; };
+		243E3F5E23333985001E34FE /* libFMDB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFMDB.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		243EA13223331FAC00A15C48 /* libAFOFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libAFOFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		243EA13423331FAC00A15C48 /* libAFOGitHub.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libAFOGitHub.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		243EA13623331FAC00A15C48 /* libAFORouter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libAFORouter.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,6 +146,7 @@
 				243EA13E23331FE900A15C48 /* libsqlite3.tbd in Frameworks */,
 				243EA13F23331FF100A15C48 /* libz.tbd in Frameworks */,
 				243EA14023331FFB00A15C48 /* libbz2.tbd in Frameworks */,
+				243E3F5F23333985001E34FE /* libFMDB.a in Frameworks */,
 				243EA13323331FAC00A15C48 /* libAFOFoundation.a in Frameworks */,
 				243EA13523331FAC00A15C48 /* libAFOGitHub.a in Frameworks */,
 				243EA13723331FAC00A15C48 /* libAFORouter.a in Frameworks */,
@@ -305,6 +308,7 @@
 		245923AB1FE133F90094C3E0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				243E3F5E23333985001E34FE /* libFMDB.a */,
 				243EA13C23331FBF00A15C48 /* libc++.tbd */,
 				243EA13223331FAC00A15C48 /* libAFOFoundation.a */,
 				243EA13423331FAC00A15C48 /* libAFOGitHub.a */,
