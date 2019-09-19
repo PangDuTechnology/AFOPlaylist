@@ -32,6 +32,7 @@
 		243EA13F23331FF100A15C48 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 240487B620084C8200D369FB /* libz.tbd */; };
 		243EA14023331FFB00A15C48 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 240487B820084CA300D369FB /* libbz2.tbd */; };
 		243EA1412333200B00A15C48 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 240487BA20084CA900D369FB /* libiconv.tbd */; };
+		243EA1532333293400A15C48 /* AFOPlayListForeign.h in Headers */ = {isa = PBXBuildFile; fileRef = 243EA1522333293400A15C48 /* AFOPlayListForeign.h */; };
 		2446ED13201979DC00FD5012 /* AFOPLMainController+Aspects.h in Headers */ = {isa = PBXBuildFile; fileRef = 2446ED11201979DC00FD5012 /* AFOPLMainController+Aspects.h */; };
 		2446ED14201979DC00FD5012 /* AFOPLMainController+Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = 2446ED12201979DC00FD5012 /* AFOPLMainController+Aspects.m */; };
 		2446ED1A2019818100FD5012 /* AFOPLMainController+AFOPLMainManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 2446ED182019818100FD5012 /* AFOPLMainController+AFOPLMainManager.h */; };
@@ -44,7 +45,6 @@
 		2494B0BE200D993B00B7816B /* AFOPLCorresponding+SQLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 2494B0BC200D993B00B7816B /* AFOPLCorresponding+SQLite.m */; };
 		2494B0C2200D9EC100B7816B /* AFOPLCorresponding+GCD.h in Headers */ = {isa = PBXBuildFile; fileRef = 2494B0C0200D9EC100B7816B /* AFOPLCorresponding+GCD.h */; };
 		2494B0C3200D9EC100B7816B /* AFOPLCorresponding+GCD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2494B0C1200D9EC100B7816B /* AFOPLCorresponding+GCD.m */; };
-		24E041181FE2183B00BE0B5B /* AFOPlayListForeign.h in Headers */ = {isa = PBXBuildFile; fileRef = 24E041161FE2183B00BE0B5B /* AFOPlayListForeign.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24E041191FE2183B00BE0B5B /* AFOPlayListForeign.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E041171FE2183B00BE0B5B /* AFOPlayListForeign.m */; };
 		24E041201FE218A300BE0B5B /* AFOPLMainController.h in Headers */ = {isa = PBXBuildFile; fileRef = 24E0411E1FE218A300BE0B5B /* AFOPLMainController.h */; };
 		24E041211FE218A300BE0B5B /* AFOPLMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E0411F1FE218A300BE0B5B /* AFOPLMainController.m */; };
@@ -95,6 +95,7 @@
 		243EA13823331FAC00A15C48 /* libAFOUIKIT.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libAFOUIKIT.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		243EA13A23331FAC00A15C48 /* libAFOViews.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libAFOViews.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		243EA13C23331FBF00A15C48 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		243EA1522333293400A15C48 /* AFOPlayListForeign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFOPlayListForeign.h; sourceTree = "<group>"; };
 		2446ED11201979DC00FD5012 /* AFOPLMainController+Aspects.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AFOPLMainController+Aspects.h"; sourceTree = "<group>"; };
 		2446ED12201979DC00FD5012 /* AFOPLMainController+Aspects.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AFOPLMainController+Aspects.m"; sourceTree = "<group>"; };
 		2446ED182019818100FD5012 /* AFOPLMainController+AFOPLMainManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AFOPLMainController+AFOPLMainManager.h"; sourceTree = "<group>"; };
@@ -108,7 +109,6 @@
 		2494B0BC200D993B00B7816B /* AFOPLCorresponding+SQLite.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AFOPLCorresponding+SQLite.m"; sourceTree = "<group>"; };
 		2494B0C0200D9EC100B7816B /* AFOPLCorresponding+GCD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AFOPLCorresponding+GCD.h"; sourceTree = "<group>"; };
 		2494B0C1200D9EC100B7816B /* AFOPLCorresponding+GCD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AFOPLCorresponding+GCD.m"; sourceTree = "<group>"; };
-		24E041161FE2183B00BE0B5B /* AFOPlayListForeign.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOPlayListForeign.h; sourceTree = "<group>"; };
 		24E041171FE2183B00BE0B5B /* AFOPlayListForeign.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOPlayListForeign.m; sourceTree = "<group>"; };
 		24E0411E1FE218A300BE0B5B /* AFOPLMainController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOPLMainController.h; sourceTree = "<group>"; };
 		24E0411F1FE218A300BE0B5B /* AFOPLMainController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOPLMainController.m; sourceTree = "<group>"; };
@@ -184,7 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				240BAB371FE1222400D58435 /* AFOPlaylist.h */,
-				24E041161FE2183B00BE0B5B /* AFOPlayListForeign.h */,
+				243EA1522333293400A15C48 /* AFOPlayListForeign.h */,
 				243EA12B23331ADD00A15C48 /* foreign */,
 				243EA12E23331B1B00A15C48 /* controller */,
 				243EA125233319A300A15C48 /* viewModels */,
@@ -343,12 +343,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				240BAB391FE1222400D58435 /* AFOPlaylist.h in Headers */,
-				24E041181FE2183B00BE0B5B /* AFOPlayListForeign.h in Headers */,
 				245B4EB121C3E95B007608AC /* AFOPLEditMenuView.h in Headers */,
 				24F36E5A1FFDC76600224A3E /* AFOReadDirectoryFile.h in Headers */,
 				24F428D61FFDDC98009F3F32 /* AFOPLMainCellDefaultLayout.h in Headers */,
 				2427228321C7E0B900E46946 /* AFOPLMainControllerCategory.h in Headers */,
 				24F928E9200C8B65007ADAA4 /* AFOPLThumbnail.h in Headers */,
+				243EA1532333293400A15C48 /* AFOPlayListForeign.h in Headers */,
 				2408BB512008A37E0049060F /* AFOPLSQLiteManager.h in Headers */,
 				24EDFA1D2004A7940071AF43 /* AFOPLCorresponding.h in Headers */,
 				2459239D1FE132B00094C3E0 /* AFOPlayListNavigationController.h in Headers */,
