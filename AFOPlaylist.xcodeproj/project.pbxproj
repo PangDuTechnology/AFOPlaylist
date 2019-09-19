@@ -601,6 +601,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CA41F655DFC22BB9E3DF2D90 /* Pods-AFOPlaylist.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -636,6 +637,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 923BB32E40C8B534224662AF /* Pods-AFOPlaylist.release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;

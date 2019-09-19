@@ -8,9 +8,13 @@ PODS:
   - AFOFoundation (1.0.6)
   - AFOGitHub (0.0.7)
   - AFORouter (0.0.4)
-  - AFOSQLite (0.0.7)
+  - AFOSQLite (0.0.9):
+    - FMDB
   - AFOUIKIT (0.0.6)
   - AFOViews (0.0.2)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
 
 DEPENDENCIES:
   - AFOFFMpeg
@@ -27,15 +31,17 @@ SPEC REPOS:
     - AFOSQLite
     - AFOUIKIT
     - AFOViews
+    - FMDB
 
 SPEC CHECKSUMS:
   AFOFFMpeg: f087899555c35a7d9a8bf04b99fc1533c0ceb4f5
   AFOFoundation: a5792ce9496c1665ae08918c1f9bb691ece3b291
   AFOGitHub: 72827902cb9b9409d35877482a7fa8b64e252e42
   AFORouter: dc40925d83908af499af28b9c988efb56ea28f89
-  AFOSQLite: 5a329785028e78ddfc46a5802f19f995d9eff5ce
+  AFOSQLite: 6ca58807832f394271ea9783259122c4b2fa74a9
   AFOUIKIT: 9feceb7972ab234f42e744e0efe783832805e3db
   AFOViews: e163b3141ed826d28d47c2a47cdbc51d0c399a54
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
 
 PODFILE CHECKSUM: 06b76dc5e75c89210d3fbf98accf22c809a93564
 
