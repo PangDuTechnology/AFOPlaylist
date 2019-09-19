@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "AFOPlaylist"
-  s.version      = "0.0.9"
+  s.version      = "0.0.10"
   s.summary      = "main view."
 
   # This description is used to generate tags and improve search results.
