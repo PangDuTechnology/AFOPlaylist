@@ -1,1 +1,1 @@
-../../../AFOFFMpeg/AFOFFMpeg/AFOMediaPlayController.h
+../../../AFOFFMpeg/AFOFFMpeg/media/play/AFOMediaPlayController.h
