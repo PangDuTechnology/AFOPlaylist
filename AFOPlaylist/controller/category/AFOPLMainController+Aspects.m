@@ -23,7 +23,7 @@
                                                                                                                                                                      @"direction":@(screen)
                                                                                                                                                                      }];
         NSString *newString =[[AFORouterManager shareInstance] settingRoutesParameters:@{
-                                                                                         @"controller" : @"AFOMediaPlayController",
+                                                                                         @"modelName" :   JLRouteFunctionPlaylist,                                        @"controller" : @"AFOMediaPlayController",
                                                                                          @"present" : NSStringFromClass([self class]),
                                                                                          @"action" :@"push",
                                                                                          @"value" : path,
