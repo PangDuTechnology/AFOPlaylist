@@ -100,7 +100,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   AFORouter:
-    :commit: 6de163bf72876277ac2a7c7e7853596f8530ab37
+    :commit: 52d8d1c2ccbdf6447c430b8872c11b322211dda7
     :git: "/Users/xianxueguang/Documents/GitHub/AFORouter"
 
 SPEC CHECKSUMS:
