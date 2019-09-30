@@ -31,29 +31,27 @@
                                      @"title" : name,
                                      @"direction" : @(screen)
                                      };
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[self convertToJsonData:dictionary]]];
+        NSString *base = @"file://";
+        base = [self addQueryStringToUrl:base params:dictionary];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:base]];
     } error:NULL];
 }
-- (NSString *)convertToJsonData:(NSDictionary *)dict{
-    NSError *error;
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:&error];
-    NSString *jsonString;
-    
-    if (!jsonData) {
-        NSLog(@"%@",error);
-    }else{
-        jsonString = [[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
+- (NSString*)addQueryStringToUrl:(NSString *)url params:(NSDictionary *)params {
+    __block NSMutableString *urlWithQuerystring = [[NSMutableString alloc] initWithString:url];
+    // 转换参数
+    if (params) {
+        [params enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+            NSString *sKey = [key description];
+            NSString *sVal = [[[params objectForKey:key] description] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+            // 需要添加 add ?k=v or &k=v ?
+            if ([urlWithQuerystring rangeOfString:@"?"].location == NSNotFound) {
+                [urlWithQuerystring appendFormat:@"?%@=%@", sKey, sVal];
+            } else {
+                [urlWithQuerystring appendFormat:@"&%@=%@", sKey, sVal];
+            }
+        }];
     }
-    
-    NSMutableString *mutStr = [NSMutableString stringWithString:jsonString];
-    //    NSRange range = {0,jsonString.length};
-    //    //去掉字符串中的空格
-    //    [mutStr replaceOccurrencesOfString:@" " withString:@"" options:NSLiteralSearch range:range];
-    NSRange range2 = {0,mutStr.length};
-    //去掉字符串中的换行符
-    [mutStr replaceOccurrencesOfString:@"\n" withString:@"" options:NSLiteralSearch range:range2];
-    
-    return mutStr;
+    return urlWithQuerystring;
 }
 - (void)dealloc{
     NSLog(@"AFOPLMainController+Aspects dealloc");
