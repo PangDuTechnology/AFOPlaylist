@@ -22,21 +22,21 @@ PODS:
   - AFOFFMpegLib/include/libavutil (0.0.22)
   - AFOFFMpegLib/include/libswresample (0.0.22)
   - AFOFFMpegLib/include/libswscale (0.0.22)
-  - AFOFoundation (1.0.7):
-    - AFOFoundation/array (= 1.0.7)
-    - AFOFoundation/bundle (= 1.0.7)
-    - AFOFoundation/define (= 1.0.7)
-    - AFOFoundation/dictionary (= 1.0.7)
-    - AFOFoundation/sandbox (= 1.0.7)
-    - AFOFoundation/string (= 1.0.7)
-    - AFOFoundation/weak (= 1.0.7)
-  - AFOFoundation/array (1.0.7)
-  - AFOFoundation/bundle (1.0.7)
-  - AFOFoundation/define (1.0.7)
-  - AFOFoundation/dictionary (1.0.7)
-  - AFOFoundation/sandbox (1.0.7)
-  - AFOFoundation/string (1.0.7)
-  - AFOFoundation/weak (1.0.7)
+  - AFOFoundation (1.0.8):
+    - AFOFoundation/array (= 1.0.8)
+    - AFOFoundation/bundle (= 1.0.8)
+    - AFOFoundation/define (= 1.0.8)
+    - AFOFoundation/dictionary (= 1.0.8)
+    - AFOFoundation/sandbox (= 1.0.8)
+    - AFOFoundation/string (= 1.0.8)
+    - AFOFoundation/weak (= 1.0.8)
+  - AFOFoundation/array (1.0.8)
+  - AFOFoundation/bundle (1.0.8)
+  - AFOFoundation/define (1.0.8)
+  - AFOFoundation/dictionary (1.0.8)
+  - AFOFoundation/sandbox (1.0.8)
+  - AFOFoundation/string (1.0.8)
+  - AFOFoundation/weak (1.0.8)
   - AFOGitHub (0.0.10):
     - AFOGitHub/Aspects (= 0.0.10)
     - AFOGitHub/GCDMulticastDelegate (= 0.0.10)
@@ -74,7 +74,7 @@ PODS:
 
 DEPENDENCIES:
   - AFOFFMpeg
-  - AFOFoundation
+  - AFOFoundation (from `/Users/xianxueguang/Documents/GitHub/AFOFoundation`)
   - AFOGitHub
   - AFORouter (from `/Users/xianxueguang/Documents/GitHub/AFORouter`)
   - AFOSQLite
@@ -84,7 +84,6 @@ SPEC REPOS:
   trunk:
     - AFOFFMpeg
     - AFOFFMpegLib
-    - AFOFoundation
     - AFOGitHub
     - AFOlibyuv
     - AFOSQLite
@@ -95,18 +94,23 @@ SPEC REPOS:
     - libxvidcore
 
 EXTERNAL SOURCES:
+  AFOFoundation:
+    :git: "/Users/xianxueguang/Documents/GitHub/AFOFoundation"
   AFORouter:
     :git: "/Users/xianxueguang/Documents/GitHub/AFORouter"
 
 CHECKOUT OPTIONS:
+  AFOFoundation:
+    :commit: cc4a1ff1d229fa8525953bc9661b08b4d7329be9
+    :git: "/Users/xianxueguang/Documents/GitHub/AFOFoundation"
   AFORouter:
-    :commit: 52d8d1c2ccbdf6447c430b8872c11b322211dda7
+    :commit: dac6200a6b816c050fc4f7f3eec2d84931e683e8
     :git: "/Users/xianxueguang/Documents/GitHub/AFORouter"
 
 SPEC CHECKSUMS:
   AFOFFMpeg: 4cddf87d97104f8138d0c8dcee82eb9662c882de
   AFOFFMpegLib: 1d3079e6dc657e8b0cbba9ae21f5eb6a86b7bc1d
-  AFOFoundation: 984bbc3d77ca72b5fa604b879065a12c108567fb
+  AFOFoundation: 3908d8d762ce86095d411062b3f23897c848b63e
   AFOGitHub: 9b4aee6e56e6d3215ff93e879575649a01e19af4
   AFOlibyuv: 0de9914d223842fb3bd71df543efbc0b3de46d85
   AFORouter: 55453f046221d0750f38f55eb47e3eeb6739fa47
@@ -117,6 +121,6 @@ SPEC CHECKSUMS:
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   libxvidcore: 304cbb77e3398b9dfc7bd006d85196e39edc8185
 
-PODFILE CHECKSUM: 9f3b61080b52cdca1c9f914baf278e0629caf274
+PODFILE CHECKSUM: b1c6100dd7e691dea1b49f776cd5035578448830
 
 COCOAPODS: 1.8.0

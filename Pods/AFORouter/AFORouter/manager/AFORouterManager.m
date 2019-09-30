@@ -127,26 +127,45 @@
 #pragma mark ------
 - (NSString *)settingRoutesParameters:(NSDictionary *)dictionary{
     NSString *strResult;
-    NSString *strBase = [self.strScheme stringByAppendingString:@"/"];
+    NSString *strBase = [self.strScheme stringByAppendingString:@"://"];
     strBase = [strBase stringByAppendingString:dictionary[@"modelName"]];
     NSString *controller = dictionary[@"controller"];
     NSString *present = dictionary[@"present"];
     NSString *action = dictionary[@"action"];
     if (controller != nil && present != nil) {
-        strResult = [strBase stringByAppendingString:present];
-        strResult = [strResult stringByAppendingString:@"/"];
-        strResult = [strResult stringByAppendingString:controller];
-        strResult = [strResult stringByAppendingString:@"/"];
-        strResult = [strResult stringByAppendingString:action];
+        strResult = [[self slashString:strBase] stringByAppendingString:present];
+        strResult = [[self slashString:strResult] stringByAppendingString:controller];
+        strResult = [[self slashString:strResult] stringByAppendingString:action];
     }else{
         strResult = [strBase stringByAppendingString:controller];
-        strResult = [strResult stringByAppendingString:@"/"];
-        strResult = [strResult stringByAppendingString:action];
+        strResult = [[self slashString:strResult] stringByAppendingString:action];
     }
     if (dictionary.count > 0) {
-        strResult = [self addQueryStringToUrl:strResult params:dictionary];
+        strResult = [self addQueryStringToUrl:strResult params:[self paramesDictionary:dictionary]];
     }
     return strResult;
+}
+- (NSString *)slashString:(NSString *)baseString{
+    
+    return [baseString stringByAppendingString:@"/"];
+}
+- (NSDictionary *)paramesDictionary:(NSDictionary *)dictionary{
+    NSMutableDictionary *dic = [[NSMutableDictionary alloc] initWithDictionary:dictionary];
+    [dic removeObjectsForKeys:@[@"modelName",@"action",@"present"]];
+    return dic;
+}
+-(NSDictionary *)convertToDictionary:(NSString *)jsonStr{
+    NSData *data = [jsonStr dataUsingEncoding:NSUTF8StringEncoding];
+    NSDictionary *tempDic = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+    
+    return tempDic;
+}
+- (NSURL *)joiningTogetherUrl:(NSURL *)url{
+    NSString *baseString = [url absoluteString];
+    NSDictionary *dictionary = [self convertToDictionary:baseString];
+    NSString *urlString = [self settingRoutesParameters:dictionary];
+    NSURL *router = [[NSURL alloc] initWithString:urlString];
+    return router;
 }
 #pragma mark ------ UIApplicationDelegate
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(nullable NSString *)sourceApplication annotation:(id)annotation{

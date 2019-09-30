@@ -47,11 +47,12 @@
 
 /* Begin PBXBuildFile section */
 		044D2F482794E8BDE6E6D94261544AF4 /* AFOTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E7312ED356282D46D11710F845A9F6D /* AFOTabBarController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		050FB82CD4965FEEEAD173EFA7089549 /* NSString+Formatting.m in Sources */ = {isa = PBXBuildFile; fileRef = 13738486718FCFC0E7FF856496114307 /* NSString+Formatting.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		056CF71F0BDC397D4BB67E8C73FD94FB /* JLRRouteRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EA2146DC2BE0D21DC389602B9E0D623 /* JLRRouteRequest.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		06C2771E3BA976B3C07EBD11E6258506 /* JLRParsingUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = FC17BA106431DFA678CE2EC3A66DF22B /* JLRParsingUtilities.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		06E2C3FEBD40BB25CC318B697A8D10CF /* SDWebImageDownloaderOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1880BC265B5EDD9D29392A412075AAB6 /* SDWebImageDownloaderOperation.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		06FD963F93548D0FD58D232D69A1EAA7 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3421C3A4E95E779E82192B204A002D6E /* FMDatabaseAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		08992CA64E2866B2C1853D144CD911D6 /* NSString+Formatting.h in Headers */ = {isa = PBXBuildFile; fileRef = 706858272730FADC0F32254E3083A61B /* NSString+Formatting.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0938E0A92E1CC6CB3C49EE2F93723A78 /* AFOWeakInstance.h in Headers */ = {isa = PBXBuildFile; fileRef = A399756BED0C6DD48B74335F31CECA8A /* AFOWeakInstance.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		09B92117FED03B5F5BE3EA58BA7AEEA5 /* AFOAudioQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = B734E8AB5888F9AE7BFC3960D391EE1D /* AFOAudioQueue.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		0A43EBC4F7AB2FB744A74AFC18D56F29 /* SDWebImageCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 040A7BB01D877E1DA2CB842392B36FB7 /* SDWebImageCoder.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		0AC68A9D1CE4436C71C5878F6EF60995 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D4C6158FD5D54555FD61AB814204F6 /* View+MASAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -59,6 +60,7 @@
 		0D3FF2189FADE5AC1AE26F427E9DEA3C /* AFOWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 622015619B46ABACE3EE995CC3960FD0 /* AFOWindow.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		0F455579EE787295F051C4C6CFD6C255 /* AFOMediaPlayController+AFOOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CBA779C37B4EA517D442B120E91EDA /* AFOMediaPlayController+AFOOrientation.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		14CFD895003D9D5E8312BB531FB94ED5 /* MASUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 75E9091EA1A1684146AA730852643295 /* MASUtilities.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		152018295126CA1C806B9ADA5A06C3DB /* NSDictionary+AFOAbnormal.m in Sources */ = {isa = PBXBuildFile; fileRef = 71537EB00244F0729E6909FD0F33507F /* NSDictionary+AFOAbnormal.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		16DDB9A02C05D1F980F5E9E205439142 /* AFOMediaQueueManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F4D5E537112DD517297D1B58A26C8B16 /* AFOMediaQueueManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		17749C903910FB5E09D0372025433AE4 /* FMDB-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EA58361B4A4B9D8DC4BD1F76752E6685 /* FMDB-dummy.m */; };
 		178AB71942CEC94BCF58722174003DC4 /* UIScrollView+SVInfiniteScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E496BF7B4DC9D0C08F66C068BAE1128 /* UIScrollView+SVInfiniteScrolling.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -67,12 +69,15 @@
 		196FFE875D6A57EF09E72D19E45400EF /* SDWebImageImageIOCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = EAB254A7F3197E5E71D6606E96CFC31B /* SDWebImageImageIOCoder.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		19BC1624436E52AF66CD57BCA383066D /* SDImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 91217689C4E205FE7783AF61C10F9B51 /* SDImageCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		19EE444F763AD3CDFC1ABCCD4EB41ADF /* JLRRouteDefinition.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C9AC76358BF312815EC10F83B695A6D /* JLRRouteDefinition.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1A4E71BD904DC6DC93226264EC62A5B8 /* NSString+URLSchemes.h in Headers */ = {isa = PBXBuildFile; fileRef = A9A34F02FADD4324CBE4E2D0445EC609 /* NSString+URLSchemes.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		1A99CC6F236E99CB41802BBFEBD952CE /* AFOAudioPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D33F016924A3D19810B8FA29490EBA5 /* AFOAudioPacket.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1AAD934080271FDDD85FE6F182DE5859 /* NSMutableDictionary+AFOAbnormal.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF28A7F749CC8A794BB784B825A756A /* NSMutableDictionary+AFOAbnormal.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1D2CA8268AEBAB729030CBBE42EC4309 /* MASViewConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 11790BB5AA949C40D72D7ED551D2B23F /* MASViewConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		1D4403D663A5E657072EBEEC49423525 /* AFOGenerateImages.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AA2B5B800F8243D3B6AE861A3D24558 /* AFOGenerateImages.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1E5EAE21032656EC85EDF765F3F4D42A /* AFOAudioCache.m in Sources */ = {isa = PBXBuildFile; fileRef = DF34DDB6BE916BAD26FAAAC60C33322E /* AFOAudioCache.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1EF9BD9DE1304729A579667639EF0404 /* AFOPlayMediaManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA08C4E4519C76F4F2D5874B647558D1 /* AFOPlayMediaManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		203A91A853D5680E5499B302417C32FE /* AFOMediaYUV.h in Headers */ = {isa = PBXBuildFile; fileRef = BCBB7B19F2616773E72FF6978FEEFB31 /* AFOMediaYUV.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		21D1BD1F45A462C06E95D50FE96F9001 /* NSFileManager+AFOOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 0258D04047FFFDAEA83CEEF601CB53A2 /* NSFileManager+AFOOperation.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		22039E80ED452442B1EBF9B99878D9E9 /* SDWebImageCompat.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C61D95F052F62E7237802EC1F37A0AD /* SDWebImageCompat.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		23BE37CE493187079352FC43492F28E5 /* SDWebImageOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 75886C4006B90CEE512DFE5F88D1D789 /* SDWebImageOperation.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		23E6198E8C335A5558F3F6BB8E71B7AB /* AFOMediaSeekFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DE349ED22C7400E93BB8A59E6F9008 /* AFOMediaSeekFrame.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -84,47 +89,48 @@
 		2BD0E327AB5E4137AB9836989107B009 /* JLRParsingUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = BF41A855F3F9C4742B82F81416054CEA /* JLRParsingUtilities.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		2D27F9F5E0104919BA3073C7EF5E001B /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 36031E6DFA53E6489590F8D2F4AFED6A /* MASConstraintMaker.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		2D6AC5541A49F5CAE820140BFEDA7432 /* AFOAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 370D0438EC266F6005711F9A42DBD657 /* AFOAudioManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2DBA3E216837B28A29C414089857D74B /* AFOFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 61E96442FEA8FFD7DFA90DA934E7EB85 /* AFOFoundation.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		2DE5C06F4E3A1F56FC4EB1B9B3567232 /* UIImage+MultiFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FBC23007626EF8076AB7F8B80560A67 /* UIImage+MultiFormat.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		2E92A67828BB1E05DF780993C589CB52 /* AFOMediaErrorCodeManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 24F97504594BE72D60C1087D89F88DA5 /* AFOMediaErrorCodeManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		33D99ED00F89D615CC88B763219ABD9E /* NSString+URLParameter.h in Headers */ = {isa = PBXBuildFile; fileRef = C9FC4A04151D80F9F8976A554B58EE34 /* NSString+URLParameter.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		34603F0E4CA3118E487860C92A70BD70 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = E156E4EFF238E76C24AFC9F2893D555A /* FMDatabaseQueue.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		356B190A8C1502F0C8EA1D34B72ADB28 /* AFOMediaView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6134C4BB0DC423E053E817987AA8EC2C /* AFOMediaView.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		386368534DF1257CED1C6C958D59B5C5 /* NSFileManager+AFOSandBox.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D04071E939B97ACEF377B74C647649 /* NSFileManager+AFOSandBox.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		38F189C3E19C0EC2E26CA87298DCF809 /* NSData+ImageContentType.h in Headers */ = {isa = PBXBuildFile; fileRef = 90F545D7D54067244724E55F615F7556 /* NSData+ImageContentType.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		3AD50B99FA588CC6C9992A8797BFC33B /* AFOViews.h in Headers */ = {isa = PBXBuildFile; fileRef = 00BA0BB8AAA27C4398A707F7A29A12E1 /* AFOViews.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		3C673E39C0B3A83B808AB1A35CF0695F /* AFOMacroDefinition.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AF2615851B0A847D451598B4CC826C0 /* AFOMacroDefinition.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		3E192EA047F2582B8D56EA3C08875782 /* JLRRouteDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B5E14B2EC204805F10F0BD4D2651AD /* JLRRouteDefinition.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		3EE115023C34B71950C454425087BF01 /* AFOMediaFrameImport.h in Headers */ = {isa = PBXBuildFile; fileRef = A0BC61B34793C329F68FC3E9C9E01AA9 /* AFOMediaFrameImport.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		3F33BE10BDFEE1E12D1770651578B2FC /* AFOMediaTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FBF82121EAF981FF058E6B21D813E10 /* AFOMediaTimer.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		3F8FA9500F69FEEEFFD4C0968E7AC864 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 916014F9672B8C6757F91C1FE058A246 /* NSLayoutConstraint+MASDebugAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		418B34CF4909B031B1A7EC1384335410 /* NSMutableDictionary+AFOAbnormal.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AE5D01A6AEABF0F5331B84185BE61D /* NSMutableDictionary+AFOAbnormal.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		423962FED17CC9448DF83AE5364AE86F /* AFOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E1AD72BF4B009E42D81C30535E5C77 /* AFOViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		4458254F5CFD97A3B74E813C1178FCE3 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5B45440925EE1AF0478C2C932E7DFA /* NSArray+MASAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		458903F51F1A544BF398FB2A91CD7D82 /* AFOViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E090824B074F1A89122FBC29344155C2 /* AFOViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		45B2BE58728D48CE0367DFDE02E04877 /* AFOVideoFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F86F4567E9C5B1A109C91EB8212D66 /* AFOVideoFrame.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		487CDBFEDEB02B8D6EB00CDBB34EC3D6 /* AFOMacroDefinition.h in Headers */ = {isa = PBXBuildFile; fileRef = 7153C47D52C796B37E315E6369EE0FA7 /* AFOMacroDefinition.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4B93E8354A43D9DEE5656EB262C2B23D /* NSFileManager+AFOOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 195EB786F5DFE58843EFB0909CC2F526 /* NSFileManager+AFOOperation.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		4BD523F45566E284403BC0B108B4C19D /* AFOGenerateImages.h in Headers */ = {isa = PBXBuildFile; fileRef = 9ACA337A6570D5895DCF742D37D7E3DF /* AFOGenerateImages.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		4C071A054D22D265E28381FD3950C450 /* AFORouter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B374DB8D53CDFDAD8B00FFE9622F019 /* AFORouter-dummy.m */; };
 		4C40A484355479DE740EE53DFDF1233F /* SDWebImageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A3347B89EB5F042B56A2E2380AB9BC36 /* SDWebImageManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		4C8C31642E32583B649A3208502135B3 /* AFOCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C03071027AAD9D208342614A17E16BD7 /* AFOCollectionViewLayout.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		4CFF9B299838AB9A776CF0105312907A /* AFOMediaPlayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5070701A17784D636B920547F70E86C1 /* AFOMediaPlayController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4F4D09A0AC9F18C22B1795D0C9939010 /* NSString+Formatting.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B088559D518228D25A3EF07FB85234E /* NSString+Formatting.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		4F7F5DD6CEFD4708DD96E336DF2C8C8D /* NSArray+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 6301C9DE5AF161F186C07AD498818906 /* NSArray+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		51B6079F708DA309B8BDAFFA5DD38DBB /* SVPullToRefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B87835AD98769D00C535E33B357A386 /* SVPullToRefresh.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		51EABDF4418B9630551D02141A937836 /* NSString+Dictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 880BD749D6E7F4B26A3B9613E32CAA6B /* NSString+Dictionary.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		5277A91A1243195EC4CFA3B34CB45DB3 /* AFOMediaSeekFrame+Conditional.h in Headers */ = {isa = PBXBuildFile; fileRef = F5079389376A8D500346BEFC57F0DCA8 /* AFOMediaSeekFrame+Conditional.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		5344F75BED544F70F7E3C5811301D810 /* AFOCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 639AA3AE4D50BD77C288AB6994678299 /* AFOCollectionView.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		55D5486DF122BAEC0BC589AF09248F20 /* AFOMediaErrorString.h in Headers */ = {isa = PBXBuildFile; fileRef = 7444E47064C030BF6E2195167451A065 /* AFOMediaErrorString.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		55DE8161EEC73EE36D14A541ECA81B66 /* Masonry.h in Headers */ = {isa = PBXBuildFile; fileRef = AD9BB06AC93EAD323A69C965C0426B38 /* Masonry.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		56104FB5C1ABA240EE4A25BD77CBCE26 /* AFOAudioDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = AB212BF6F354FE30AB0D440576B414D4 /* AFOAudioDecoder.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		574F47787ACD78A73701B1AE29750301 /* UIScrollView+SVPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CAABCEFB3F27FA1BE7715987DE0744 /* UIScrollView+SVPullToRefresh.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		5762ED2D9569FF09E931D72C4E823690 /* NSString+Formatting.m in Sources */ = {isa = PBXBuildFile; fileRef = F315604D37DBDABA42F1CCF087B0FB19 /* NSString+Formatting.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		579D1A039FED99EE1F8601D3CCF6FB71 /* NSArray+AFOAbnormal.h in Headers */ = {isa = PBXBuildFile; fileRef = 7551FFCA0BE5773DE28AA5F26105B0FA /* NSArray+AFOAbnormal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		5A5C7ACAD16F54D698E6DDF619AA25EA /* Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = D761D338B3CC022ADC565E9B818B00D0 /* Aspects.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		5CD3AAFF23F256248CC13DD0EA609FA2 /* SDWebImageDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = C276EA53577252753EE2D53FBE4B9440 /* SDWebImageDownloader.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5DF83BA8C7197BAC7D2452FBFF7CE795 /* NSDictionary+AFOAbnormal.h in Headers */ = {isa = PBXBuildFile; fileRef = 38A64C4455CF2A1255693F184D81E849 /* NSDictionary+AFOAbnormal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		5EDD50655359EB01029CFF4A90E83BA2 /* FMDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EB89F96F9A4D0D27A30DC88620F392A /* FMDatabase.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		5F6994D4679C04B85C19B2D2071148DD /* AFOGitHub-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4557A4354D09510E743F85B9FD6A117C /* AFOGitHub-dummy.m */; };
-		62F0A4A61BB1A05DAEABBFE7C8010DDC /* NSFileManager+AFOSandBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9EFF30579C20A54D9FD61BFC8495D5 /* NSFileManager+AFOSandBox.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		63BC52BAAAA3098F9E9752347D3BF908 /* AFOSQLite-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA249768136B730D550B4312C6EBA31 /* AFOSQLite-dummy.m */; };
-		640638009EA41B33EC46EC7A4ED06C71 /* AFOFoundation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7829C750EEE4EC97BECAAFDA6A165E66 /* AFOFoundation-dummy.m */; };
-		666872E2B47A8EE75DDB2A25EBE49FEC /* AFOWeakInstance.h in Headers */ = {isa = PBXBuildFile; fileRef = CF963FA15664287A454578CAF0C007D9 /* AFOWeakInstance.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6552C89B23D44B06FFCF1461D534B10F /* NSBundle+AFOCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE9B1C986BE6D10BA29ABADD36F4338 /* NSBundle+AFOCategory.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		666F1486F9FDBA7819DFDEC36D544E23 /* AFORouterNamesPace.h in Headers */ = {isa = PBXBuildFile; fileRef = D318E579A6D42162226CCF9F7103ED37 /* AFORouterNamesPace.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		6759FE80DFA91784AF0F1E74B2E8CFB6 /* NSFileManager+AFOOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 516A1387C1760A17B2B682ED9BC98A90 /* NSFileManager+AFOOperation.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		68F76E3C107CBE45A63101EC583772F5 /* UIImage+ForceDecode.h in Headers */ = {isa = PBXBuildFile; fileRef = C21808414D3EE34F3263B6D8973D5FF2 /* UIImage+ForceDecode.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		695F45B16AAD2F20417A9A1E3E90717B /* AFOFFMpeg.h in Headers */ = {isa = PBXBuildFile; fileRef = 23D32CD8EF3A2685505C6B52C060E47F /* AFOFFMpeg.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		6AFEDF366503C9A3964B682810C821B3 /* AFOFMDBForeignInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 33C4DB7301F0D75781DD987DB5EE4C5D /* AFOFMDBForeignInterface.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -133,6 +139,7 @@
 		6D8E447F7B5D0C517D1A0EF6D5612F42 /* AFOPlayMediaManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F4FF422A2B8BD902FC823B3EA14D0296 /* AFOPlayMediaManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		6DAD6545C47A11B2405EFFCF7ABDFE1E /* AFOUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = FAFE85949503A1C33AD34A67C26DAF2F /* AFOUIKit.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		6E1A70E64745E754856F123B67C32790 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = B662531ACFC380B93EC2744F4B6C8931 /* MASViewAttribute.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6E47C56845D2E20C9463D8183498BB16 /* NSString+Dictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 3180173B1B6AC1EBB3625C2B21EE7ADD /* NSString+Dictionary.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		6FB2E46B46D9EE7F98C8A7F625927702 /* NSImage+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 5781D1671EB94E8DBB66D8235EB155BC /* NSImage+WebCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		7405E169371C0B2BB91C67124D977E9E /* MASLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = FD32683F18FE9C3E3A91CB6C242D96C3 /* MASLayoutConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		7499533092C7ABA813263E003ADEB94A /* AFOAudioSession.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCA338FBFB956B227F8A0C460DACA81 /* AFOAudioSession.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -144,7 +151,6 @@
 		79597535BB9CC02AE7F37DB8AF0EB25C /* UIButton+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = B34BC24DF737825EEC2B7C758B30C016 /* UIButton+WebCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		79A895A744254BED7BCDF83282B01D11 /* UIView+WebCacheOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = C1045B892023DA2C0E39992332A6A3F3 /* UIView+WebCacheOperation.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		7A6D089C0A17B9BC805BD5F6D400878E /* UIImage+GIF.h in Headers */ = {isa = PBXBuildFile; fileRef = ED014ECD346BEEAD9812FA1F94F91B9C /* UIImage+GIF.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		7B8245939298D6CE5F290F32072EFC42 /* NSArray+AFOAbnormal.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AD791A6FEBABBB97E90E04700E0538 /* NSArray+AFOAbnormal.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7D53B5ED756136B2927A6FBC3407EF15 /* View+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 13A24B6255B8FFFBDF6CD310F12D87BE /* View+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		7E453A8BA18C0A15E1A3C8F84B2CB5D9 /* AFOVideoFrameRGB.h in Headers */ = {isa = PBXBuildFile; fileRef = 32D915842C22E85A5D5E79462A5A7631 /* AFOVideoFrameRGB.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		7EB4AAF893FBB0E8CC2BE8A97DF7A7D7 /* JLRRouteHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 077425EE6BF08F23836DDB41BC314C86 /* JLRRouteHandler.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -158,16 +164,13 @@
 		85734D173CA42F7EEC7C1C67CDBA24F8 /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 692F4D9642CBF8CE23A9925138909CDE /* NSArray+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		8886F31D4BDF22552B2BAA4EF3FF2C9A /* FMResultSet.h in Headers */ = {isa = PBXBuildFile; fileRef = DFB2923EBA83FA647D5BCB43E8B01FFB /* FMResultSet.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		8AAA22B2CFC75F2F6E66616D3B6625B6 /* AFOAudioCache.h in Headers */ = {isa = PBXBuildFile; fileRef = B3F5B2D084C3E2116A67A3CECA660EBB /* AFOAudioCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		8C13C0BAC088BE148C1B97D1335CF770 /* NSDictionary+AFOAbnormal.m in Sources */ = {isa = PBXBuildFile; fileRef = DA28BE0BE4DD8D4A4177B77426C42575 /* NSDictionary+AFOAbnormal.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		8D51C2176DF88D9EEE5AC73858EFF520 /* AFOMediaSeekFrame+Conditional.m in Sources */ = {isa = PBXBuildFile; fileRef = 775FB1B694D99B64994A6AD47EDE92FE /* AFOMediaSeekFrame+Conditional.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		8DE347F791ADACC36EE153F21898451D /* AFONavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 198E4FFDC3D49CEE98E07FABE0A5A571 /* AFONavigationController.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		8F8B9CBB2EFECC4EB36791C87478F230 /* GCDMulticastDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8B88228336DFC1157C972B4BB81D19 /* GCDMulticastDelegate.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		903C392773C6D0BA1856685EADC5A25B /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = E804EBD7676FA7401081B43868A31EC1 /* MASViewAttribute.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		91D874D03F278EC67FBF324DA19B0463 /* AFOMediaFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = 8345248CE877AE24ED60AF51A4AAEEC9 /* AFOMediaFrame.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		925282AACD6B6B90E92D07CD8D333FA2 /* NSMutableArray+AFOAbnormal.m in Sources */ = {isa = PBXBuildFile; fileRef = 899FF0B6FE7FA679D44BDCCCB0BCEA4A /* NSMutableArray+AFOAbnormal.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9359DB9E2A1433BF776189193B727B14 /* AFOGitHub.h in Headers */ = {isa = PBXBuildFile; fileRef = DB4D80C90EE504F2AB7B4D07C7D9DD75 /* AFOGitHub.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		95860294C80A9FB4BA96BEBED88B759B /* SDWebImagePrefetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = C38ACAA5109DC28D8D4429B337D29CDB /* SDWebImagePrefetcher.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		96088E81A4AEC2373F807A03D8625AE6 /* NSMutableArray+AFOAbnormal.h in Headers */ = {isa = PBXBuildFile; fileRef = 097D97B21CDFE2438A63A6214428CE9F /* NSMutableArray+AFOAbnormal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		961F1010CF960BAF0C64F59EF50F78B2 /* AFOMediaOpenGLView.h in Headers */ = {isa = PBXBuildFile; fileRef = 87DD0EA2872B0FDBD41C56DC3A533CC7 /* AFOMediaOpenGLView.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		963A5BA199A76C0CAD4759E9ED60261A /* AFOMediaPlayController.h in Headers */ = {isa = PBXBuildFile; fileRef = 08708D0B9EA15E6E6FAB144510ED0A12 /* AFOMediaPlayController.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		9702FEB76127692E57B916FBE9350412 /* AFOMediaConditional.m in Sources */ = {isa = PBXBuildFile; fileRef = A3644DB41EE436D8C9ABB3B3A4E1B3C9 /* AFOMediaConditional.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -177,35 +180,36 @@
 		9BE34060D8D15AA1A1B887022AADC4F1 /* AFOMediaTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C76DAE63A9E550518A3CD99C3ADD58D /* AFOMediaTimer.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9C4C41C6D49AC7D53A92D294BC0C9EDA /* INTUAutoRemoveObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2C6414A620634F3E361305882DAE94 /* INTUAutoRemoveObserver.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9DCCC64BCBE6B19EB81415280B67AF8F /* SDWebImageCoderHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CDB73500C9413A73813138F5CCC787A /* SDWebImageCoderHelper.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9E77AD99F82FA58553D1EA3105CC969E /* NSBundle+AFOCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B87857C0CC8304574005DCF8B1B2230D /* NSBundle+AFOCategory.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A06C5B9F24D570FFC9036CF242BF2EC5 /* AFOAudioQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B9FC60A4EDFB0062681442AFE19414 /* AFOAudioQueue.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A1FD0E42C32833240CA781C65B922B3B /* AFOMediaManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAFBCBC68BC8639F5C2167742DC124B /* AFOMediaManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A21C529EEFED582F119DB1110237E6CF /* AFOCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E00293F1C87F846ADDDC148D5495DC9 /* AFOCollectionView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A3484FCB2C44D8926966DBE73823E321 /* NSFileManager+AFOSandBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 853A0FCB724DA1A6DF35F0DE78DD7760 /* NSFileManager+AFOSandBox.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A457539BFF44A933271DDEE5E603523B /* AFOTabBarController.h in Headers */ = {isa = PBXBuildFile; fileRef = BB1E3D9C57A8C38D6BBF6874AA0AF414 /* AFOTabBarController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A46582973E2EE74CD76C069C565A37B3 /* NSString+URLParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B39FCA619157D23C3A3D91529F00B4 /* NSString+URLParameter.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A4BF719F684008F4F4C87B62A2E44A06 /* AFOMediaPlayController+AFOOrientation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F55D0FE9038F42B58F0B64E3A3746F6 /* AFOMediaPlayController+AFOOrientation.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A4FFBEAA5E9916688D1D32CED63FA41E /* SDWebImageCodersManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B0798BC7E07C9D3CFA4A17C23B52E76 /* SDWebImageCodersManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A53245EF8F3C116E2A5BAACCC7CC88AD /* AFOVideoFrameYUV.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A9660C4F0A99B9839E9291F2FF4081 /* AFOVideoFrameYUV.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A5583450160729634BACE33C0B74362D /* UIScrollView+SVInfiniteScrolling.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F64490855C73140E9220D94B60C53DD /* UIScrollView+SVInfiniteScrolling.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A55F8D43ACF4C12A465202A07D41251B /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6A681AFA71AFA9E29059B5844C7845 /* MASViewConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		A715FEDCDAA43A1A98AFC55A17BD6558 /* NSBundle+AFOCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1F0703C501795292D51E80736492B3 /* NSBundle+AFOCategory.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A774FA9BD11E6E12339F0DD6F722BE3B /* AFOAudioThreadDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 00DE04CB03B31A6B5443094B3C05394C /* AFOAudioThreadDecoder.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A7D174B5DB6ACB32685359E63BE0D898 /* AFOCollectionViewLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA8FD3EFA40A435873F0043CC95AD92 /* AFOCollectionViewLayout.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A8EA721AA8A85869010C2CBDA726CFB2 /* AFOFoundation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C5705CA22E812593FFBB02AE4BE9AB7D /* AFOFoundation-dummy.m */; };
 		ABB42BDD65149FAE7BFE91DAA3152C52 /* UIScrollView+SVPullToRefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = 70C6B158489AF1B725710CB6FD664EA8 /* UIScrollView+SVPullToRefresh.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		AC83FE8B29053F0D408276CBF2B82ED1 /* NSMutableDictionary+AFOAbnormal.h in Headers */ = {isa = PBXBuildFile; fileRef = DD57033D482AD42CA0D040581AD6F264 /* NSMutableDictionary+AFOAbnormal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		ACC278696B1415A3CD6CB9BC9D794B0F /* AFOWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5D5BFF3EA3B6D075A5A906D7A3EA87 /* AFOWindow.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		ACC7770E7475CB95E403B2BC787FAF1B /* JLRRouteRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F074383133857960DDC43639D4822E29 /* JLRRouteRequest.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		ADD36CE36338025A9BC353675351A629 /* SDWebImageFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = C72A18F05FE65B9DE0A215C2FA4BD453 /* SDWebImageFrame.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B28767E679B70392CA3E518EDBB28436 /* AFOMediaPlayControllerCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 76C3ECA3E304866EDE45035644D99D73 /* AFOMediaPlayControllerCategory.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B2D098510CC6734345B988C488CD37D9 /* FMDatabaseAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 12BDD9BFD4513F3CE6B0CF1586E94C65 /* FMDatabaseAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		B48E4B87D613C741991E2CAA6E145EC1 /* NSArray+AFOAbnormal.h in Headers */ = {isa = PBXBuildFile; fileRef = FDAF993276E5BA49AB1C5FFF8E088281 /* NSArray+AFOAbnormal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B560551AD632B93F860A1FA2234C66B0 /* MASConstraintMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = D33800C4D2A21D4732E47D9991551DF1 /* MASConstraintMaker.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B7FC777B47B6372680D4D6735E67DDE6 /* AFOViews-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C1EB5F6069C1F79C08E38873F0A23B /* AFOViews-dummy.m */; };
 		B9CC0218F6739F136635416517A5F1C9 /* AFOMediaFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6309333B4AA07E7EDA8A3CB0F14A6BF1 /* AFOMediaFrame.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		BA19D27FE778BB563AE9382044F4D098 /* AFOMediaThumbnail.h in Headers */ = {isa = PBXBuildFile; fileRef = E4EC46415B9EF6A25EDF3F1D19C55580 /* AFOMediaThumbnail.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		BAC5930AE88C95C6214B85C322B15AAE /* GCDMulticastDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 9ABAFA6E2FEB0933427B335379E38C62 /* GCDMulticastDelegate.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		BAD6F6FF94E436F502004842B1D9BEEE /* JLRRouteResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = E9541EE99E7F767BD4B082260CC07B8A /* JLRRouteResponse.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		BB22E51184C76D2FA1B0F14FE5958417 /* AFOFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 137901953E0C9C1843A78B84E6C0EB98 /* AFOFoundation.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		BC3B56376F77231FBE8E59D4A772BF8D /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 205A50EAD615664A9AF53211E65ED308 /* FMDatabase.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		BC7A898B3EE3F157D2BBD47AB7DDA344 /* AFORouterManager+StringManipulation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ADB5C3597C340B4B700F35FF46D56BC /* AFORouterManager+StringManipulation.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BD9C0972D1B118C05ADA8B8796FF47B7 /* NSFileManager+AFOSandBox.h in Headers */ = {isa = PBXBuildFile; fileRef = EB6500B14A0477B7DD0C0788B41DB7D7 /* NSFileManager+AFOSandBox.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		BDF9E0ADE20419BA927E9714287547C2 /* AFOAudioManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CABCB7B4C8C3394797835EF423DA87F /* AFOAudioManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C16C281559336A1D724ADA49B3148FD4 /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 5942FD83C2D9C27CAF5010444C09CFD9 /* MASConstraint+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C1A94C9861441D2A11BFFC36D49228B9 /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = F825F9512866850AFB56EC6245BA4B12 /* MASCompositeConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -213,30 +217,31 @@
 		C299C179917BC281A0276142A49B5557 /* JLRRouteResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDFA0650FC6B05C589A2AA110C64D7A /* JLRRouteResponse.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		C330E8F950474E4D432618549590AA0E /* AFOVideoAudioManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EB859C7E82E9DDD1AA255A638542C98 /* AFOVideoAudioManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C33B20BE81F62DCFCF454437FF5659D7 /* AFOAudioDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CA8EB3CF609CEFE9B9C9FFCFD75D4E6 /* AFOAudioDecoder.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		C35763AA76ACC14DC2285BB3882CC133 /* NSFileManager+AFOOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = E90178B31AF9FC4D0622C1A28B134917 /* NSFileManager+AFOOperation.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C3CE9CAC2F4E14C2DA3482A6B3F9A816 /* UIView+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 575FD95DC01BC95B72D0A2E1412D5582 /* UIView+WebCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C3CFF4F47D9833C267B2EB7DB3EC1701 /* AFOVideoFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C8F2B8D1104EE4F51A2D7ABD9EA0AE /* AFOVideoFrame.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C3DC8EA3A3F9148F32EF6966AA4659B3 /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B72F294C4094F09657BB6B99325AA22 /* NSLayoutConstraint+MASDebugAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C5370B7207D49B366DD6F35F35063F8D /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 03671B6E1C27C076AE15469BACDFE066 /* View+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		C6933593BC5872CDC13C0C9760A346EB /* NSDictionary+AFOAbnormal.h in Headers */ = {isa = PBXBuildFile; fileRef = 53110B952C086DA6053315863DF5D6EA /* NSDictionary+AFOAbnormal.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C863B2266971EF2A32ADC66FC20A5DDE /* NSMutableDictionary+AFOAbnormal.h in Headers */ = {isa = PBXBuildFile; fileRef = F81D598A129490285E49504B39BDA9AA /* NSMutableDictionary+AFOAbnormal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C89FB12102089F3E433665BEBA422DD8 /* AFOFMDBForeignInterface+Dictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 8812ED71F3DBC1A988F0D372E1B12028 /* AFOFMDBForeignInterface+Dictionary.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		CA0526AEB0782DEDF6F57E10E28EE2AB /* AFORouter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F447401C6FBA8143FE9D5E87877E92F /* AFORouter.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		CAC2240D91DB014EB46FA389C7E42438 /* AFOMediaForeignInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = A78B41784D54578B768C11B228CD48BB /* AFOMediaForeignInterface.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		CB37AC7DEA026343562DA9B25B965183 /* AFOAudioOutPut.m in Sources */ = {isa = PBXBuildFile; fileRef = D996B9B12CA2F858DE05FF972D1DFC8A /* AFOAudioOutPut.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		CBEC961BF8A1D4D0E27F2991C167C2CB /* NSMutableArray+AFOAbnormal.m in Sources */ = {isa = PBXBuildFile; fileRef = EF34B215AA8F7FDD1BFA4AEA845B90E0 /* NSMutableArray+AFOAbnormal.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D0512E0DEEC8BEE8CA2646405EE97DA3 /* AFOFMDBForeignInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2AB61105D8634A211B65EABC3EA35E /* AFOFMDBForeignInterface.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D2383D4FB137C09AA4F23401CB51F160 /* AFOMediaOpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CC3EC78D9D70E4C33AA53B2DF07E1D /* AFOMediaOpenGLView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		D32E89D4540F3DF66D83F47358490264 /* NSBundle+AFOCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 2785CDD7745AEAA09B917770BCDFF73C /* NSBundle+AFOCategory.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		D581201A3D38F6A8B7543527951D14B5 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD907496E5EF190F5ECFE5441D1F5E7 /* MASLayoutConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D67DB57887EACAB414F9D8641E3FE85A /* AFOProgressSliderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACB04700A787DBD16F275636B4FB95D /* AFOProgressSliderManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D6EA06AD298FBA0D16170BD7A4D9EE08 /* AFOFMDBForeignInterface+SQLite.m in Sources */ = {isa = PBXBuildFile; fileRef = EA64E00ADC15C0F9FC14528FBB98B1F5 /* AFOFMDBForeignInterface+SQLite.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D8AB3F261609170FEE89A72C23B5F224 /* FMDB.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BD117EC4FD14D19F6660961955D847C /* FMDB.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		D91A719209DD804ED3C94ED09C0A2D86 /* AFOMediaPlayController+AFOGestures.h in Headers */ = {isa = PBXBuildFile; fileRef = B6C8663B189789AF5F37B1F8E4E4EDBD /* AFOMediaPlayController+AFOGestures.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DA433BCB32563E43394F9E5CBC077E36 /* NSString+URLSchemes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F56BA2BDA02F4B09FE56AE660C108B5 /* NSString+URLSchemes.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		DB230B3A1539D2E7F85A77C0D0AC95E4 /* AFORouterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 13D884B96791D255A328C8BBB95242F3 /* AFORouterManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		DB61B99833FAE78573F556BFE0D7841F /* UIImageView+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 1214D72918743A108FD5F8E4CFD0A785 /* UIImageView+WebCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		DD7DB1073256B588D17B293817B67931 /* INTUAutoRemoveObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DAE4C6B287D0EFFC1ECACD89AFDDBE6 /* INTUAutoRemoveObserver.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		DFB06B7B3D7F3C86DA464BE4A4F8763A /* AFOMediaControlView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FB6B29988C612BB25E6E20F441BDFD4 /* AFOMediaControlView.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E106F32BAF65C1D24BF8D1BBC8254C11 /* AFOMediaErrorCodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A773E47215803302E5FEEB059D6082 /* AFOMediaErrorCodeManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		E132F1DA0B7716AC794B5585A40CCDFA /* AFOMediaYUV.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2038E245DC3A148EE93931D4586715 /* AFOMediaYUV.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E298BEB78A6C012DA2C33C02B5627994 /* NSArray+AFOAbnormal.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C9D88B25E0A5631FEF8AC5250709BB /* NSArray+AFOAbnormal.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		E3F2E69358ED180280BFF159DC84A958 /* AFOAudioOutPut.h in Headers */ = {isa = PBXBuildFile; fileRef = F05FBDD1BA2B114BFABE9848E614F556 /* AFOAudioOutPut.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E4D7DAD2E5CBB02BBA1DEFC40E40B2EC /* FMDatabaseQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = E9A8A5963F0F981D15ECDF83DBB7D760 /* FMDatabaseQueue.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E508D1D33101A32B13CC58C0DE1A6AF9 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = F402E2ACD7CA33E0E9AA5A191D45DFFA /* FMDatabasePool.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -248,6 +253,7 @@
 		EEE216D015EB2C48FB8B87AE53B57E1C /* AFOFMDBForeignInterface+Dictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A0EAEAF03B0221CFAB5D1317465523F /* AFOFMDBForeignInterface+Dictionary.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		F21233D9681A6776961DFEA52881E23D /* JLRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = 5736AD48EFB6F986CF4A3B06749B213B /* JLRoutes.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F238843178149834E4B2C7B054CC2D0D /* AFOVideoAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E55D3A432CCB51054A973ACDB5BD49 /* AFOVideoAudioManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F2C2B05189F1A158C52F04842076A99E /* NSMutableArray+AFOAbnormal.h in Headers */ = {isa = PBXBuildFile; fileRef = 24801738ACD36C0B507EB80564DEA6CD /* NSMutableArray+AFOAbnormal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		F348444848D0F2CE12B5B22DE028622D /* AFOMediaThumbnail.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FBC86BD9E588B8C94FEBA40C57B446E /* AFOMediaThumbnail.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F3B8F29091D33750F36E2079E5B0D379 /* AFOAudioThreadDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9619554DC7C840F9099F5D1F606B14 /* AFOAudioThreadDecoder.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F6D7DA33D03D0A249EC66BDE5DF3C7B8 /* JLRoutes.h in Headers */ = {isa = PBXBuildFile; fileRef = 49864021F69FBAF025E0BA75A7EA1203 /* JLRoutes.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -430,6 +436,7 @@
 		00BA0BB8AAA27C4398A707F7A29A12E1 /* AFOViews.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOViews.h; path = AFOViews/AFOViews.h; sourceTree = "<group>"; };
 		00DE04CB03B31A6B5443094B3C05394C /* AFOAudioThreadDecoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOAudioThreadDecoder.h; path = AFOFFMpeg/media/decoder/AFOAudioThreadDecoder.h; sourceTree = "<group>"; };
 		01C18E5507F11C3FCBF7D95026E56AAF /* AFOFFMpeg-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFOFFMpeg-prefix.pch"; sourceTree = "<group>"; };
+		0258D04047FFFDAEA83CEEF601CB53A2 /* NSFileManager+AFOOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSFileManager+AFOOperation.h"; path = "AFOFoundation/sandbox/NSFileManager+AFOOperation.h"; sourceTree = "<group>"; };
 		026E4088F0B3EC6C57983473B2193C1E /* libxvidcore.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libxvidcore.a; path = libxvidcore/lib/libxvidcore.a; sourceTree = "<group>"; };
 		02D7174C3FA915D584A7409A6823A002 /* ffversion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ffversion.h; path = FFmpeg/include/libavutil/ffversion.h; sourceTree = "<group>"; };
 		03671B6E1C27C076AE15469BACDFE066 /* View+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASAdditions.h"; path = "AFOGitHub/Masonry/View+MASAdditions.h"; sourceTree = "<group>"; };
@@ -439,7 +446,6 @@
 		0668EE106D7FD2D24C0EB2E6A1F119E5 /* dv_profile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = dv_profile.h; path = FFmpeg/include/libavcodec/dv_profile.h; sourceTree = "<group>"; };
 		077425EE6BF08F23836DDB41BC314C86 /* JLRRouteHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JLRRouteHandler.h; path = AFORouter/router/JLRRouteHandler.h; sourceTree = "<group>"; };
 		08708D0B9EA15E6E6FAB144510ED0A12 /* AFOMediaPlayController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOMediaPlayController.h; path = AFOFFMpeg/media/play/AFOMediaPlayController.h; sourceTree = "<group>"; };
-		097D97B21CDFE2438A63A6214428CE9F /* NSMutableArray+AFOAbnormal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+AFOAbnormal.h"; path = "AFOFoundation/array/NSMutableArray+AFOAbnormal.h"; sourceTree = "<group>"; };
 		0B72F294C4094F09657BB6B99325AA22 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+MASDebugAdditions.h"; path = "AFOGitHub/Masonry/NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
 		0B87835AD98769D00C535E33B357A386 /* SVPullToRefresh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVPullToRefresh.h; path = AFOGitHub/UIScrollView/SVPullToRefresh.h; sourceTree = "<group>"; };
 		0C24BBB043BDA3C81D82F72B5D1CD75C /* macros_msa.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = macros_msa.h; path = libyuv/include/libyuv/macros_msa.h; sourceTree = "<group>"; };
@@ -448,7 +454,6 @@
 		0C7ACC0DB258B2605FBC5E7D51113542 /* base64.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = base64.h; path = FFmpeg/include/libavutil/base64.h; sourceTree = "<group>"; };
 		0D317A5D869BAC6A1564933D2AAC480B /* compare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = compare.h; path = libyuv/include/libyuv/compare.h; sourceTree = "<group>"; };
 		0DE2E90F2DE55EB81C1BC16A92ADA799 /* AFOVideoFrameRGB.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFOVideoFrameRGB.m; path = AFOFFMpeg/media/format/AFOVideoFrameRGB.m; sourceTree = "<group>"; };
-		0E3D661E3798BED527BAA5AFB2DEE80F /* AFOFoundation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFOFoundation-prefix.pch"; sourceTree = "<group>"; };
 		0E4ED3031BF15F3040264C1D8CE85128 /* AFOSQLite.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFOSQLite.xcconfig; sourceTree = "<group>"; };
 		0E9BEFF4E678F09A5263D039837FD46B /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ViewController+MASAdditions.h"; path = "AFOGitHub/Masonry/ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		0F89425E91BCCE2BAA96BBB70266B525 /* avutil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = avutil.h; path = FFmpeg/include/libavutil/avutil.h; sourceTree = "<group>"; };
@@ -459,13 +464,14 @@
 		1214D72918743A108FD5F8E4CFD0A785 /* UIImageView+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+WebCache.h"; path = "AFOGitHub/SDWebImage/include/UIImageView+WebCache.h"; sourceTree = "<group>"; };
 		12BDD9BFD4513F3CE6B0CF1586E94C65 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = src/fmdb/FMDatabaseAdditions.h; sourceTree = "<group>"; };
 		13713FFAFB666DD051FB95E669C1D63C /* libavcodec.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libavcodec.a; path = FFmpeg/lib/libavcodec.a; sourceTree = "<group>"; };
-		137901953E0C9C1843A78B84E6C0EB98 /* AFOFoundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOFoundation.h; path = AFOFoundation/AFOFoundation.h; sourceTree = "<group>"; };
+		13738486718FCFC0E7FF856496114307 /* NSString+Formatting.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+Formatting.m"; path = "AFOFoundation/string/NSString+Formatting.m"; sourceTree = "<group>"; };
 		13A24B6255B8FFFBDF6CD310F12D87BE /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASShorthandAdditions.h"; path = "AFOGitHub/Masonry/View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		13D884B96791D255A328C8BBB95242F3 /* AFORouterManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFORouterManager.m; path = AFORouter/manager/AFORouterManager.m; sourceTree = "<group>"; };
 		15CC3EC78D9D70E4C33AA53B2DF07E1D /* AFOMediaOpenGLView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFOMediaOpenGLView.m; path = AFOFFMpeg/media/openGL/AFOMediaOpenGLView.m; sourceTree = "<group>"; };
 		1799FA631357C79D5CE841EEBF54F85D /* intreadwrite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = intreadwrite.h; path = FFmpeg/include/libavutil/intreadwrite.h; sourceTree = "<group>"; };
 		1880BC265B5EDD9D29392A412075AAB6 /* SDWebImageDownloaderOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloaderOperation.h; path = AFOGitHub/SDWebImage/include/SDWebImageDownloaderOperation.h; sourceTree = "<group>"; };
 		18AD29E7F1FC3380162F8EEA2E7602F4 /* AFOSQLite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOSQLite.h; path = AFOSQLite/AFOSQLite.h; sourceTree = "<group>"; };
+		195EB786F5DFE58843EFB0909CC2F526 /* NSFileManager+AFOOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSFileManager+AFOOperation.m"; path = "AFOFoundation/sandbox/NSFileManager+AFOOperation.m"; sourceTree = "<group>"; };
 		198E4FFDC3D49CEE98E07FABE0A5A571 /* AFONavigationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFONavigationController.h; path = AFOUIKIT/AFONavigationController.h; sourceTree = "<group>"; };
 		1A7F8209F4BD2B61119F8B253DDD8624 /* mastering_display_metadata.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mastering_display_metadata.h; path = FFmpeg/include/libavutil/mastering_display_metadata.h; sourceTree = "<group>"; };
 		1AA8FD3EFA40A435873F0043CC95AD92 /* AFOCollectionViewLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOCollectionViewLayout.h; path = AFOUIKIT/AFOCollectionViewLayout.h; sourceTree = "<group>"; };
@@ -487,8 +493,8 @@
 		22720E4AC49480DEAF723A571A0E9EA9 /* AFORouter-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFORouter-prefix.pch"; sourceTree = "<group>"; };
 		236CCB29C4AC5BB1C682FD1A771EFF67 /* cpu.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = cpu.h; path = FFmpeg/include/libavutil/cpu.h; sourceTree = "<group>"; };
 		23D32CD8EF3A2685505C6B52C060E47F /* AFOFFMpeg.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOFFMpeg.h; path = AFOFFMpeg/AFOFFMpeg.h; sourceTree = "<group>"; };
+		24801738ACD36C0B507EB80564DEA6CD /* NSMutableArray+AFOAbnormal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+AFOAbnormal.h"; path = "AFOFoundation/array/NSMutableArray+AFOAbnormal.h"; sourceTree = "<group>"; };
 		24F97504594BE72D60C1087D89F88DA5 /* AFOMediaErrorCodeManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOMediaErrorCodeManager.h; path = AFOFFMpeg/media/error/AFOMediaErrorCodeManager.h; sourceTree = "<group>"; };
-		2785CDD7745AEAA09B917770BCDFF73C /* NSBundle+AFOCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSBundle+AFOCategory.h"; path = "AFOFoundation/bundle/NSBundle+AFOCategory.h"; sourceTree = "<group>"; };
 		27FA8FAA3BCA0536F120E266AACAE1B3 /* hwcontext_drm.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = hwcontext_drm.h; path = FFmpeg/include/libavutil/hwcontext_drm.h; sourceTree = "<group>"; };
 		27FDD837E48DDB8600D0851DA5C9021A /* version.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = version.h; path = FFmpeg/include/libavcodec/version.h; sourceTree = "<group>"; };
 		28FFC3FB8C79D4264463796E9D012902 /* qsv.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = qsv.h; path = FFmpeg/include/libavcodec/qsv.h; sourceTree = "<group>"; };
@@ -498,6 +504,7 @@
 		2CAFBCBC68BC8639F5C2167742DC124B /* AFOMediaManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFOMediaManager.m; path = AFOFFMpeg/media/manager/AFOMediaManager.m; sourceTree = "<group>"; };
 		2DA9870BB67463D08F575792A575EDD4 /* audio_fifo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = audio_fifo.h; path = FFmpeg/include/libavutil/audio_fifo.h; sourceTree = "<group>"; };
 		2F73094A692B68F5E959E57D15624312 /* AFORouterInfoplist.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFORouterInfoplist.h; path = AFORouter/manager/AFORouterInfoplist.h; sourceTree = "<group>"; };
+		3180173B1B6AC1EBB3625C2B21EE7ADD /* NSString+Dictionary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+Dictionary.h"; path = "AFOFoundation/string/NSString+Dictionary.h"; sourceTree = "<group>"; };
 		32D915842C22E85A5D5E79462A5A7631 /* AFOVideoFrameRGB.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOVideoFrameRGB.h; path = AFOFFMpeg/media/format/AFOVideoFrameRGB.h; sourceTree = "<group>"; };
 		33596DE88C47986482B0038043F9A434 /* AFOAudioSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOAudioSession.h; path = AFOFFMpeg/media/audio/AFOAudioSession.h; sourceTree = "<group>"; };
 		33BA3C8C6FE92BF7DD75A1AEBA4B2C34 /* libxvidcore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = libxvidcore.xcconfig; sourceTree = "<group>"; };
@@ -510,11 +517,13 @@
 		36031E6DFA53E6489590F8D2F4AFED6A /* MASConstraintMaker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraintMaker.m; path = AFOGitHub/Masonry/MASConstraintMaker.m; sourceTree = "<group>"; };
 		364925DE0E18A0C1AD653FF1BBE15FEA /* AFOFMDBForeignInterface+SQLite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "AFOFMDBForeignInterface+SQLite.h"; path = "AFOSQLite/privite/AFOFMDBForeignInterface+SQLite.h"; sourceTree = "<group>"; };
 		370D0438EC266F6005711F9A42DBD657 /* AFOAudioManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFOAudioManager.m; path = AFOFFMpeg/media/audio/AFOAudioManager.m; sourceTree = "<group>"; };
+		38A64C4455CF2A1255693F184D81E849 /* NSDictionary+AFOAbnormal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+AFOAbnormal.h"; path = "AFOFoundation/dictionary/NSDictionary+AFOAbnormal.h"; sourceTree = "<group>"; };
 		38CD1C056D2A4B2E1F22AA1A3CD6838D /* rc4.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = rc4.h; path = FFmpeg/include/libavutil/rc4.h; sourceTree = "<group>"; };
 		38E02E06448BBCB9D179F478F54EAB0C /* AFOMediaQueueManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFOMediaQueueManager.m; path = AFOFFMpeg/media/manager/AFOMediaQueueManager.m; sourceTree = "<group>"; };
 		3A8D3D993898FBDBF0A1C6D65CDB86DB /* hwcontext_d3d11va.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = hwcontext_d3d11va.h; path = FFmpeg/include/libavutil/hwcontext_d3d11va.h; sourceTree = "<group>"; };
 		3AB876C26DEA2A74DB5373CAE729EE3E /* x264.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = x264.h; path = x264/include/x264.h; sourceTree = "<group>"; };
 		3ADB5C3597C340B4B700F35FF46D56BC /* AFORouterManager+StringManipulation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "AFORouterManager+StringManipulation.h"; path = "AFORouter/manager/AFORouterManager+StringManipulation.h"; sourceTree = "<group>"; };
+		3B088559D518228D25A3EF07FB85234E /* NSString+Formatting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+Formatting.h"; path = "AFOFoundation/string/NSString+Formatting.h"; sourceTree = "<group>"; };
 		3BA86D429446A0B0697DA5F1C7D466A8 /* lfg.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = lfg.h; path = FFmpeg/include/libavutil/lfg.h; sourceTree = "<group>"; };
 		3C61D95F052F62E7237802EC1F37A0AD /* SDWebImageCompat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageCompat.h; path = AFOGitHub/SDWebImage/include/SDWebImageCompat.h; sourceTree = "<group>"; };
 		3C9AC76358BF312815EC10F83B695A6D /* JLRRouteDefinition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JLRRouteDefinition.h; path = AFORouter/router/JLRRouteDefinition.h; sourceTree = "<group>"; };
@@ -542,24 +551,23 @@
 		4F045729F2A88ED727DA8F1006FF1A17 /* Aspects.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Aspects.h; path = AFOGitHub/Aspects/Aspects.h; sourceTree = "<group>"; };
 		5035E4DBDF1CF0540F2F4AE855AFB281 /* ripemd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ripemd.h; path = FFmpeg/include/libavutil/ripemd.h; sourceTree = "<group>"; };
 		5070701A17784D636B920547F70E86C1 /* AFOMediaPlayController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFOMediaPlayController.m; path = AFOFFMpeg/media/play/AFOMediaPlayController.m; sourceTree = "<group>"; };
-		516A1387C1760A17B2B682ED9BC98A90 /* NSFileManager+AFOOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSFileManager+AFOOperation.m"; path = "AFOFoundation/sandbox/NSFileManager+AFOOperation.m"; sourceTree = "<group>"; };
-		53110B952C086DA6053315863DF5D6EA /* NSDictionary+AFOAbnormal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+AFOAbnormal.h"; path = "AFOFoundation/dictionary/NSDictionary+AFOAbnormal.h"; sourceTree = "<group>"; };
 		562A169AA4BA10FE6156E2CB62F760B8 /* libAFORouter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libAFORouter.a; path = libAFORouter.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5736AD48EFB6F986CF4A3B06749B213B /* JLRoutes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JLRoutes.m; path = AFORouter/router/JLRoutes.m; sourceTree = "<group>"; };
 		575FD95DC01BC95B72D0A2E1412D5582 /* UIView+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+WebCache.h"; path = "AFOGitHub/SDWebImage/include/UIView+WebCache.h"; sourceTree = "<group>"; };
 		5781D1671EB94E8DBB66D8235EB155BC /* NSImage+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSImage+WebCache.h"; path = "AFOGitHub/SDWebImage/include/NSImage+WebCache.h"; sourceTree = "<group>"; };
 		5942FD83C2D9C27CAF5010444C09CFD9 /* MASConstraint+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MASConstraint+Private.h"; path = "AFOGitHub/Masonry/MASConstraint+Private.h"; sourceTree = "<group>"; };
 		59C8F2B8D1104EE4F51A2D7ABD9EA0AE /* AFOVideoFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOVideoFrame.h; path = AFOFFMpeg/media/viewModels/AFOVideoFrame.h; sourceTree = "<group>"; };
+		5AE9B1C986BE6D10BA29ABADD36F4338 /* NSBundle+AFOCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSBundle+AFOCategory.h"; path = "AFOFoundation/bundle/NSBundle+AFOCategory.h"; sourceTree = "<group>"; };
 		5B374DB8D53CDFDAD8B00FFE9622F019 /* AFORouter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AFORouter-dummy.m"; sourceTree = "<group>"; };
 		5B8B88228336DFC1157C972B4BB81D19 /* GCDMulticastDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDMulticastDelegate.m; path = AFOGitHub/GCDMulticastDelegate/GCDMulticastDelegate.m; sourceTree = "<group>"; };
 		5C1929CDB0C631B9DBB4A8833F36D45B /* version.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = version.h; path = libyuv/include/libyuv/version.h; sourceTree = "<group>"; };
 		5D10152E917B4AC4E73857C41FE355A2 /* convert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = convert.h; path = libyuv/include/libyuv/convert.h; sourceTree = "<group>"; };
 		5D6199A8885484E597EBC93344570607 /* avfft.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = avfft.h; path = FFmpeg/include/libavcodec/avfft.h; sourceTree = "<group>"; };
 		5F78E5ABF81F9BDE78564B7E2EEFB8B0 /* AFOProgressSlider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFOProgressSlider.m; path = AFOViews/AFOProgressSlider.m; sourceTree = "<group>"; };
-		5F9EFF30579C20A54D9FD61BFC8495D5 /* NSFileManager+AFOSandBox.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSFileManager+AFOSandBox.m"; path = "AFOFoundation/sandbox/NSFileManager+AFOSandBox.m"; sourceTree = "<group>"; };
 		60E7EC2BBC95C74F0C2B3412BC93930B /* rational.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = rational.h; path = FFmpeg/include/libavutil/rational.h; sourceTree = "<group>"; };
 		60EC254F2489BC4935C5C0DDD320C0E7 /* scale.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = scale.h; path = libyuv/include/libyuv/scale.h; sourceTree = "<group>"; };
 		6134C4BB0DC423E053E817987AA8EC2C /* AFOMediaView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOMediaView.h; path = AFOFFMpeg/media/view/AFOMediaView.h; sourceTree = "<group>"; };
+		61E96442FEA8FFD7DFA90DA934E7EB85 /* AFOFoundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOFoundation.h; path = AFOFoundation/AFOFoundation.h; sourceTree = "<group>"; };
 		622015619B46ABACE3EE995CC3960FD0 /* AFOWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOWindow.h; path = AFOUIKIT/AFOWindow.h; sourceTree = "<group>"; };
 		625C2BA1303FF8C54F83D7F234A8AE6F /* AFOMediaManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOMediaManager.h; path = AFOFFMpeg/media/manager/AFOMediaManager.h; sourceTree = "<group>"; };
 		6301C9DE5AF161F186C07AD498818906 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASAdditions.h"; path = "AFOGitHub/Masonry/NSArray+MASAdditions.h"; sourceTree = "<group>"; };
@@ -569,7 +577,6 @@
 		64C5FF50CC9C3A652778AFC451513E8F /* AFOMediaView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFOMediaView.m; path = AFOFFMpeg/media/view/AFOMediaView.m; sourceTree = "<group>"; };
 		650645A83E56E305C669A8912BE81053 /* AFOSQLite-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFOSQLite-prefix.pch"; sourceTree = "<group>"; };
 		662AD358A0B8E55A9ADF596756E69920 /* tree.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = tree.h; path = FFmpeg/include/libavutil/tree.h; sourceTree = "<group>"; };
-		66AD791A6FEBABBB97E90E04700E0538 /* NSArray+AFOAbnormal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+AFOAbnormal.m"; path = "AFOFoundation/array/NSArray+AFOAbnormal.m"; sourceTree = "<group>"; };
 		670BF12F15247A78063D0C39704DF1EE /* libswscale.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libswscale.a; path = FFmpeg/lib/libswscale.a; sourceTree = "<group>"; };
 		692F4D9642CBF8CE23A9925138909CDE /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASShorthandAdditions.h"; path = "AFOGitHub/Masonry/NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		69DBECEA739A737D99852456FC1D35D7 /* Pods-AFOPlaylist-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AFOPlaylist-dummy.m"; sourceTree = "<group>"; };
@@ -577,14 +584,17 @@
 		6AC4262682E3AAAE51BF3AABA8462930 /* videotoolbox.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = videotoolbox.h; path = FFmpeg/include/libavcodec/videotoolbox.h; sourceTree = "<group>"; };
 		6C68E6E83FF37FC94763BEAEE0E79A7B /* spherical.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = spherical.h; path = FFmpeg/include/libavutil/spherical.h; sourceTree = "<group>"; };
 		6C9DF467AD370F9DDAB9C557C26A11B3 /* file.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = file.h; path = FFmpeg/include/libavutil/file.h; sourceTree = "<group>"; };
+		6CF28A7F749CC8A794BB784B825A756A /* NSMutableDictionary+AFOAbnormal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableDictionary+AFOAbnormal.m"; path = "AFOFoundation/dictionary/NSMutableDictionary+AFOAbnormal.m"; sourceTree = "<group>"; };
 		6D620BB1947335A8107A830AEA6797DA /* avio.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = avio.h; path = FFmpeg/include/libavformat/avio.h; sourceTree = "<group>"; };
 		6D67ADE711EAB8AC091E1F4F9AFA922E /* opt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = opt.h; path = FFmpeg/include/libavutil/opt.h; sourceTree = "<group>"; };
 		6EB89F96F9A4D0D27A30DC88620F392A /* FMDatabase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = src/fmdb/FMDatabase.h; sourceTree = "<group>"; };
 		6F34E246C3A5D9D367681E5D6C9BEFDB /* sha.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = sha.h; path = FFmpeg/include/libavutil/sha.h; sourceTree = "<group>"; };
-		706858272730FADC0F32254E3083A61B /* NSString+Formatting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+Formatting.h"; path = "AFOFoundation/string/NSString+Formatting.h"; sourceTree = "<group>"; };
 		70C6B158489AF1B725710CB6FD664EA8 /* UIScrollView+SVPullToRefresh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+SVPullToRefresh.h"; path = "AFOGitHub/UIScrollView/UIScrollView+SVPullToRefresh.h"; sourceTree = "<group>"; };
+		71537EB00244F0729E6909FD0F33507F /* NSDictionary+AFOAbnormal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+AFOAbnormal.m"; path = "AFOFoundation/dictionary/NSDictionary+AFOAbnormal.m"; sourceTree = "<group>"; };
+		7153C47D52C796B37E315E6369EE0FA7 /* AFOMacroDefinition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOMacroDefinition.h; path = AFOFoundation/define/AFOMacroDefinition.h; sourceTree = "<group>"; };
 		7444E47064C030BF6E2195167451A065 /* AFOMediaErrorString.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOMediaErrorString.h; path = AFOFFMpeg/media/error/AFOMediaErrorString.h; sourceTree = "<group>"; };
 		7501729CCE1BD7AB454E6822F20ED89B /* AFOUIKIT-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AFOUIKIT-dummy.m"; sourceTree = "<group>"; };
+		7551FFCA0BE5773DE28AA5F26105B0FA /* NSArray+AFOAbnormal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+AFOAbnormal.h"; path = "AFOFoundation/array/NSArray+AFOAbnormal.h"; sourceTree = "<group>"; };
 		75886C4006B90CEE512DFE5F88D1D789 /* SDWebImageOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageOperation.h; path = AFOGitHub/SDWebImage/include/SDWebImageOperation.h; sourceTree = "<group>"; };
 		75AD8EEAE3BA3A4AF4C3462B2CF0877F /* Pods-AFOPlaylist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AFOPlaylist.release.xcconfig"; sourceTree = "<group>"; };
 		75E9091EA1A1684146AA730852643295 /* MASUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASUtilities.h; path = AFOGitHub/Masonry/MASUtilities.h; sourceTree = "<group>"; };
@@ -595,9 +605,7 @@
 		775FB1B694D99B64994A6AD47EDE92FE /* AFOMediaSeekFrame+Conditional.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "AFOMediaSeekFrame+Conditional.m"; path = "AFOFFMpeg/media/seek/AFOMediaSeekFrame+Conditional.m"; sourceTree = "<group>"; };
 		77C36BCACBDD7EDCB7446F04FAAB0C6D /* swscale.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = swscale.h; path = FFmpeg/include/libswscale/swscale.h; sourceTree = "<group>"; };
 		77EC59B59E99517096E1916E04CCB698 /* AFOVideoFrameYUV.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOVideoFrameYUV.h; path = AFOFFMpeg/media/format/AFOVideoFrameYUV.h; sourceTree = "<group>"; };
-		7829C750EEE4EC97BECAAFDA6A165E66 /* AFOFoundation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AFOFoundation-dummy.m"; sourceTree = "<group>"; };
 		78305B0233A45159D856D4C12A2F231B /* libSDWebImage.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libSDWebImage.a; path = AFOGitHub/SDWebImage/lib/libSDWebImage.a; sourceTree = "<group>"; };
-		79D04071E939B97ACEF377B74C647649 /* NSFileManager+AFOSandBox.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSFileManager+AFOSandBox.h"; path = "AFOFoundation/sandbox/NSFileManager+AFOSandBox.h"; sourceTree = "<group>"; };
 		7A5B45440925EE1AF0478C2C932E7DFA /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MASAdditions.m"; path = "AFOGitHub/Masonry/NSArray+MASAdditions.m"; sourceTree = "<group>"; };
 		7ACB04700A787DBD16F275636B4FB95D /* AFOProgressSliderManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFOProgressSliderManager.m; path = AFOViews/AFOProgressSliderManager.m; sourceTree = "<group>"; };
 		7C2AB61105D8634A211B65EABC3EA35E /* AFOFMDBForeignInterface.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFOFMDBForeignInterface.m; path = AFOSQLite/privite/AFOFMDBForeignInterface.m; sourceTree = "<group>"; };
@@ -616,16 +624,18 @@
 		846D3EF00F54D1B5D1EA9D3A2F34D012 /* FMDB.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FMDB.xcconfig; sourceTree = "<group>"; };
 		84AC6BD99DF60535AA3EAA8D6BE40A37 /* error.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = error.h; path = FFmpeg/include/libavutil/error.h; sourceTree = "<group>"; };
 		8513645F8743C41CBEFF8B537DA3FA6E /* AFOViews-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFOViews-prefix.pch"; sourceTree = "<group>"; };
+		853A0FCB724DA1A6DF35F0DE78DD7760 /* NSFileManager+AFOSandBox.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSFileManager+AFOSandBox.m"; path = "AFOFoundation/sandbox/NSFileManager+AFOSandBox.m"; sourceTree = "<group>"; };
 		85BBCB0AEF2B0C032320DBD7502E148D /* murmur3.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = murmur3.h; path = FFmpeg/include/libavutil/murmur3.h; sourceTree = "<group>"; };
 		86B37CCF7F47215C5B1D94C9691882A7 /* AFORouterManagerDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFORouterManagerDelegate.h; path = AFORouter/manager/AFORouterManagerDelegate.h; sourceTree = "<group>"; };
 		87DD0EA2872B0FDBD41C56DC3A533CC7 /* AFOMediaOpenGLView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOMediaOpenGLView.h; path = AFOFFMpeg/media/openGL/AFOMediaOpenGLView.h; sourceTree = "<group>"; };
+		880BD749D6E7F4B26A3B9613E32CAA6B /* NSString+Dictionary.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+Dictionary.m"; path = "AFOFoundation/string/NSString+Dictionary.m"; sourceTree = "<group>"; };
 		8812ED71F3DBC1A988F0D372E1B12028 /* AFOFMDBForeignInterface+Dictionary.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "AFOFMDBForeignInterface+Dictionary.m"; path = "AFOSQLite/privite/AFOFMDBForeignInterface+Dictionary.m"; sourceTree = "<group>"; };
-		899FF0B6FE7FA679D44BDCCCB0BCEA4A /* NSMutableArray+AFOAbnormal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+AFOAbnormal.m"; path = "AFOFoundation/array/NSMutableArray+AFOAbnormal.m"; sourceTree = "<group>"; };
 		8A90AFE26123DB6144E976DC1FC04869 /* libyuv.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = libyuv.h; path = libyuv/include/libyuv.h; sourceTree = "<group>"; };
 		8C2C831FDCD9DA5B858E0D822BA00008 /* FMResultSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = src/fmdb/FMResultSet.m; sourceTree = "<group>"; };
 		8CABCB7B4C8C3394797835EF423DA87F /* AFOAudioManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOAudioManager.h; path = AFOFFMpeg/media/audio/AFOAudioManager.h; sourceTree = "<group>"; };
 		8D680BEA3DDF0D77E0A87CA8402C13F2 /* crc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crc.h; path = FFmpeg/include/libavutil/crc.h; sourceTree = "<group>"; };
 		8E2052C715420F6678B4D14B6B5989D2 /* AFOMediaControlView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFOMediaControlView.m; path = AFOFFMpeg/media/view/AFOMediaControlView.m; sourceTree = "<group>"; };
+		8F56BA2BDA02F4B09FE56AE660C108B5 /* NSString+URLSchemes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+URLSchemes.m"; path = "AFOFoundation/string/NSString+URLSchemes.m"; sourceTree = "<group>"; };
 		8F7C2A2CE1E8AFFD30CAD41BB543D5D9 /* md5.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = md5.h; path = FFmpeg/include/libavutil/md5.h; sourceTree = "<group>"; };
 		8FBC23007626EF8076AB7F8B80560A67 /* UIImage+MultiFormat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+MultiFormat.h"; path = "AFOGitHub/SDWebImage/include/UIImage+MultiFormat.h"; sourceTree = "<group>"; };
 		8FBF82121EAF981FF058E6B21D813E10 /* AFOMediaTimer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOMediaTimer.h; path = AFOFFMpeg/media/viewModels/AFOMediaTimer.h; sourceTree = "<group>"; };
@@ -645,7 +655,6 @@
 		9A0EAEAF03B0221CFAB5D1317465523F /* AFOFMDBForeignInterface+Dictionary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "AFOFMDBForeignInterface+Dictionary.h"; path = "AFOSQLite/privite/AFOFMDBForeignInterface+Dictionary.h"; sourceTree = "<group>"; };
 		9ABAFA6E2FEB0933427B335379E38C62 /* GCDMulticastDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDMulticastDelegate.h; path = AFOGitHub/GCDMulticastDelegate/GCDMulticastDelegate.h; sourceTree = "<group>"; };
 		9ACA337A6570D5895DCF742D37D7E3DF /* AFOGenerateImages.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOGenerateImages.h; path = AFOFFMpeg/media/viewModels/AFOGenerateImages.h; sourceTree = "<group>"; };
-		9AF2615851B0A847D451598B4CC826C0 /* AFOMacroDefinition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOMacroDefinition.h; path = AFOFoundation/define/AFOMacroDefinition.h; sourceTree = "<group>"; };
 		9B0798BC7E07C9D3CFA4A17C23B52E76 /* SDWebImageCodersManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageCodersManager.h; path = AFOGitHub/SDWebImage/include/SDWebImageCodersManager.h; sourceTree = "<group>"; };
 		9BD117EC4FD14D19F6660961955D847C /* FMDB.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDB.h; path = src/fmdb/FMDB.h; sourceTree = "<group>"; };
 		9C1EF10258AE1D7836BB2F88C0F0AF6A /* avdct.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = avdct.h; path = FFmpeg/include/libavcodec/avdct.h; sourceTree = "<group>"; };
@@ -663,16 +672,18 @@
 		A2728D15099225519649A60EDC9F7CB7 /* vda.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = vda.h; path = FFmpeg/include/libavcodec/vda.h; sourceTree = "<group>"; };
 		A3347B89EB5F042B56A2E2380AB9BC36 /* SDWebImageManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageManager.h; path = AFOGitHub/SDWebImage/include/SDWebImageManager.h; sourceTree = "<group>"; };
 		A3644DB41EE436D8C9ABB3B3A4E1B3C9 /* AFOMediaConditional.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFOMediaConditional.m; path = AFOFFMpeg/media/viewModels/AFOMediaConditional.m; sourceTree = "<group>"; };
+		A399756BED0C6DD48B74335F31CECA8A /* AFOWeakInstance.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOWeakInstance.h; path = AFOFoundation/weak/AFOWeakInstance.h; sourceTree = "<group>"; };
 		A3A80BA70CFB7F75C5391BEBBBA8C9DA /* libFMDB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libFMDB.a; path = libFMDB.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A534B11EF6A3BA7086419D0520ED9E1E /* pixfmt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pixfmt.h; path = FFmpeg/include/libavutil/pixfmt.h; sourceTree = "<group>"; };
 		A678314D65C4E0F53AA91019AC5F3AD1 /* frame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = frame.h; path = FFmpeg/include/libavutil/frame.h; sourceTree = "<group>"; };
 		A6FAE155A2CB7C3CE497D9A2B8523E18 /* jni.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = jni.h; path = FFmpeg/include/libavcodec/jni.h; sourceTree = "<group>"; };
-		A74865849FFA2A29541D46F00D48BF39 /* AFOFoundation.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFOFoundation.xcconfig; sourceTree = "<group>"; };
 		A77E4AD3D23F47F9C43497B3940FCB98 /* libyuv.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libyuv.a; path = libyuv/lib/libyuv.a; sourceTree = "<group>"; };
 		A78B41784D54578B768C11B228CD48BB /* AFOMediaForeignInterface.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFOMediaForeignInterface.m; path = AFOFFMpeg/AFOMediaForeignInterface.m; sourceTree = "<group>"; };
 		A8F09391CAA51232555BC312857110B9 /* channel_layout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = channel_layout.h; path = FFmpeg/include/libavutil/channel_layout.h; sourceTree = "<group>"; };
+		A9A34F02FADD4324CBE4E2D0445EC609 /* NSString+URLSchemes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+URLSchemes.h"; path = "AFOFoundation/string/NSString+URLSchemes.h"; sourceTree = "<group>"; };
 		A9C32CEF4E0EE94DBC6B82F084A6D956 /* mathematics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mathematics.h; path = FFmpeg/include/libavutil/mathematics.h; sourceTree = "<group>"; };
 		AB212BF6F354FE30AB0D440576B414D4 /* AFOAudioDecoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFOAudioDecoder.m; path = AFOFFMpeg/media/audio/AFOAudioDecoder.m; sourceTree = "<group>"; };
+		AC76CCA74F834803F3F7713E387593C1 /* AFOFoundation.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFOFoundation.xcconfig; sourceTree = "<group>"; };
 		ACD565447CBED786E4CA875ED14200FC /* des.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = des.h; path = FFmpeg/include/libavutil/des.h; sourceTree = "<group>"; };
 		AD9BB06AC93EAD323A69C965C0426B38 /* Masonry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Masonry.h; path = AFOGitHub/Masonry/Masonry.h; sourceTree = "<group>"; };
 		AE6A681AFA71AFA9E29059B5844C7845 /* MASViewConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewConstraint.m; path = AFOGitHub/Masonry/MASViewConstraint.m; sourceTree = "<group>"; };
@@ -680,7 +691,6 @@
 		B02465EA06A2061A10A583A2706B111F /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ViewController+MASAdditions.m"; path = "AFOGitHub/Masonry/ViewController+MASAdditions.m"; sourceTree = "<group>"; };
 		B024808C7CF4D3CE55DD84F61140808A /* pixelutils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pixelutils.h; path = FFmpeg/include/libavutil/pixelutils.h; sourceTree = "<group>"; };
 		B0B202B4A651009149589E723453227B /* cpu_id.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = cpu_id.h; path = libyuv/include/libyuv/cpu_id.h; sourceTree = "<group>"; };
-		B2AE5D01A6AEABF0F5331B84185BE61D /* NSMutableDictionary+AFOAbnormal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableDictionary+AFOAbnormal.m"; path = "AFOFoundation/dictionary/NSMutableDictionary+AFOAbnormal.m"; sourceTree = "<group>"; };
 		B333A0FA0F6B07440EAE271FECE4E36C /* stereo3d.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = stereo3d.h; path = FFmpeg/include/libavutil/stereo3d.h; sourceTree = "<group>"; };
 		B34BC24DF737825EEC2B7C758B30C016 /* UIButton+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+WebCache.h"; path = "AFOGitHub/SDWebImage/include/UIButton+WebCache.h"; sourceTree = "<group>"; };
 		B354670875CDCF008BDC392AD00DEF6B /* AFOGitHub.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFOGitHub.xcconfig; sourceTree = "<group>"; };
@@ -696,6 +706,7 @@
 		B734E8AB5888F9AE7BFC3960D391EE1D /* AFOAudioQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOAudioQueue.h; path = AFOFFMpeg/media/audio/AFOAudioQueue.h; sourceTree = "<group>"; };
 		B76EF79D40C099CCC7496D947DC3848E /* compare_row.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = compare_row.h; path = libyuv/include/libyuv/compare_row.h; sourceTree = "<group>"; };
 		B7B15F9FEF27D4B7D64D64306AEF839B /* AFOMediaDecoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFOMediaDecoder.m; path = AFOFFMpeg/media/decoder/AFOMediaDecoder.m; sourceTree = "<group>"; };
+		B87857C0CC8304574005DCF8B1B2230D /* NSBundle+AFOCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSBundle+AFOCategory.m"; path = "AFOFoundation/bundle/NSBundle+AFOCategory.m"; sourceTree = "<group>"; };
 		B8AE76389E784356198C631E9F4E662D /* bprint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = bprint.h; path = FFmpeg/include/libavutil/bprint.h; sourceTree = "<group>"; };
 		B947D7E0BF056B55CC7A37968D101AAE /* vdpau.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = vdpau.h; path = FFmpeg/include/libavcodec/vdpau.h; sourceTree = "<group>"; };
 		BA2038E245DC3A148EE93931D4586715 /* AFOMediaYUV.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFOMediaYUV.m; path = AFOFFMpeg/media/format/AFOMediaYUV.m; sourceTree = "<group>"; };
@@ -718,21 +729,21 @@
 		C276EA53577252753EE2D53FBE4B9440 /* SDWebImageDownloader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloader.h; path = AFOGitHub/SDWebImage/include/SDWebImageDownloader.h; sourceTree = "<group>"; };
 		C38ACAA5109DC28D8D4429B337D29CDB /* SDWebImagePrefetcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImagePrefetcher.h; path = AFOGitHub/SDWebImage/include/SDWebImagePrefetcher.h; sourceTree = "<group>"; };
 		C4B5E14B2EC204805F10F0BD4D2651AD /* JLRRouteDefinition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JLRRouteDefinition.m; path = AFORouter/router/JLRRouteDefinition.m; sourceTree = "<group>"; };
+		C5705CA22E812593FFBB02AE4BE9AB7D /* AFOFoundation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AFOFoundation-dummy.m"; sourceTree = "<group>"; };
 		C61E0890D55937A57F1DCFF167DFC86E /* fifo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = fifo.h; path = FFmpeg/include/libavutil/fifo.h; sourceTree = "<group>"; };
 		C72A18F05FE65B9DE0A215C2FA4BD453 /* SDWebImageFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageFrame.h; path = AFOGitHub/SDWebImage/include/SDWebImageFrame.h; sourceTree = "<group>"; };
 		C7EF5C46171B2453F5FA9A93FFA85EC6 /* AFOlibyuv.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFOlibyuv.xcconfig; sourceTree = "<group>"; };
 		C9497677B90D7D67C9E79FD460A5A119 /* Pods-AFOPlaylist-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AFOPlaylist-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C986846CB8D2C0F33FFF4FABA1328F22 /* AFOMediaPlayController+AFOGestures.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "AFOMediaPlayController+AFOGestures.m"; path = "AFOFFMpeg/media/play/AFOMediaPlayController+AFOGestures.m"; sourceTree = "<group>"; };
 		C9C53ACA5221C13F73E4751FDED3FFA3 /* intfloat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = intfloat.h; path = FFmpeg/include/libavutil/intfloat.h; sourceTree = "<group>"; };
+		C9FC4A04151D80F9F8976A554B58EE34 /* NSString+URLParameter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+URLParameter.h"; path = "AFOFoundation/string/NSString+URLParameter.h"; sourceTree = "<group>"; };
 		CA578DF6DE69230A7C8E027654EFF96A /* sha512.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = sha512.h; path = FFmpeg/include/libavutil/sha512.h; sourceTree = "<group>"; };
 		CAFA03BE6094BAFA373DAB29D773DE10 /* version.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = version.h; path = FFmpeg/include/libswscale/version.h; sourceTree = "<group>"; };
-		CB1F0703C501795292D51E80736492B3 /* NSBundle+AFOCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSBundle+AFOCategory.m"; path = "AFOFoundation/bundle/NSBundle+AFOCategory.m"; sourceTree = "<group>"; };
 		CBD907496E5EF190F5ECFE5441D1F5E7 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASLayoutConstraint.m; path = AFOGitHub/Masonry/MASLayoutConstraint.m; sourceTree = "<group>"; };
 		CCB7499A3494709844E7A32F0252C159 /* convert_from_argb.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = convert_from_argb.h; path = libyuv/include/libyuv/convert_from_argb.h; sourceTree = "<group>"; };
 		CD9619554DC7C840F9099F5D1F606B14 /* AFOAudioThreadDecoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFOAudioThreadDecoder.m; path = AFOFFMpeg/media/decoder/AFOAudioThreadDecoder.m; sourceTree = "<group>"; };
 		CE6C032295D670E25122293CB9059B0F /* AFOViews.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFOViews.xcconfig; sourceTree = "<group>"; };
 		CE970AAC91086B77B161ED732AAC7340 /* eval.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = eval.h; path = FFmpeg/include/libavutil/eval.h; sourceTree = "<group>"; };
-		CF963FA15664287A454578CAF0C007D9 /* AFOWeakInstance.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOWeakInstance.h; path = AFOFoundation/weak/AFOWeakInstance.h; sourceTree = "<group>"; };
 		CFBB3836F5A7AFBCD2ED69D5711BD967 /* dict.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = dict.h; path = FFmpeg/include/libavutil/dict.h; sourceTree = "<group>"; };
 		D0C1EB5F6069C1F79C08E38873F0A23B /* AFOViews-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AFOViews-dummy.m"; sourceTree = "<group>"; };
 		D0CAABCEFB3F27FA1BE7715987DE0744 /* UIScrollView+SVPullToRefresh.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+SVPullToRefresh.m"; path = "AFOGitHub/UIScrollView/UIScrollView+SVPullToRefresh.m"; sourceTree = "<group>"; };
@@ -743,6 +754,7 @@
 		D441D6FFA541389CEB39D2FE3154E3AC /* bswap.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = bswap.h; path = FFmpeg/include/libavutil/bswap.h; sourceTree = "<group>"; };
 		D6871AFD91992D20E873EA7ED83251BE /* AFOFFMpeg-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AFOFFMpeg-dummy.m"; sourceTree = "<group>"; };
 		D761D338B3CC022ADC565E9B818B00D0 /* Aspects.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Aspects.m; path = AFOGitHub/Aspects/Aspects.m; sourceTree = "<group>"; };
+		D7B39FCA619157D23C3A3D91529F00B4 /* NSString+URLParameter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+URLParameter.m"; path = "AFOFoundation/string/NSString+URLParameter.m"; sourceTree = "<group>"; };
 		D7DA8B647044F9BA0C195AE711811361 /* libAFOFFMpeg.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libAFOFFMpeg.a; path = libAFOFFMpeg.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7FD7576B72F64D840344B7C760592BD /* scale_row.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = scale_row.h; path = libyuv/include/libyuv/scale_row.h; sourceTree = "<group>"; };
 		D8A94ED512BDA5ADC64B36934E259E1F /* swresample.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = swresample.h; path = FFmpeg/include/libswresample/swresample.h; sourceTree = "<group>"; };
@@ -750,12 +762,10 @@
 		D9871F280D498832CBF5AB39B088CEB5 /* imgutils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = imgutils.h; path = FFmpeg/include/libavutil/imgutils.h; sourceTree = "<group>"; };
 		D996B9B12CA2F858DE05FF972D1DFC8A /* AFOAudioOutPut.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFOAudioOutPut.m; path = AFOFFMpeg/media/audio/AFOAudioOutPut.m; sourceTree = "<group>"; };
 		D9FFF5BD56D1E45F03602A880520120D /* parseutils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = parseutils.h; path = FFmpeg/include/libavutil/parseutils.h; sourceTree = "<group>"; };
-		DA28BE0BE4DD8D4A4177B77426C42575 /* NSDictionary+AFOAbnormal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+AFOAbnormal.m"; path = "AFOFoundation/dictionary/NSDictionary+AFOAbnormal.m"; sourceTree = "<group>"; };
 		DADF54AADF3649E144A2565FAD6EDA36 /* rotate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = rotate.h; path = libyuv/include/libyuv/rotate.h; sourceTree = "<group>"; };
 		DB4D80C90EE504F2AB7B4D07C7D9DD75 /* AFOGitHub.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOGitHub.h; path = AFOGitHub/AFOGitHub.h; sourceTree = "<group>"; };
 		DC295880257FB200038D3CA78CED8D91 /* JLRRouteHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JLRRouteHandler.m; path = AFORouter/router/JLRRouteHandler.m; sourceTree = "<group>"; };
 		DCE5DCA9ACEC14FA217D435D446D8600 /* AFOGitHub-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFOGitHub-prefix.pch"; sourceTree = "<group>"; };
-		DD57033D482AD42CA0D040581AD6F264 /* NSMutableDictionary+AFOAbnormal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableDictionary+AFOAbnormal.h"; path = "AFOFoundation/dictionary/NSMutableDictionary+AFOAbnormal.h"; sourceTree = "<group>"; };
 		DD85726EC4772DAE8E00E49D7F262FBA /* downmix_info.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = downmix_info.h; path = FFmpeg/include/libavutil/downmix_info.h; sourceTree = "<group>"; };
 		DF34DDB6BE916BAD26FAAAC60C33322E /* AFOAudioCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFOAudioCache.m; path = AFOFFMpeg/media/audio/AFOAudioCache.m; sourceTree = "<group>"; };
 		DFB2923EBA83FA647D5BCB43E8B01FFB /* FMResultSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = src/fmdb/FMResultSet.h; sourceTree = "<group>"; };
@@ -774,8 +784,8 @@
 		E640B19985B47CDD84312107E2551FE1 /* motion_vector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = motion_vector.h; path = FFmpeg/include/libavutil/motion_vector.h; sourceTree = "<group>"; };
 		E6A4A79EC5E781B36DEE6EFE65537853 /* xvid.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xvid.h; path = libxvidcore/include/xvid.h; sourceTree = "<group>"; };
 		E715C45590442BC4116310377C380AD1 /* basic_types.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = basic_types.h; path = libyuv/include/libyuv/basic_types.h; sourceTree = "<group>"; };
+		E7C9D88B25E0A5631FEF8AC5250709BB /* NSArray+AFOAbnormal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+AFOAbnormal.m"; path = "AFOFoundation/array/NSArray+AFOAbnormal.m"; sourceTree = "<group>"; };
 		E804EBD7676FA7401081B43868A31EC1 /* MASViewAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewAttribute.h; path = AFOGitHub/Masonry/MASViewAttribute.h; sourceTree = "<group>"; };
-		E90178B31AF9FC4D0622C1A28B134917 /* NSFileManager+AFOOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSFileManager+AFOOperation.h"; path = "AFOFoundation/sandbox/NSFileManager+AFOOperation.h"; sourceTree = "<group>"; };
 		E9541EE99E7F767BD4B082260CC07B8A /* JLRRouteResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JLRRouteResponse.h; path = AFORouter/router/JLRRouteResponse.h; sourceTree = "<group>"; };
 		E9A8A5963F0F981D15ECDF83DBB7D760 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueue.h; path = src/fmdb/FMDatabaseQueue.h; sourceTree = "<group>"; };
 		E9B5249FCD4ACF3D1FBD17F163390F9A /* camellia.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = camellia.h; path = FFmpeg/include/libavutil/camellia.h; sourceTree = "<group>"; };
@@ -783,15 +793,16 @@
 		EA64E00ADC15C0F9FC14528FBB98B1F5 /* AFOFMDBForeignInterface+SQLite.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "AFOFMDBForeignInterface+SQLite.m"; path = "AFOSQLite/privite/AFOFMDBForeignInterface+SQLite.m"; sourceTree = "<group>"; };
 		EAB254A7F3197E5E71D6606E96CFC31B /* SDWebImageImageIOCoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageImageIOCoder.h; path = AFOGitHub/SDWebImage/include/SDWebImageImageIOCoder.h; sourceTree = "<group>"; };
 		EB4CAEDB60A73DBACC384862664CB336 /* version.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = version.h; path = FFmpeg/include/libavformat/version.h; sourceTree = "<group>"; };
+		EB6500B14A0477B7DD0C0788B41DB7D7 /* NSFileManager+AFOSandBox.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSFileManager+AFOSandBox.h"; path = "AFOFoundation/sandbox/NSFileManager+AFOSandBox.h"; sourceTree = "<group>"; };
 		EB852C585375B7B60C42EC973C3DC782 /* macros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = macros.h; path = FFmpeg/include/libavutil/macros.h; sourceTree = "<group>"; };
 		EC87852E3F06D99464B987913D625178 /* MASConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraint.m; path = AFOGitHub/Masonry/MASConstraint.m; sourceTree = "<group>"; };
 		ED014ECD346BEEAD9812FA1F94F91B9C /* UIImage+GIF.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+GIF.h"; path = "AFOGitHub/SDWebImage/include/UIImage+GIF.h"; sourceTree = "<group>"; };
+		EF34B215AA8F7FDD1BFA4AEA845B90E0 /* NSMutableArray+AFOAbnormal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+AFOAbnormal.m"; path = "AFOFoundation/array/NSMutableArray+AFOAbnormal.m"; sourceTree = "<group>"; };
 		EFB15EA0C88231D05145C176516E2973 /* time.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = time.h; path = FFmpeg/include/libavutil/time.h; sourceTree = "<group>"; };
 		EFCA338FBFB956B227F8A0C460DACA81 /* AFOAudioSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFOAudioSession.m; path = AFOFFMpeg/media/audio/AFOAudioSession.m; sourceTree = "<group>"; };
 		F05FBDD1BA2B114BFABE9848E614F556 /* AFOAudioOutPut.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOAudioOutPut.h; path = AFOFFMpeg/media/audio/AFOAudioOutPut.h; sourceTree = "<group>"; };
 		F074383133857960DDC43639D4822E29 /* JLRRouteRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JLRRouteRequest.m; path = AFORouter/router/JLRRouteRequest.m; sourceTree = "<group>"; };
 		F279D51927E0F61905AD4600A4492ADC /* MASCompositeConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASCompositeConstraint.m; path = AFOGitHub/Masonry/MASCompositeConstraint.m; sourceTree = "<group>"; };
-		F315604D37DBDABA42F1CCF087B0FB19 /* NSString+Formatting.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+Formatting.m"; path = "AFOFoundation/string/NSString+Formatting.m"; sourceTree = "<group>"; };
 		F39383F0AADA6BCF727C03C26374B1B7 /* libAFOUIKIT.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libAFOUIKIT.a; path = libAFOUIKIT.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F402E2ACD7CA33E0E9AA5A191D45DFFA /* FMDatabasePool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = src/fmdb/FMDatabasePool.m; sourceTree = "<group>"; };
 		F4D5E537112DD517297D1B58A26C8B16 /* AFOMediaQueueManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOMediaQueueManager.h; path = AFOFFMpeg/media/manager/AFOMediaQueueManager.h; sourceTree = "<group>"; };
@@ -800,6 +811,7 @@
 		F5A00A79EAD072691A636D0D2C297543 /* buffer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = buffer.h; path = FFmpeg/include/libavutil/buffer.h; sourceTree = "<group>"; };
 		F6835DC63733EB8575F9F5DC02AEFAD5 /* lzo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = lzo.h; path = FFmpeg/include/libavutil/lzo.h; sourceTree = "<group>"; };
 		F71B9DD12BC1F89851B8F3928B5CF493 /* AFOMediaSeekFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFOMediaSeekFrame.h; path = AFOFFMpeg/media/seek/AFOMediaSeekFrame.h; sourceTree = "<group>"; };
+		F81D598A129490285E49504B39BDA9AA /* NSMutableDictionary+AFOAbnormal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableDictionary+AFOAbnormal.h"; path = "AFOFoundation/dictionary/NSMutableDictionary+AFOAbnormal.h"; sourceTree = "<group>"; };
 		F825F9512866850AFB56EC6245BA4B12 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASCompositeConstraint.h; path = AFOGitHub/Masonry/MASCompositeConstraint.h; sourceTree = "<group>"; };
 		FA08C4E4519C76F4F2D5874B647558D1 /* AFOPlayMediaManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFOPlayMediaManager.m; path = AFOFFMpeg/media/manager/AFOPlayMediaManager.m; sourceTree = "<group>"; };
 		FA5D5BFF3EA3B6D075A5A906D7A3EA87 /* AFOWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFOWindow.m; path = AFOUIKIT/AFOWindow.m; sourceTree = "<group>"; };
@@ -808,8 +820,8 @@
 		FC17BA106431DFA678CE2EC3A66DF22B /* JLRParsingUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JLRParsingUtilities.h; path = AFORouter/router/JLRParsingUtilities.h; sourceTree = "<group>"; };
 		FCDFA0650FC6B05C589A2AA110C64D7A /* JLRRouteResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JLRRouteResponse.m; path = AFORouter/router/JLRRouteResponse.m; sourceTree = "<group>"; };
 		FD32683F18FE9C3E3A91CB6C242D96C3 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASLayoutConstraint.h; path = AFOGitHub/Masonry/MASLayoutConstraint.h; sourceTree = "<group>"; };
-		FDAF993276E5BA49AB1C5FFF8E088281 /* NSArray+AFOAbnormal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+AFOAbnormal.h"; path = "AFOFoundation/array/NSArray+AFOAbnormal.h"; sourceTree = "<group>"; };
 		FF5763E70D2C5EF6208EC599B74C1926 /* timestamp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = timestamp.h; path = FFmpeg/include/libavutil/timestamp.h; sourceTree = "<group>"; };
+		FF65A9D463A2AB8B55BE869992E86C3E /* AFOFoundation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFOFoundation-prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -941,6 +953,28 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/FMDB";
+			sourceTree = "<group>";
+		};
+		260EAA07280BB2F21D6C98E9598A81FD /* dictionary */ = {
+			isa = PBXGroup;
+			children = (
+				38A64C4455CF2A1255693F184D81E849 /* NSDictionary+AFOAbnormal.h */,
+				71537EB00244F0729E6909FD0F33507F /* NSDictionary+AFOAbnormal.m */,
+				F81D598A129490285E49504B39BDA9AA /* NSMutableDictionary+AFOAbnormal.h */,
+				6CF28A7F749CC8A794BB784B825A756A /* NSMutableDictionary+AFOAbnormal.m */,
+			);
+			name = dictionary;
+			sourceTree = "<group>";
+		};
+		28456E72F62B9500291FFDD49C50AC6D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AC76CCA74F834803F3F7713E387593C1 /* AFOFoundation.xcconfig */,
+				C5705CA22E812593FFBB02AE4BE9AB7D /* AFOFoundation-dummy.m */,
+				FF65A9D463A2AB8B55BE869992E86C3E /* AFOFoundation-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/AFOFoundation";
 			sourceTree = "<group>";
 		};
 		2B28CDADB896B60EBBF5C58BA2AFD037 /* Frameworks */ = {
@@ -1077,6 +1111,17 @@
 			path = AFOFFMpeg;
 			sourceTree = "<group>";
 		};
+		33AD0A900DAC74F985004466BBF12410 /* sandbox */ = {
+			isa = PBXGroup;
+			children = (
+				0258D04047FFFDAEA83CEEF601CB53A2 /* NSFileManager+AFOOperation.h */,
+				195EB786F5DFE58843EFB0909CC2F526 /* NSFileManager+AFOOperation.m */,
+				EB6500B14A0477B7DD0C0788B41DB7D7 /* NSFileManager+AFOSandBox.h */,
+				853A0FCB724DA1A6DF35F0DE78DD7760 /* NSFileManager+AFOSandBox.m */,
+			);
+			name = sandbox;
+			sourceTree = "<group>";
+		};
 		343F7A0F7187CE017A3EB9FE7817D884 /* lib */ = {
 			isa = PBXGroup;
 			children = (
@@ -1183,7 +1228,7 @@
 			children = (
 				305C06B6F43AF616E2F29936FC7BDCD7 /* AFOFFMpeg */,
 				8C50E1B6484368070012E11775B2B0E0 /* AFOFFMpegLib */,
-				F8E0AD98EAC96555EBC4A8C7CA49D142 /* AFOFoundation */,
+				F13A43506EE8070580A148905A50D763 /* AFOFoundation */,
 				808517065E8179C3CE3559758EE70F68 /* AFOGitHub */,
 				5B70D6066FD180415B91C68CCCA36228 /* AFOlibyuv */,
 				AFB9E9B0E2EC6C0398EA8B43BCEFB05A /* AFORouter */,
@@ -1225,6 +1270,14 @@
 			name = libswscale;
 			sourceTree = "<group>";
 		};
+		4DAF3C895AEE4B1E1623B1D9AE830B24 /* weak */ = {
+			isa = PBXGroup;
+			children = (
+				A399756BED0C6DD48B74335F31CECA8A /* AFOWeakInstance.h */,
+			);
+			name = weak;
+			sourceTree = "<group>";
+		};
 		4F5F83BEE5EC070A5264D525B03ADA0D /* INTUAutoRemoveObserver */ = {
 			isa = PBXGroup;
 			children = (
@@ -1245,15 +1298,19 @@
 			path = "../Target Support Files/AFORouter";
 			sourceTree = "<group>";
 		};
-		55BFC2694098A67E344E51B754203AB2 /* Support Files */ = {
+		5780FDF88F9B7E99C67BBA5B94AD953D /* string */ = {
 			isa = PBXGroup;
 			children = (
-				A74865849FFA2A29541D46F00D48BF39 /* AFOFoundation.xcconfig */,
-				7829C750EEE4EC97BECAAFDA6A165E66 /* AFOFoundation-dummy.m */,
-				0E3D661E3798BED527BAA5AFB2DEE80F /* AFOFoundation-prefix.pch */,
+				3180173B1B6AC1EBB3625C2B21EE7ADD /* NSString+Dictionary.h */,
+				880BD749D6E7F4B26A3B9613E32CAA6B /* NSString+Dictionary.m */,
+				3B088559D518228D25A3EF07FB85234E /* NSString+Formatting.h */,
+				13738486718FCFC0E7FF856496114307 /* NSString+Formatting.m */,
+				C9FC4A04151D80F9F8976A554B58EE34 /* NSString+URLParameter.h */,
+				D7B39FCA619157D23C3A3D91529F00B4 /* NSString+URLParameter.m */,
+				A9A34F02FADD4324CBE4E2D0445EC609 /* NSString+URLSchemes.h */,
+				8F56BA2BDA02F4B09FE56AE660C108B5 /* NSString+URLSchemes.m */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/AFOFoundation";
+			name = string;
 			sourceTree = "<group>";
 		};
 		5B70D6066FD180415B91C68CCCA36228 /* AFOlibyuv */ = {
@@ -1287,10 +1344,10 @@
 			path = AFOlibyuv;
 			sourceTree = "<group>";
 		};
-		5CFE2C1879AAEAF441A5B4DE4CCB6DA9 /* define */ = {
+		64DA92E2932014D31C3B48D012D31234 /* define */ = {
 			isa = PBXGroup;
 			children = (
-				9AF2615851B0A847D451598B4CC826C0 /* AFOMacroDefinition.h */,
+				7153C47D52C796B37E315E6369EE0FA7 /* AFOMacroDefinition.h */,
 			);
 			name = define;
 			sourceTree = "<group>";
@@ -1316,6 +1373,15 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/AFOlibyuv";
+			sourceTree = "<group>";
+		};
+		723675B7DE1DE26752079DE3E180C177 /* bundle */ = {
+			isa = PBXGroup;
+			children = (
+				5AE9B1C986BE6D10BA29ABADD36F4338 /* NSBundle+AFOCategory.h */,
+				B87857C0CC8304574005DCF8B1B2230D /* NSBundle+AFOCategory.m */,
+			);
+			name = bundle;
 			sourceTree = "<group>";
 		};
 		732451670306BA9D2C614A4CA23A91D6 /* libavcodec */ = {
@@ -1360,17 +1426,6 @@
 				5B8B88228336DFC1157C972B4BB81D19 /* GCDMulticastDelegate.m */,
 			);
 			name = GCDMulticastDelegate;
-			sourceTree = "<group>";
-		};
-		7AC61F0F4CD804A09CC0933A41B00A64 /* dictionary */ = {
-			isa = PBXGroup;
-			children = (
-				53110B952C086DA6053315863DF5D6EA /* NSDictionary+AFOAbnormal.h */,
-				DA28BE0BE4DD8D4A4177B77426C42575 /* NSDictionary+AFOAbnormal.m */,
-				DD57033D482AD42CA0D040581AD6F264 /* NSMutableDictionary+AFOAbnormal.h */,
-				B2AE5D01A6AEABF0F5331B84185BE61D /* NSMutableDictionary+AFOAbnormal.m */,
-			);
-			name = dictionary;
 			sourceTree = "<group>";
 		};
 		7D3AFDF215E3D4EAEA6214E3B43D63FF /* Frameworks */ = {
@@ -1427,15 +1482,6 @@
 			path = "../Target Support Files/AFOFFMpeg";
 			sourceTree = "<group>";
 		};
-		8BF158CBDA1EC5FA5F4A0AAA17629F96 /* bundle */ = {
-			isa = PBXGroup;
-			children = (
-				2785CDD7745AEAA09B917770BCDFF73C /* NSBundle+AFOCategory.h */,
-				CB1F0703C501795292D51E80736492B3 /* NSBundle+AFOCategory.m */,
-			);
-			name = bundle;
-			sourceTree = "<group>";
-		};
 		8C50E1B6484368070012E11775B2B0E0 /* AFOFFMpegLib */ = {
 			isa = PBXGroup;
 			children = (
@@ -1445,15 +1491,6 @@
 			);
 			name = AFOFFMpegLib;
 			path = AFOFFMpegLib;
-			sourceTree = "<group>";
-		};
-		939285816E8269D35EB3587F805E8C2A /* string */ = {
-			isa = PBXGroup;
-			children = (
-				706858272730FADC0F32254E3083A61B /* NSString+Formatting.h */,
-				F315604D37DBDABA42F1CCF087B0FB19 /* NSString+Formatting.m */,
-			);
-			name = string;
 			sourceTree = "<group>";
 		};
 		9DC67016796DDDDEE4AD2DA97D092F19 /* Support Files */ = {
@@ -1487,17 +1524,6 @@
 			);
 			name = libxvidcore;
 			path = libxvidcore;
-			sourceTree = "<group>";
-		};
-		AC4C2B4B4E3D4267D4A6B1DAA82D775E /* array */ = {
-			isa = PBXGroup;
-			children = (
-				FDAF993276E5BA49AB1C5FFF8E088281 /* NSArray+AFOAbnormal.h */,
-				66AD791A6FEBABBB97E90E04700E0538 /* NSArray+AFOAbnormal.m */,
-				097D97B21CDFE2438A63A6214428CE9F /* NSMutableArray+AFOAbnormal.h */,
-				899FF0B6FE7FA679D44BDCCCB0BCEA4A /* NSMutableArray+AFOAbnormal.m */,
-			);
-			name = array;
 			sourceTree = "<group>";
 		};
 		AE8044E9B975F87C469A84E528280442 /* Support Files */ = {
@@ -1639,17 +1665,6 @@
 			);
 			sourceTree = "<group>";
 		};
-		D21237076B0B07D818F32023A87BA1A4 /* sandbox */ = {
-			isa = PBXGroup;
-			children = (
-				E90178B31AF9FC4D0622C1A28B134917 /* NSFileManager+AFOOperation.h */,
-				516A1387C1760A17B2B682ED9BC98A90 /* NSFileManager+AFOOperation.m */,
-				79D04071E939B97ACEF377B74C647649 /* NSFileManager+AFOSandBox.h */,
-				5F9EFF30579C20A54D9FD61BFC8495D5 /* NSFileManager+AFOSandBox.m */,
-			);
-			name = sandbox;
-			sourceTree = "<group>";
-		};
 		D87F507B6C4BEF1142B9221819D55C57 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -1673,12 +1688,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E46A8A15140633207F3A91DD13917CC5 /* weak */ = {
+		E65F7B32F117BC01D53483B3F77E81C9 /* array */ = {
 			isa = PBXGroup;
 			children = (
-				CF963FA15664287A454578CAF0C007D9 /* AFOWeakInstance.h */,
+				7551FFCA0BE5773DE28AA5F26105B0FA /* NSArray+AFOAbnormal.h */,
+				E7C9D88B25E0A5631FEF8AC5250709BB /* NSArray+AFOAbnormal.m */,
+				24801738ACD36C0B507EB80564DEA6CD /* NSMutableArray+AFOAbnormal.h */,
+				EF34B215AA8F7FDD1BFA4AEA845B90E0 /* NSMutableArray+AFOAbnormal.m */,
 			);
-			name = weak;
+			name = array;
 			sourceTree = "<group>";
 		};
 		E81EDA14A0BD11196A9930346BE71A3F /* libavformat */ = {
@@ -1713,6 +1731,23 @@
 			path = AFOUIKIT;
 			sourceTree = "<group>";
 		};
+		F13A43506EE8070580A148905A50D763 /* AFOFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				61E96442FEA8FFD7DFA90DA934E7EB85 /* AFOFoundation.h */,
+				E65F7B32F117BC01D53483B3F77E81C9 /* array */,
+				723675B7DE1DE26752079DE3E180C177 /* bundle */,
+				64DA92E2932014D31C3B48D012D31234 /* define */,
+				260EAA07280BB2F21D6C98E9598A81FD /* dictionary */,
+				33AD0A900DAC74F985004466BBF12410 /* sandbox */,
+				5780FDF88F9B7E99C67BBA5B94AD953D /* string */,
+				28456E72F62B9500291FFDD49C50AC6D /* Support Files */,
+				4DAF3C895AEE4B1E1623B1D9AE830B24 /* weak */,
+			);
+			name = AFOFoundation;
+			path = AFOFoundation;
+			sourceTree = "<group>";
+		};
 		F20E4A727ABB689A653AA56A340B132C /* standard */ = {
 			isa = PBXGroup;
 			children = (
@@ -1731,23 +1766,6 @@
 			name = standard;
 			sourceTree = "<group>";
 		};
-		F8E0AD98EAC96555EBC4A8C7CA49D142 /* AFOFoundation */ = {
-			isa = PBXGroup;
-			children = (
-				137901953E0C9C1843A78B84E6C0EB98 /* AFOFoundation.h */,
-				AC4C2B4B4E3D4267D4A6B1DAA82D775E /* array */,
-				8BF158CBDA1EC5FA5F4A0AAA17629F96 /* bundle */,
-				5CFE2C1879AAEAF441A5B4DE4CCB6DA9 /* define */,
-				7AC61F0F4CD804A09CC0933A41B00A64 /* dictionary */,
-				D21237076B0B07D818F32023A87BA1A4 /* sandbox */,
-				939285816E8269D35EB3587F805E8C2A /* string */,
-				55BFC2694098A67E344E51B754203AB2 /* Support Files */,
-				E46A8A15140633207F3A91DD13917CC5 /* weak */,
-			);
-			name = AFOFoundation;
-			path = AFOFoundation;
-			sourceTree = "<group>";
-		};
 		FFF693546EA1819B14FEB3FE2A467F3D /* libswresample */ = {
 			isa = PBXGroup;
 			children = (
@@ -1760,21 +1778,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		110F5D16E8D427B85A6D87374FD2E666 /* Headers */ = {
+		0F30793A8923885B0DA057F48172F947 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB22E51184C76D2FA1B0F14FE5958417 /* AFOFoundation.h in Headers */,
-				3C673E39C0B3A83B808AB1A35CF0695F /* AFOMacroDefinition.h in Headers */,
-				666872E2B47A8EE75DDB2A25EBE49FEC /* AFOWeakInstance.h in Headers */,
-				B48E4B87D613C741991E2CAA6E145EC1 /* NSArray+AFOAbnormal.h in Headers */,
-				D32E89D4540F3DF66D83F47358490264 /* NSBundle+AFOCategory.h in Headers */,
-				C6933593BC5872CDC13C0C9760A346EB /* NSDictionary+AFOAbnormal.h in Headers */,
-				C35763AA76ACC14DC2285BB3882CC133 /* NSFileManager+AFOOperation.h in Headers */,
-				386368534DF1257CED1C6C958D59B5C5 /* NSFileManager+AFOSandBox.h in Headers */,
-				96088E81A4AEC2373F807A03D8625AE6 /* NSMutableArray+AFOAbnormal.h in Headers */,
-				AC83FE8B29053F0D408276CBF2B82ED1 /* NSMutableDictionary+AFOAbnormal.h in Headers */,
-				08992CA64E2866B2C1853D144CD911D6 /* NSString+Formatting.h in Headers */,
+				2DBA3E216837B28A29C414089857D74B /* AFOFoundation.h in Headers */,
+				487CDBFEDEB02B8D6EB00CDBB34EC3D6 /* AFOMacroDefinition.h in Headers */,
+				0938E0A92E1CC6CB3C49EE2F93723A78 /* AFOWeakInstance.h in Headers */,
+				579D1A039FED99EE1F8601D3CCF6FB71 /* NSArray+AFOAbnormal.h in Headers */,
+				6552C89B23D44B06FFCF1461D534B10F /* NSBundle+AFOCategory.h in Headers */,
+				5DF83BA8C7197BAC7D2452FBFF7CE795 /* NSDictionary+AFOAbnormal.h in Headers */,
+				21D1BD1F45A462C06E95D50FE96F9001 /* NSFileManager+AFOOperation.h in Headers */,
+				BD9C0972D1B118C05ADA8B8796FF47B7 /* NSFileManager+AFOSandBox.h in Headers */,
+				F2C2B05189F1A158C52F04842076A99E /* NSMutableArray+AFOAbnormal.h in Headers */,
+				C863B2266971EF2A32ADC66FC20A5DDE /* NSMutableDictionary+AFOAbnormal.h in Headers */,
+				6E47C56845D2E20C9463D8183498BB16 /* NSString+Dictionary.h in Headers */,
+				4F4D09A0AC9F18C22B1795D0C9939010 /* NSString+Formatting.h in Headers */,
+				33D99ED00F89D615CC88B763219ABD9E /* NSString+URLParameter.h in Headers */,
+				1A4E71BD904DC6DC93226264EC62A5B8 /* NSString+URLSchemes.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1998,8 +2019,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04666770BEDE44258984BE9868C1C997 /* Build configuration list for PBXNativeTarget "AFOFoundation" */;
 			buildPhases = (
-				110F5D16E8D427B85A6D87374FD2E666 /* Headers */,
-				02272D5CC251ED616495ACE55C22D06B /* Sources */,
+				0F30793A8923885B0DA057F48172F947 /* Headers */,
+				C044A817C7D7A30D3CE63AB934643C1F /* Sources */,
 				6C5BD48D9EC798CA800DA3BF9031F290 /* Frameworks */,
 			);
 			buildRules = (
@@ -2166,22 +2187,6 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		02272D5CC251ED616495ACE55C22D06B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				640638009EA41B33EC46EC7A4ED06C71 /* AFOFoundation-dummy.m in Sources */,
-				7B8245939298D6CE5F290F32072EFC42 /* NSArray+AFOAbnormal.m in Sources */,
-				A715FEDCDAA43A1A98AFC55A17BD6558 /* NSBundle+AFOCategory.m in Sources */,
-				8C13C0BAC088BE148C1B97D1335CF770 /* NSDictionary+AFOAbnormal.m in Sources */,
-				6759FE80DFA91784AF0F1E74B2E8CFB6 /* NSFileManager+AFOOperation.m in Sources */,
-				62F0A4A61BB1A05DAEABBFE7C8010DDC /* NSFileManager+AFOSandBox.m in Sources */,
-				925282AACD6B6B90E92D07CD8D333FA2 /* NSMutableArray+AFOAbnormal.m in Sources */,
-				418B34CF4909B031B1A7EC1384335410 /* NSMutableDictionary+AFOAbnormal.m in Sources */,
-				5762ED2D9569FF09E931D72C4E823690 /* NSString+Formatting.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		41691D05D2FAC9B3A0329E912EE46463 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2277,6 +2282,25 @@
 				45B2BE58728D48CE0367DFDE02E04877 /* AFOVideoFrame.m in Sources */,
 				0AD97DD3D630979F7A4675AD645DB5A8 /* AFOVideoFrameRGB.m in Sources */,
 				A53245EF8F3C116E2A5BAACCC7CC88AD /* AFOVideoFrameYUV.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C044A817C7D7A30D3CE63AB934643C1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8EA721AA8A85869010C2CBDA726CFB2 /* AFOFoundation-dummy.m in Sources */,
+				E298BEB78A6C012DA2C33C02B5627994 /* NSArray+AFOAbnormal.m in Sources */,
+				9E77AD99F82FA58553D1EA3105CC969E /* NSBundle+AFOCategory.m in Sources */,
+				152018295126CA1C806B9ADA5A06C3DB /* NSDictionary+AFOAbnormal.m in Sources */,
+				4B93E8354A43D9DEE5656EB262C2B23D /* NSFileManager+AFOOperation.m in Sources */,
+				A3484FCB2C44D8926966DBE73823E321 /* NSFileManager+AFOSandBox.m in Sources */,
+				CBEC961BF8A1D4D0E27F2991C167C2CB /* NSMutableArray+AFOAbnormal.m in Sources */,
+				1AAD934080271FDDD85FE6F182DE5859 /* NSMutableDictionary+AFOAbnormal.m in Sources */,
+				51EABDF4418B9630551D02141A937836 /* NSString+Dictionary.m in Sources */,
+				050FB82CD4965FEEEAD173EFA7089549 /* NSString+Formatting.m in Sources */,
+				A46582973E2EE74CD76C069C565A37B3 /* NSString+URLParameter.m in Sources */,
+				DA433BCB32563E43394F9E5CBC077E36 /* NSString+URLSchemes.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2464,7 +2488,7 @@
 /* Begin XCBuildConfiguration section */
 		069180E38A6AD731D885B1E59D5C2884 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A74865849FFA2A29541D46F00D48BF39 /* AFOFoundation.xcconfig */;
+			baseConfigurationReference = AC76CCA74F834803F3F7713E387593C1 /* AFOFoundation.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -2488,7 +2512,7 @@
 		};
 		0A3078FD52940DBDC1B59F7121F12D1E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A74865849FFA2A29541D46F00D48BF39 /* AFOFoundation.xcconfig */;
+			baseConfigurationReference = AC76CCA74F834803F3F7713E387593C1 /* AFOFoundation.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

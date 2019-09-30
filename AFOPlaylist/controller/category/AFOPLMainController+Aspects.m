@@ -8,6 +8,7 @@
 
 #import "AFOPLMainController+Aspects.h"
 #import <AFOGitHub/AFOGitHub.h>
+#import <AFOFoundation/AFOFoundation.h>
 #import <AFORouter/AFORouter.h>
 #import "AFOPLMainControllerCategory.h"
 @implementation AFOPLMainController (Aspects)
@@ -31,27 +32,9 @@
                                      @"title" : name,
                                      @"direction" : @(screen)
                                      };
-        NSString *base = @"file://";
-        base = [self addQueryStringToUrl:base params:dictionary];
+        NSString *base = @"url://";[NSString addSchemes:nil params:dictionary];
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:base]];
     } error:NULL];
-}
-- (NSString*)addQueryStringToUrl:(NSString *)url params:(NSDictionary *)params {
-    __block NSMutableString *urlWithQuerystring = [[NSMutableString alloc] initWithString:url];
-    // 转换参数
-    if (params) {
-        [params enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
-            NSString *sKey = [key description];
-            NSString *sVal = [[[params objectForKey:key] description] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-            // 需要添加 add ?k=v or &k=v ?
-            if ([urlWithQuerystring rangeOfString:@"?"].location == NSNotFound) {
-                [urlWithQuerystring appendFormat:@"?%@=%@", sKey, sVal];
-            } else {
-                [urlWithQuerystring appendFormat:@"&%@=%@", sKey, sVal];
-            }
-        }];
-    }
-    return urlWithQuerystring;
 }
 - (void)dealloc{
     NSLog(@"AFOPLMainController+Aspects dealloc");
