@@ -32,7 +32,7 @@
                                      @"title" : name,
                                      @"direction" : @(screen)
                                      };
-        NSString *base = @"url://";[NSString addSchemes:nil params:dictionary];
+        NSString *base = [NSString addSchemes:@"dd" params:dictionary];
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:base]];
     } error:NULL];
 }
