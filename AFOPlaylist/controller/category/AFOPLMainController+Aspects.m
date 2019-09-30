@@ -22,6 +22,14 @@
                                                                                                                                                                      @"title" : name,
                                                                                                                                                                      @"direction":@(screen)
                                                                                                                                                                      }];
+        NSString *newString =[[AFORouterManager shareInstance] settingRoutesParameters:@{
+                                                                                         @"controller" : @"AFOMediaPlayController",
+                                                                                         @"present" : NSStringFromClass([self class]),
+                                                                                         @"action" :@"push",
+                                                                                         @"value" : path,
+                                                                                         @"title" : name,
+                                                                                         @"direction" : @(screen)
+                                                                                         }];
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:baseStr]];
     } error:NULL];
 }

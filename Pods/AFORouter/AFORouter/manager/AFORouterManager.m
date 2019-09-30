@@ -124,6 +124,29 @@
                                    params:(NSDictionary *)dictionary{
     return [self settingPushControllerRouter:controller present:present scheme:self.strScheme params:dictionary];
 }
+#pragma mark ------
+- (NSString *)settingRoutesParameters:(NSDictionary *)dictionary{
+    NSString *strResult;
+    NSString *strBase =[self.strScheme stringByAppendingString:dictionary[@"modelName"]];
+    NSString *controller = dictionary[@"controller"];
+    NSString *present = dictionary[@"present"];
+    NSString *action = dictionary[@"action"];
+    if (controller != nil && present != nil) {
+        strResult = [strBase stringByAppendingString:present];
+        strResult = [strResult stringByAppendingString:@"/"];
+        strResult = [strResult stringByAppendingString:controller];
+        strResult = [strResult stringByAppendingString:@"/"];
+        strResult = [strResult stringByAppendingString:action];
+    }else{
+        strResult = [strBase stringByAppendingString:controller];
+        strResult = [strResult stringByAppendingString:@"/"];
+        strResult = [strResult stringByAppendingString:action];
+    }
+    if (dictionary.count > 0) {
+        strResult = [self addQueryStringToUrl:strResult params:dictionary];
+    }
+    return strResult;
+}
 #pragma mark ------ UIApplicationDelegate
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(nullable NSString *)sourceApplication annotation:(id)annotation{
     return [self routeURL:url];
