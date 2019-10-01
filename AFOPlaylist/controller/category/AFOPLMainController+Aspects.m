@@ -19,7 +19,7 @@
         NSInteger screen = [self screenPortrait:indexPath];
         
         NSDictionary *dictionary = @{
-                                     @"modelName" :   JLRouteFunctionPlaylist,                                        @"controller" : @"AFOMediaPlayController",
+                                     @"modelName" :   @"playlist",                                        @"controller" : @"AFOMediaPlayController",
                                      @"present" : NSStringFromClass([self class]),
                                      @"action" :@"push",
                                      @"value" : path,
