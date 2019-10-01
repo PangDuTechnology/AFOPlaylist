@@ -19,8 +19,9 @@
         NSInteger screen = [self screenPortrait:indexPath];
         
         NSDictionary *dictionary = @{
-                                     @"modelName" :   @"playlist",                                        @"controller" : @"AFOMediaPlayController",
-                                     @"present" : NSStringFromClass([self class]),
+                                     @"modelName" :   @"playlist",
+                                     @"current" : NSStringFromClass([self class]),
+                                     @"next" : @"AFOMediaPlayController",
                                      @"action" :@"push",
                                      @"value" : path,
                                      @"title" : name,
