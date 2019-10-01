@@ -11,7 +11,7 @@
 @implementation NSString (URLParameter)
 + (NSString *)addSchemes:(NSString *)url
                   params:(NSDictionary *)dictionary{
-    NSString *baseString = [[NSString readSchemesFromInfoPlist] stringByAppendingString:@"/"];
+    NSString *baseString = [[NSString readSchemesFromInfoPlist] stringByAppendingString:@"://"];
     baseString = [baseString stringByAppendingString:[NSString readSchemesFromInfoPlist]];
     return [self addQueryStringToUrl:baseString params:dictionary];
 }
@@ -33,4 +33,31 @@
     }
     return urlWithQuerystring;
 }
+#pragma mark ------
++ (NSString *)settingRoutesParameters:(NSDictionary *)dictionary{
+    NSString *strResult;
+    NSString *strBase = [[NSString readSchemesFromInfoPlist] stringByAppendingString:@"://"];
+    strBase = [strBase stringByAppendingString:dictionary[@"modelName"]];
+    NSString *controller = dictionary[@"controller"];
+    NSString *present = dictionary[@"present"];
+    NSString *action = dictionary[@"action"];
+    if (controller != nil && present != nil) {
+        strResult = [[strBase stringByAppendingString:@"/"] stringByAppendingString:present];
+        strResult = [[strResult stringByAppendingString:@"/"] stringByAppendingString:controller];
+        strResult = [[strResult stringByAppendingString:@"/"] stringByAppendingString:action];
+    }else{
+        strResult = [strBase stringByAppendingString:controller];
+        strResult = [[strResult stringByAppendingString:@"/"] stringByAppendingString:action];
+    }
+    if (dictionary.count > 0) {
+        strResult = [NSString addQueryStringToUrl:strResult params:[NSString paramesDictionary:dictionary]];
+    }
+    return strResult;
+}
++ (NSDictionary *)paramesDictionary:(NSDictionary *)dictionary{
+    NSMutableDictionary *dic = [[NSMutableDictionary alloc] initWithDictionary:dictionary];
+    [dic removeObjectsForKeys:@[@"modelName",@"action",@"present"]];
+    return dic;
+}
+
 @end

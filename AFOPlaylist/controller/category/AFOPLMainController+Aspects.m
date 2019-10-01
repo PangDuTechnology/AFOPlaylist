@@ -9,7 +9,6 @@
 #import "AFOPLMainController+Aspects.h"
 #import <AFOGitHub/AFOGitHub.h>
 #import <AFOFoundation/AFOFoundation.h>
-#import <AFORouter/AFORouter.h>
 #import "AFOPLMainControllerCategory.h"
 @implementation AFOPLMainController (Aspects)
 #pragma mark ------ collectionView:didSelectItemAtIndexPath:
@@ -19,11 +18,6 @@
         NSString *name = [self vedioName:indexPath];
         NSInteger screen = [self screenPortrait:indexPath];
         
-        NSString *baseStr = [[AFORouterManager shareInstance] settingPushControllerRouter:@"AFOMediaPlayController" present:NSStringFromClass([self class]) params:@{@"value": path,
-                                                                                                                                                                     @"title" : name,
-                                                                                                                                                                     @"direction":@(screen)
-                                                                                                                                                                     }];
-//        NSString *newString =[[AFORouterManager shareInstance] settingRoutesParameters:];
         NSDictionary *dictionary = @{
                                      @"modelName" :   JLRouteFunctionPlaylist,                                        @"controller" : @"AFOMediaPlayController",
                                      @"present" : NSStringFromClass([self class]),
@@ -32,7 +26,7 @@
                                      @"title" : name,
                                      @"direction" : @(screen)
                                      };
-        NSString *base = [NSString addSchemes:@"dd" params:dictionary];
+        NSString *base = [NSString settingRoutesParameters:dictionary];
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:base]];
     } error:NULL];
 }

@@ -101,7 +101,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   AFOFoundation:
-    :commit: cc4a1ff1d229fa8525953bc9661b08b4d7329be9
+    :commit: acb65e1ea941009e2669fc6a0c543fa774500184
     :git: "/Users/xianxueguang/Documents/GitHub/AFOFoundation"
   AFORouter:
     :commit: dac6200a6b816c050fc4f7f3eec2d84931e683e8

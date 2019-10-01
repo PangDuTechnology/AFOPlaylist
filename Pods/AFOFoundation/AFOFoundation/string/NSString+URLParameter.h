@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
                   params:(NSDictionary *)dictionary;
 + (NSString*)addQueryStringToUrl:(NSString *)url
                           params:(NSDictionary *)params;
++ (NSString *)settingRoutesParameters:(NSDictionary *)dictionary;
 @end
 
 NS_ASSUME_NONNULL_END
