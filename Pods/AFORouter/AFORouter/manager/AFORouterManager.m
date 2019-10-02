@@ -8,17 +8,14 @@
 
 #import "AFORouterManager.h"
 #import <UIKit/UIKit.h>
+#import <AFOUIKIT/UIViewController+CurrentController.h>
 #import <AFOFoundation/AFOFoundation.h>
 #import "JLRoutes.h"
-#import "AFORouterManager+StringManipulation.h"
-#import "AFORouterInfoplist.h"
 #import "AFORouterManagerDelegate.h"
-
+#import "AFORouterActionContext.h"
 @interface AFORouterManager ()<AFORouterManagerDelegate,UIApplicationDelegate>
 @property (nonatomic, strong) JLRoutes                  *routes;
 @property (nonatomic, copy)   NSString                  *strScheme;
-@property (nonatomic, strong)       id                   rootController;
-@property (nonatomic, strong)       id                   valueModel;
 @end
 
 @implementation AFORouterManager
@@ -32,142 +29,40 @@
     return shareInstance;
 }
 #pragma mark ------
-+ (void)initialize{
-    if (self == [AFORouterManager class]) {
-        [self loadNotification];
-    }
-}
-#pragma mark ------
-+ (void)loadNotification{
-    [[AFORouterManager shareInstance] readRouterScheme];
-    [[AFORouterManager shareInstance] loadRotesFile];
-}
-#pragma mark ------ 获取RooterController
-- (void)settingRooterController:(id)controller{
-    self.rootController = controller;
+- (void)loadNotification{
+    [self readRouterScheme];
+    [self loadRotesFile];
 }
 #pragma mark ------ 设置Schemes
 - (void)readRouterScheme{
-    self.strScheme = [AFORouterInfoplist readAppInfoPlistFile];
-    _routes = [JLRoutes routesForScheme:self.strScheme];
+    self.strScheme = [NSString readSchemesFromInfoPlist];
+    self.routes = [JLRoutes routesForScheme:self.strScheme];
 }
 #pragma mark ------ 添加跳转规则
 - (void)loadRotesFile{
     WeakObject(self);
-    [self.routes addRoute:@"/push/:presentController/:pushController"handler:^BOOL(NSDictionary<NSString *,id> * _Nonnull parameters) {
+    [self.routes addRoute:@"/:modelName/:current/:next/:action"handler:^BOOL(NSDictionary<NSString *,id> * _Nonnull parameters) {
         StrongObject(self)
-        ///------
-        Class classPush = NSClassFromString(parameters[@"pushController"]);
-        UIViewController *nextController = [[classPush alloc] init];
-        nextController.hidesBottomBarWhenPushed = YES;
-        UIViewController *currentController = [self currentViewController];
-        [self addSenderControllerRouterManagerDelegate:nextController present:currentController parameters:parameters];
-        [currentController.navigationController pushViewController:nextController animated:YES];
+        AFORouterActionContext *action = [[AFORouterActionContext alloc] initAction:parameters[@"action"]];
+        [action currentController:[UIViewController currentViewController] nextController:[self nextController:parameters] parameter:parameters];
         return YES;
     }];
 }
-#pragma mark ------------
-- (void)addSenderControllerRouterManagerDelegate:(id)pushController
-                                         present:(id)presentController
-                                      parameters:(NSDictionary *)parameters{
-    ///------ 传递值
-    if ([presentController respondsToSelector:@selector(didSenderRouterManagerDelegate)]) {
-        self.valueModel = [presentController performSelector:@selector(didSenderRouterManagerDelegate)];
-    }
-    ///------ 获取值
-    if ([pushController respondsToSelector:@selector(didReceiverRouterManagerDelegate:)]) {
-        [pushController performSelector:@selector(didReceiverRouterManagerDelegate:) withObject:parameters];
-    }
-    ///------ 获取值
-    if ([pushController respondsToSelector:@selector(didReceiverRouterManagerDelegate:parameters:)] && self.valueModel) {
-        [pushController performSelector:@selector(didReceiverRouterManagerDelegate:parameters:) withObject:self.valueModel withObject:parameters];
-    }
-}
-#pragma mark ------ 当前Controller
-- (UIViewController *)currentViewController{
-    if ([self.rootController isKindOfClass:[UINavigationController class]]) {
-        return [self returnNavigationLastObject:self.rootController];
-    }else if ([self.rootController isKindOfClass:[UITabBarController class]]){
-        return [self returnTabBarControllerSelect:self.rootController];
-    }
-    return self.rootController;
-}
-#pragma mark ------ navigation last Controller
-- (id)returnNavigationLastObject:(id)controller{
-    UINavigationController  *navigation = (UINavigationController *)controller;
-    return [[navigation viewControllers] lastObject];
-}
-#pragma mark ------ tabBarController select Controller
-- (id)returnTabBarControllerSelect:(id)controller{
-    UITabBarController *tabBar = controller;
-    if ([tabBar.selectedViewController isKindOfClass:[UINavigationController class]]) {
-        return [self returnNavigationLastObject:tabBar.selectedViewController];
-    }else{
-        return tabBar.selectedViewController;
-    }
+- (UIViewController *)nextController:(NSDictionary *)parameters{
+    Class class = NSClassFromString(parameters[@"next"]);
+    UIViewController *controller = [[class alloc] init];
+    controller.hidesBottomBarWhenPushed = YES;
+    return controller;
 }
 #pragma mark ------ 匹配URL
 - (BOOL)routeURL:(NSURL *)url{
     return [self.routes routeURL:url];
 }
-#pragma mark ------ 不带参数URL
-- (NSString *)settingPushControllerRouter:(id)controller{
-    return [self settingPushControllerRouter:controller scheme:self.strScheme params:nil];
-}
-#pragma mark ------ 带参数URL
-- (NSString *)settingPushControllerRouter:(id)controller params:(NSDictionary *)dictionary{
-    return [self settingPushControllerRouter:controller scheme:self.strScheme params:dictionary];
-}
-#pragma mark ------
-- (NSString *)settingPushControllerRouter:(id)controller
-                                  present:(id)present
-                                   params:(NSDictionary *)dictionary{
-    return [self settingPushControllerRouter:controller present:present scheme:self.strScheme params:dictionary];
-}
-#pragma mark ------
-- (NSString *)settingRoutesParameters:(NSDictionary *)dictionary{
-    NSString *strResult;
-    NSString *strBase = [self.strScheme stringByAppendingString:@"://"];
-    strBase = [strBase stringByAppendingString:dictionary[@"modelName"]];
-    NSString *controller = dictionary[@"controller"];
-    NSString *present = dictionary[@"present"];
-    NSString *action = dictionary[@"action"];
-    if (controller != nil && present != nil) {
-        strResult = [[self slashString:strBase] stringByAppendingString:present];
-        strResult = [[self slashString:strResult] stringByAppendingString:controller];
-        strResult = [[self slashString:strResult] stringByAppendingString:action];
-    }else{
-        strResult = [strBase stringByAppendingString:controller];
-        strResult = [[self slashString:strResult] stringByAppendingString:action];
-    }
-    if (dictionary.count > 0) {
-        strResult = [self addQueryStringToUrl:strResult params:[self paramesDictionary:dictionary]];
-    }
-    return strResult;
-}
-- (NSString *)slashString:(NSString *)baseString{
-    
-    return [baseString stringByAppendingString:@"/"];
-}
-- (NSDictionary *)paramesDictionary:(NSDictionary *)dictionary{
-    NSMutableDictionary *dic = [[NSMutableDictionary alloc] initWithDictionary:dictionary];
-    [dic removeObjectsForKeys:@[@"modelName",@"action",@"present"]];
-    return dic;
-}
--(NSDictionary *)convertToDictionary:(NSString *)jsonStr{
-    NSData *data = [jsonStr dataUsingEncoding:NSUTF8StringEncoding];
-    NSDictionary *tempDic = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-    
-    return tempDic;
-}
-- (NSURL *)joiningTogetherUrl:(NSURL *)url{
-    NSString *baseString = [url absoluteString];
-    NSDictionary *dictionary = [self convertToDictionary:baseString];
-    NSString *urlString = [self settingRoutesParameters:dictionary];
-    NSURL *router = [[NSURL alloc] initWithString:urlString];
-    return router;
-}
 #pragma mark ------ UIApplicationDelegate
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [self loadNotification];
+    return YES;
+}
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(nullable NSString *)sourceApplication annotation:(id)annotation{
     return [self routeURL:url];
 }
@@ -176,10 +71,4 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 #pragma mark ------ property
-- (UIViewController *)rootController{
-    if (!_rootController) {
-        _rootController = [[UIViewController alloc]init];
-    }
-    return _rootController;
-}
 @end
