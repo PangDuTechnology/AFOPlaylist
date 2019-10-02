@@ -64,7 +64,9 @@ PODS:
   - AFORouter/router (0.0.6)
   - AFOSQLite (0.0.10):
     - FMDB
-  - AFOUIKIT (0.0.6)
+  - AFOUIKIT (0.0.7):
+    - AFOUIKIT/viewController (= 0.0.7)
+  - AFOUIKIT/viewController (0.0.7)
   - AFOViews (0.0.2)
   - AFOx264 (0.0.1)
   - FMDB (2.7.5):
@@ -78,6 +80,7 @@ DEPENDENCIES:
   - AFOGitHub
   - AFORouter (from `/Users/xianxueguang/Documents/GitHub/AFORouter`)
   - AFOSQLite
+  - AFOUIKIT (from `/Users/xianxueguang/Documents/GitHub/AFOUIKIT`)
   - FMDB
 
 SPEC REPOS:
@@ -87,7 +90,6 @@ SPEC REPOS:
     - AFOGitHub
     - AFOlibyuv
     - AFOSQLite
-    - AFOUIKIT
     - AFOViews
     - AFOx264
     - FMDB
@@ -98,14 +100,19 @@ EXTERNAL SOURCES:
     :git: "/Users/xianxueguang/Documents/GitHub/AFOFoundation"
   AFORouter:
     :git: "/Users/xianxueguang/Documents/GitHub/AFORouter"
+  AFOUIKIT:
+    :git: "/Users/xianxueguang/Documents/GitHub/AFOUIKIT"
 
 CHECKOUT OPTIONS:
   AFOFoundation:
     :commit: 0e0e903002c8c86c2622bb07ad289afa466a72ba
     :git: "/Users/xianxueguang/Documents/GitHub/AFOFoundation"
   AFORouter:
-    :commit: d85febcd38122b4704553e5f82f2cf277c045438
+    :commit: 8caf23b56be917383f42881f7fa9ef0027db2938
     :git: "/Users/xianxueguang/Documents/GitHub/AFORouter"
+  AFOUIKIT:
+    :commit: 63c9740e4d1c97868c8a354c1ac5d928ca24c9f9
+    :git: "/Users/xianxueguang/Documents/GitHub/AFOUIKIT"
 
 SPEC CHECKSUMS:
   AFOFFMpeg: 4cddf87d97104f8138d0c8dcee82eb9662c882de
@@ -115,12 +122,12 @@ SPEC CHECKSUMS:
   AFOlibyuv: 0de9914d223842fb3bd71df543efbc0b3de46d85
   AFORouter: 55453f046221d0750f38f55eb47e3eeb6739fa47
   AFOSQLite: d5f1a069955f3a074b2585c48d5417fa7ccf3392
-  AFOUIKIT: 9feceb7972ab234f42e744e0efe783832805e3db
+  AFOUIKIT: b1e12d14891b02f23c5dd3808db57ee6873e5c15
   AFOViews: e163b3141ed826d28d47c2a47cdbc51d0c399a54
   AFOx264: 83c386e207372a1d9b57ca21fda9c7a3d09c5b15
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   libxvidcore: 304cbb77e3398b9dfc7bd006d85196e39edc8185
 
-PODFILE CHECKSUM: b1c6100dd7e691dea1b49f776cd5035578448830
+PODFILE CHECKSUM: 14a51123a659a975e57e6468103d34d1d14dccf0
 
 COCOAPODS: 1.8.0
