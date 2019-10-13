@@ -1,6 +1,6 @@
 {
   "name": "AFORouter",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "summary": "The router.",
   "description": "Used to pass values between pages.",
   "homepage": "https://github.com/PangDuTechnology/AFORouter.git",
@@ -13,13 +13,15 @@
   },
   "source": {
     "git": "https://github.com/PangDuTechnology/AFORouter.git",
-    "tag": "0.0.6"
+    "tag": "0.0.8"
   },
   "source_files": "AFORouter/AFORouter.h",
   "public_header_files": "AFORouter/AFORouter.h",
   "requires_arc": true,
-  "xcconfig": {
-    "HEADER_SEARCH_PATHS": "\"$(SDKROOT)/AFORouter/router/*.h\",\"$(SDKROOT)/AFORouter/manager/*.h\""
+  "dependencies": {
+    "AFOSchedulerCore": [
+
+    ]
   },
   "subspecs": [
     {
@@ -39,6 +41,11 @@
       },
       "source_files": "AFORouter/manager/*.{h,m}",
       "public_header_files": "AFORouter/manager/*.h"
+    },
+    {
+      "name": "scheduler",
+      "source_files": "AFORouter/scheduler/*.{h,m}",
+      "public_header_files": "AFORouter/scheduler/*.h"
     }
   ]
 }
