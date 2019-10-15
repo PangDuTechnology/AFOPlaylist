@@ -1,13 +1,13 @@
 PODS:
   - AFODelegateExtension (0.0.7)
-  - AFOFFMpeg (0.1.3):
+  - AFOFFMpeg (0.1.1):
     - AFODelegateExtension
-    - AFOFFMpeg/audio (= 0.1.3)
-    - AFOFFMpeg/error (= 0.1.3)
-    - AFOFFMpeg/manager (= 0.1.3)
-    - AFOFFMpeg/media (= 0.1.3)
-    - AFOFFMpeg/play (= 0.1.3)
-    - AFOFFMpeg/screenshots (= 0.1.3)
+    - AFOFFMpeg/audio (= 0.1.1)
+    - AFOFFMpeg/error (= 0.1.1)
+    - AFOFFMpeg/manager (= 0.1.1)
+    - AFOFFMpeg/media (= 0.1.1)
+    - AFOFFMpeg/play (= 0.1.1)
+    - AFOFFMpeg/screenshots (= 0.1.1)
     - AFOFFMpegLib
     - AFOFoundation
     - AFOGitHub
@@ -17,18 +17,7 @@ PODS:
     - AFOViews
     - AFOx264
     - libxvidcore
-  - AFOFFMpeg/audio (0.1.3):
-    - AFODelegateExtension
-    - AFOFFMpegLib
-    - AFOFoundation
-    - AFOGitHub
-    - AFOlibyuv
-    - AFORouter
-    - AFOUIKIT
-    - AFOViews
-    - AFOx264
-    - libxvidcore
-  - AFOFFMpeg/error (0.1.3):
+  - AFOFFMpeg/audio (0.1.1):
     - AFODelegateExtension
     - AFOFFMpegLib
     - AFOFoundation
@@ -39,7 +28,7 @@ PODS:
     - AFOViews
     - AFOx264
     - libxvidcore
-  - AFOFFMpeg/manager (0.1.3):
+  - AFOFFMpeg/error (0.1.1):
     - AFODelegateExtension
     - AFOFFMpegLib
     - AFOFoundation
@@ -50,7 +39,7 @@ PODS:
     - AFOViews
     - AFOx264
     - libxvidcore
-  - AFOFFMpeg/media (0.1.3):
+  - AFOFFMpeg/manager (0.1.1):
     - AFODelegateExtension
     - AFOFFMpegLib
     - AFOFoundation
@@ -61,7 +50,7 @@ PODS:
     - AFOViews
     - AFOx264
     - libxvidcore
-  - AFOFFMpeg/play (0.1.3):
+  - AFOFFMpeg/media (0.1.1):
     - AFODelegateExtension
     - AFOFFMpegLib
     - AFOFoundation
@@ -72,7 +61,18 @@ PODS:
     - AFOViews
     - AFOx264
     - libxvidcore
-  - AFOFFMpeg/screenshots (0.1.3):
+  - AFOFFMpeg/play (0.1.1):
+    - AFODelegateExtension
+    - AFOFFMpegLib
+    - AFOFoundation
+    - AFOGitHub
+    - AFOlibyuv
+    - AFORouter
+    - AFOUIKIT
+    - AFOViews
+    - AFOx264
+    - libxvidcore
+  - AFOFFMpeg/screenshots (0.1.1):
     - AFODelegateExtension
     - AFOFFMpegLib
     - AFOFoundation
@@ -143,7 +143,13 @@ PODS:
   - AFORouter/scheduler (0.0.8):
     - AFOSchedulerCore
   - AFOSchedulerCore (0.0.1):
+    - AFOSchedulerCore/homePage (= 0.0.1)
+    - AFOSchedulerCore/playList (= 0.0.1)
+    - AFOSchedulerCore/rooter (= 0.0.1)
     - AFOSchedulerCore/scheduler (= 0.0.1)
+  - AFOSchedulerCore/homePage (0.0.1)
+  - AFOSchedulerCore/playList (0.0.1)
+  - AFOSchedulerCore/rooter (0.0.1)
   - AFOSchedulerCore/scheduler (0.0.1)
   - AFOSQLite (0.0.10):
     - FMDB
@@ -158,7 +164,7 @@ PODS:
   - libxvidcore (0.0.1)
 
 DEPENDENCIES:
-  - AFOFFMpeg
+  - AFOFFMpeg (from `/Users/piccolo/Documents/GitHub/AFOFFMpeg`)
   - AFOFoundation
   - AFOGitHub
   - AFORouter (from `/Users/piccolo/Documents/GitHub/AFORouter`)
@@ -170,7 +176,6 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - AFODelegateExtension
-    - AFOFFMpeg
     - AFOFFMpegLib
     - AFOFoundation
     - AFOGitHub
@@ -183,28 +188,33 @@ SPEC REPOS:
     - libxvidcore
 
 EXTERNAL SOURCES:
+  AFOFFMpeg:
+    :git: "/Users/piccolo/Documents/GitHub/AFOFFMpeg"
   AFORouter:
     :git: "/Users/piccolo/Documents/GitHub/AFORouter"
   AFOSchedulerCore:
     :git: "/Users/piccolo/Documents/GitHub/AFOSchedulerCore"
 
 CHECKOUT OPTIONS:
+  AFOFFMpeg:
+    :commit: 88110965d7fd8ce08170b7fb3079bcf137fb0a9b
+    :git: "/Users/piccolo/Documents/GitHub/AFOFFMpeg"
   AFORouter:
     :commit: e4c494994d6e616a935cec8ced15dade5b54cc62
     :git: "/Users/piccolo/Documents/GitHub/AFORouter"
   AFOSchedulerCore:
-    :commit: cd3a6ffd6eb253eccbb57264af00e65a056ccda3
+    :commit: 15335000d10389fd967fffb3a0bfba810e1e66f4
     :git: "/Users/piccolo/Documents/GitHub/AFOSchedulerCore"
 
 SPEC CHECKSUMS:
   AFODelegateExtension: 4a3b0331b540af32b577bc389498aefc1e633981
-  AFOFFMpeg: 0ea4b54d5ffe976e85e8ca6f917da17804f7e3f6
+  AFOFFMpeg: a1d408babe6678c73bbe21d16832fb47844dcd9f
   AFOFFMpegLib: 1d3079e6dc657e8b0cbba9ae21f5eb6a86b7bc1d
   AFOFoundation: b5953521aa5c436dba3d2e77d56b5614289476ab
   AFOGitHub: 9b4aee6e56e6d3215ff93e879575649a01e19af4
   AFOlibyuv: 0de9914d223842fb3bd71df543efbc0b3de46d85
   AFORouter: 58bd94d2b55d6f2683abdb7bbb5cfd122dc6da55
-  AFOSchedulerCore: 0e4cdd5bdadfb2ae323ccc4cf9b205757b34d540
+  AFOSchedulerCore: e67576eb67f1e252498368ff4f84844736f5af15
   AFOSQLite: d5f1a069955f3a074b2585c48d5417fa7ccf3392
   AFOUIKIT: b1e12d14891b02f23c5dd3808db57ee6873e5c15
   AFOViews: e163b3141ed826d28d47c2a47cdbc51d0c399a54
@@ -212,6 +222,6 @@ SPEC CHECKSUMS:
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   libxvidcore: 304cbb77e3398b9dfc7bd006d85196e39edc8185
 
-PODFILE CHECKSUM: 4671f5d22b62463814627ff028d0814950311ac3
+PODFILE CHECKSUM: b451c3732bf9a28afba6ac9f80d7b5ad656c7ac0
 
 COCOAPODS: 1.8.3

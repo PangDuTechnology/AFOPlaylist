@@ -1,7 +1,7 @@
 platform :ios, '8.0'
 inhibit_all_warnings!
 target 'AFOPlaylist' do
-  pod 'AFOFFMpeg'
+  pod 'AFOFFMpeg', :git => '/Users/piccolo/Documents/GitHub/AFOFFMpeg'
   pod 'AFOUIKIT'
   pod 'AFOFoundation'
   pod 'AFOSchedulerCore', :git => '/Users/piccolo/Documents/GitHub/AFOSchedulerCore'

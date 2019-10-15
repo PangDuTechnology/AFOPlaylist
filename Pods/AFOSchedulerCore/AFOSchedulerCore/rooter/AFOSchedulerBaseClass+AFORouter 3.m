@@ -1,0 +1,16 @@
+//
+//  AFOSchedulerBaseClass+AFORouter.m
+//  AFOSchedulerCore
+//
+//  Created by piccolo on 2019/10/15.
+//  Copyright © 2019 piccolo. All rights reserved.
+//
+
+#import "AFOSchedulerBaseClass+AFORouter.h"
+
+#import <AppKit/AppKit.h>
+
+
+@implementation AFOSchedulerBaseClass (AFORouter)
+
+@end
