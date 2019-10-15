@@ -1,16 +1,17 @@
 //
 //  AFOSchedulerBaseClass+AFORouter.h
-//  AFORouter
+//  AFOSchedulerCore
 //
-//  Created by piccolo on 2019/10/13.
-//  Copyright © 2019 AFO. All rights reserved.
+//  Created by piccolo on 2019/10/15.
+//  Copyright © 2019 piccolo. All rights reserved.
 //
 
 #import <AFOSchedulerCore/AFOSchedulerBaseClass.h>
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AFOSchedulerBaseClass (AFORouter)
-+ (void)jumpPassingParameters:(NSDictionary *)parameters;
++ (void)schedulerRouterJumpPassingParameters:(NSDictionary *)parameters;
 @end
 
 NS_ASSUME_NONNULL_END

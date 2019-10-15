@@ -29,8 +29,9 @@
                                      @"direction" : @(screen)
                                      };
         NSString *base = [NSString settingRoutesParameters:dictionary];
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:base]];
-        [AFOSchedulerBaseClass schedulerPlayListPassDictionary:dictionary];
+        if ([[UIApplication sharedApplication] openURL:[NSURL URLWithString:base]]) {
+            [AFOSchedulerBaseClass schedulerPlayListPassDictionary:dictionary];
+        }
     } error:NULL];
 }
 - (void)dealloc{
