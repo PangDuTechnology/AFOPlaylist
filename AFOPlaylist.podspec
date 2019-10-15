@@ -30,6 +30,7 @@ Pod::Spec.new do |s|
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.requires_arc = true
   s.dependency "AFOFoundation"
+  s.dependency "AFOSchedulerCore"
   s.dependency "AFORouter"
   s.dependency "AFOUIKIT"
   s.dependency "AFOFFMpeg"
