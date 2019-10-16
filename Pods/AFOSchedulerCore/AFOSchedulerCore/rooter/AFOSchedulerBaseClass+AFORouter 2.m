@@ -28,8 +28,8 @@
     }
 }
 #pragma mark ------------
-+ (void)schedulerController:(UIViewController *)currentController
-                    present:(UIViewController *)nextController
++ (void)schedulerController:(UIViewController *)nextController
+                    present:(UIViewController *)currentController
                  parameters:(NSDictionary *)parameters{
     id valueModel;
     ///------ 传递值
