@@ -194,13 +194,13 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   AFOFFMpeg:
-    :commit: 06c65a10c4007952e3d48e980b6101f9b19ed2c4
+    :commit: c928b7925cb48f4b248c7feec8b508c855feb06f
     :git: "/Users/piccolo/Documents/GitHub/AFOFFMpeg"
   AFORouter:
-    :commit: 434092197661fed0fb7c72d91cd8daee32da298a
+    :commit: 7448ab7c292ba004b7b8ce8ecdd530c8229b4510
     :git: "/Users/piccolo/Documents/GitHub/AFORouter"
   AFOSchedulerCore:
-    :commit: 2cae1a19763847b7f540afc95b8e16774474f400
+    :commit: f8b82c19caed93a8327c9d9b6836d03d5b01d10e
     :git: "/Users/piccolo/Documents/GitHub/AFOSchedulerCore"
 
 SPEC CHECKSUMS:
