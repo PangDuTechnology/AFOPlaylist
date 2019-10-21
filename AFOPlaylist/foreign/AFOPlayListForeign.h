@@ -8,4 +8,5 @@
 #import <UIKit/UIKit.h>
 @interface AFOPlayListForeign : UIViewController
 - (UIViewController *)returnController;
+- (UINavigationController *)returnNavigationController;
 @end
