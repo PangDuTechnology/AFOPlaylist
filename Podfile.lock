@@ -194,7 +194,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   AFOFFMpeg:
-    :commit: 3d30bf01ac111c95241ab886eac5c15225dc3957
+    :commit: 7879d8a54a42e2ea0f5d2891efd556b4f6337021
     :git: "/Users/piccolo/Documents/GitHub/AFOFFMpeg"
   AFORouter:
     :commit: 68df70eab6943e4cdc10752f4ae12d0735375258
