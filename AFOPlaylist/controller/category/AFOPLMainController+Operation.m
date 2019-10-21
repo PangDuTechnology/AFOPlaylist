@@ -139,8 +139,4 @@
         [cell settingCellUnTouch:isTouch];
     }];
 }
-#pragma mark ------ dealloc
-- (void)dealloc{
-    NSLog(@"AFOPLMainController+Operation dealloc");
-}
 @end
