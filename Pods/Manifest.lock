@@ -197,7 +197,7 @@ CHECKOUT OPTIONS:
     :commit: 3d30bf01ac111c95241ab886eac5c15225dc3957
     :git: "/Users/piccolo/Documents/GitHub/AFOFFMpeg"
   AFORouter:
-    :commit: 6888e2416e455e38dab3b5842a8d864d3dabf97a
+    :commit: 68df70eab6943e4cdc10752f4ae12d0735375258
     :git: "/Users/piccolo/Documents/GitHub/AFORouter"
   AFOSchedulerCore:
     :commit: eca43f2842cc9144a3acf37d9529e02a1f661841
