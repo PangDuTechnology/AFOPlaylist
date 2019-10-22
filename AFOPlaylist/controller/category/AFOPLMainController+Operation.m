@@ -49,6 +49,7 @@
 #pragma mark ------
 - (void)addOperationButton{
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc]initWithTitle:@"编辑" style:UIBarButtonItemStylePlain target:self action:@selector(editorVedioOperation:)];
+    backItem.accessibilityFrame = CGRectMake(0, 5, 60, 35);
     self.navigationItem.rightBarButtonItem = backItem;
 }
 #pragma mark ------ 编辑
