@@ -9,6 +9,7 @@
 #import "AFOPLMainController+Aspects.h"
 #import <AFOGitHub/AFOGitHub.h>
 #import <AFOFoundation/AFOFoundation.h>
+#import <AFOSchedulerCore/AFOSchedulerBaseClass+AFOPlayList.h>
 #import "AFOPLMainControllerCategory.h"
 @implementation AFOPLMainController (Aspects)
 #pragma mark ------ collectionView:didSelectItemAtIndexPath:
