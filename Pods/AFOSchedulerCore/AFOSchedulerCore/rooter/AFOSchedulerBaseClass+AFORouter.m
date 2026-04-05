@@ -46,5 +46,8 @@
     if ([nextController respondsToSelector:@selector(schedulerReceiverRouterManagerDelegate:parameters:)] && valueModel) {
         [nextController performSelector:@selector(schedulerReceiverRouterManagerDelegate:parameters:) withObject:valueModel withObject:parameters];
     }
+    nextController.hidesBottomBarWhenPushed = YES;
+    nextController.modalPresentationStyle = UIModalPresentationFullScreen;
+    [currentController presentViewController:nextController animated:YES completion:nil];
 }
 @end
