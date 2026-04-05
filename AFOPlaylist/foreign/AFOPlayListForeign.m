@@ -17,7 +17,7 @@
 @implementation AFOPlayListForeign
 #pragma mark ------ add controller
 - (UIViewController *)returnController{
-    return self.navigationController.visibleViewController;
+    return self.navigationController;
 }
 - (UINavigationController *)returnNavigationController{
     return self.navigationController;

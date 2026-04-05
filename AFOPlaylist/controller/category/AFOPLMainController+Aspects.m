@@ -10,11 +10,13 @@
 #import <AFOGitHub/AFOGitHub.h>
 #import <AFOFoundation/AFOFoundation.h>
 #import <AFOSchedulerCore/AFOSchedulerBaseClass+AFOPlayList.h>
+#import <AFOSchedulerCore/AFOSchedulerBaseClass+AFORouter.h>
 #import "AFOPLMainControllerCategory.h"
 @implementation AFOPLMainController (Aspects)
 #pragma mark ------ collectionView:didSelectItemAtIndexPath:
 - (void)collectionViewDidSelectRowAtIndexPathExchange{
-    [self aspect_hookSelector:@selector(collectionView:didSelectItemAtIndexPath:) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> info, UITableView *tableView, NSIndexPath *indexPath){
+    [self aspect_hookSelector:@selector(collectionView:didSelectItemAtIndexPath:) withOptions:AspectPositionInstead usingBlock:^(id<AspectInfo> info, UITableView *tableView, NSIndexPath *indexPath){
+        NSLog(@"AFOPLMainController+Aspects: collectionView:didSelectItemAtIndexPath: hooked and block executed.");
         NSString *path = [self vedioPath:indexPath];
         NSString *name = [self vedioName:indexPath];
         NSInteger screen = [self screenPortrait:indexPath];
@@ -29,7 +31,8 @@
                                      @"direction" : @(screen)
                                      };
         NSString *base = [NSString settingRoutesParameters:dictionary];
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:base]];
+        NSLog(@"base====%@",base);
+        [AFOSchedulerBaseClass schedulerRouterJumpPassingParameters:dictionary];
     } error:NULL];
 }
 @end

@@ -70,6 +70,7 @@
 }
 #pragma mark ------ UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"AFOPLMainController: Original collectionView:didSelectItemAtIndexPath: called. Index Path: %@", indexPath);
 }
 #pragma mark ------------ property
 - (UICollectionView *)collectionView{
@@ -81,6 +82,7 @@
         _collectionView.dataSource = self.collectionDataSource;
         _collectionView.alwaysBounceVertical=YES;
         [_collectionView registerClass:[AFOPLMainCollectionCell class] forCellWithReuseIdentifier:NSStringFromClass([AFOPLMainCollectionCell class])];
+        NSLog(@"AFOPLMainController: CollectionView created. Delegate: %p, DataSource: %p, UserInteractionEnabled: %d, Frame: %@", _collectionView.delegate, _collectionView.dataSource, _collectionView.userInteractionEnabled, NSStringFromCGRect(_collectionView.frame));
     }
     return _collectionView;
 }
@@ -113,4 +115,11 @@
 - (void)dealloc{
     NSLog(@"AFOPLMainController dealloc");
 }
+
+#pragma mark ------ returnController
+- (UIViewController *)returnController {
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:self];
+    return navController;
+}
+
 @end

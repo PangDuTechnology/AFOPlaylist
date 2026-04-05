@@ -15,9 +15,11 @@
 @implementation AFOSchedulerBaseClass (AFORouter)
 #pragma mark ------ router
 + (void)schedulerRouterJumpPassingParameters:(NSDictionary *)parameters{
+    NSLog(@"AFOSchedulerBaseClass: schedulerRouterJumpPassingParameters called. Parameters: %@", parameters);
     SEL current = NSSelectorFromString(@"currentViewController");
     if ([UIViewController respondsToSelector:current]) {
         id controller = [UIViewController performSelector:current];
+    NSLog(@"AFOSchedulerBaseClass: currentViewController: %p", controller);
         NSArray *paraArray = @[controller,parameters[@"next"],parameters];
         Class class = NSClassFromString(@"AFORouterActionContext");
         id instance = [[class alloc] init];
