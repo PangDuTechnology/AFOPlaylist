@@ -31,7 +31,6 @@
                                      @"direction" : @(screen)
                                      };
         NSString *base = [NSString settingRoutesParameters:dictionary];
-        NSLog(@"base====%@",base);
         [AFOSchedulerBaseClass schedulerRouterJumpPassingParameters:dictionary];
     } error:NULL];
 }
