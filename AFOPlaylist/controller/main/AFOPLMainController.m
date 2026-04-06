@@ -19,6 +19,13 @@
 @property (nonnull, nonatomic, strong, readwrite) UICollectionView             *collectionView;
 @end
 @implementation AFOPLMainController
+#pragma mark ------ viewWillAppear
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    NSLog(@"AFOPLMainController: viewWillAppear called. Hiding TabBar.");
+    self.tabBarController.tabBar.hidden = YES;
+}
+
 #pragma mark ------ viewDidLoad
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -114,6 +121,13 @@
 #pragma mark ------ dealloc
 - (void)dealloc{
     NSLog(@"AFOPLMainController dealloc");
+}
+
+#pragma mark ------ viewDidDisappear
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    NSLog(@"AFOPLMainController: viewDidDisappear called. Showing TabBar.");
+    self.tabBarController.tabBar.hidden = NO;
 }
 
 #pragma mark ------ returnController
