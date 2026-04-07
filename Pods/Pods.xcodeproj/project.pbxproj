@@ -72,6 +72,7 @@
 		118C3CCBF1C65683C73FE5A6E30CBFA8 /* View+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E64723C2C720B932BAC6F71276AC591 /* View+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		11F15A8E69DB8475792565DE97852F02 /* SDWebImageCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 33DE3B18D2A4CB198637B8A7E845C7CF /* SDWebImageCoder.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		1228B77B5B9641F56BFE07D82B4C9BE7 /* INTUAutoRemoveObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F45A82A762467798772402B18B129D /* INTUAutoRemoveObserver.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		145356FD2F84921D00E15A68 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1486414D2F83E55A00CE34D4 /* VideoToolbox.framework */; };
 		1486414E2F83E55A00CE34D4 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1486414D2F83E55A00CE34D4 /* VideoToolbox.framework */; };
 		14D4266EC5D4730972488E3FE847EA6D /* AFOSchedulerBaseClass+AFOHomePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 802A55FF0AEE5BB4C1BF0050F2C4CDA7 /* AFOSchedulerBaseClass+AFOHomePage.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		14F6C74166E4B28C304953ADFA4A1D1E /* AFOFFMpeg-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C895919AC5662B8453A454BD3573484 /* AFOFFMpeg-dummy.m */; };
@@ -962,6 +963,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				145356FD2F84921D00E15A68 /* VideoToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3046,7 +3048,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -3180,7 +3182,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
