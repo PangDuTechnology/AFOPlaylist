@@ -33,8 +33,18 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     [self.view addSubview:self.collectionView];
     [self collectionViewDidSelectRowAtIndexPathExchange];
-    [self initializerInstance];
-    [self addOperationButton];
+}
+#pragma mark ------ viewDidLayoutSubviews
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    if (!self.isInitialized) {
+        [self initializerInstance];
+        [self addOperationButton];
+        self.isInitialized = YES;
+    }
+    [self.collectionView.collectionViewLayout invalidateLayout]; // 强制布局失效
+    [self.collectionView layoutIfNeeded]; // 强制立即更新布局
+    [self.collectionView reloadData]; // 强制重新加载数据以确保所有单元格重新配置
 }
 #pragma mark ------ 设置初始值
 - (void)initializerInstance{
@@ -71,6 +81,8 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             [UIView performWithoutAnimation:^{
                 [self.collectionView reloadData];
+                [self.collectionView.collectionViewLayout invalidateLayout]; // 显式使布局失效
+                [self.collectionView layoutIfNeeded]; // 强制立即更新布局
             }];
         });
     }];

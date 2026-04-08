@@ -26,6 +26,7 @@
 #pragma mark ------ 准备方法被自动调用，以保证layout实例的正确。
 - (void)prepareLayout{
     [super prepareLayout];
+    [self.maxDictionary removeAllObjects]; // 强制清空旧的 maxDictionary
     //初始化字典，有几列就有几个键值对，key为列，value为列的最大y值，初始值为上内边距
     for (int i = 0; i < self.itemCount; i++) {
         self.maxDictionary[@(i)] = @(self.spacingTop);
@@ -48,6 +49,8 @@
             maxIndex = key;
         }
     }];
+    CGFloat contentHeight = [self.maxDictionary[maxIndex] floatValue] + self.spacingBottom;
+    NSLog(@"AFOPLMainCellDefaultLayout: Content Size Height: %f", contentHeight); // 添加日志
     //collectionView的contentSize.height就等于最长列的最大y值+下内边距
     return CGSizeMake(0, [self.maxDictionary[maxIndex] floatValue] + self.spacingBottom);
 }
@@ -57,10 +60,11 @@
     
     ///------ 获取collectionView的宽度
     CGFloat width =CGRectGetWidth(self.collectionView.frame);
+    NSLog(@"AFOPLMainCellDefaultLayout: CollectionView Frame Width: %f", width); // 添加日志
     
     ///------ item width = (collectionView的宽度 - 内边距与列间距) / 列数
     CGFloat itemWidth = (width - self.spacingLeft -self.spacingRight - self.spacingWidthTotal)/self.itemCount;
-    
+    NSLog(@"AFOPLMainCellDefaultLayout: Calculated Item Width: %f", itemWidth); // 添加日志    
     ///------ item hight
     CGFloat itemHeight = self.block(itemWidth, indexPath);
     
@@ -90,6 +94,11 @@
 - (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect{
     return self.attributesArray;
 }
+
+#pragma mark ------ 边界变化时强制重新布局
+- (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds {
+    return YES;
+}
 #pragma mark ------------ property
 #pragma mark ------
 - (CGFloat)spacingWidthTotal{
@@ -105,27 +114,27 @@
 }
 #pragma mark ------ spacing
 - (CGFloat)spacingWidth{
-    return _spacingWidth = 5;
+    return _spacingWidth = 0;
 }
 #pragma mark ------ lineWidth
 - (CGFloat)lineWidth{
-    return _lineWidth = 5;
+    return _lineWidth = 0;
 }
 #pragma mark ------ spacingLeft
 - (CGFloat)spacingLeft{
-    return _spacingLeft = 5;
+    return _spacingLeft = 0;
 }
 #pragma mark ------ spacingRight
 - (CGFloat)spacingRight{
-    return _spacingRight = 5;
+    return _spacingRight = 0;
 }
 #pragma mark ------ spacingTop
 - (CGFloat)spacingTop{
-    return _spacingTop = 5;
+    return _spacingTop = 0;
 }
 #pragma mark ------ spacingBottom
 - (CGFloat)spacingBottom{
-    return _spacingBottom = 5;
+    return _spacingBottom = 0;
 }
 #pragma mark ------ attributesArray
 - (NSMutableArray *)attributesArray{

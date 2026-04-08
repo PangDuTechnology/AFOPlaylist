@@ -40,10 +40,9 @@
 - (CGFloat)thumbnailHight:(NSIndexPath *)indexPath width:(CGFloat)width{
     AFOPLThumbnail *detail = [self.dataArray objectAtIndexAFOAbnormal:indexPath.item];
     CGFloat height = 0;
-    if (width < detail.image_width) {
-        height = detail.image_hight * (detail.image_width / width);
+    if (detail.image_width > 0) { // 避免除以零
+        height = detail.image_hight * (width / detail.image_width);
     }
-     height = detail.image_hight * (width / detail.image_width);
     return height;
 }
 #pragma mark ------ 视频地址
@@ -68,8 +67,10 @@
 }
 #pragma mark ------ 获取最新数据
 - (void)getThumbnailData:(void (^)(NSArray *array))block{
+    NSLog(@"AFOPLMainManager: getThumbnailData called."); // 添加日志
     [self.dataArray removeAllObjects];
     NSArray *addArray = [AFOPLCorresponding getUnscreenshotsArray:self.nameArray compare:[AFOPLCorresponding vedioName:[AFOPLCorresponding getDataFromDataBase]]];
+    NSLog(@"AFOPLMainManager: addArray count: %lu, Database Data Count: %lu", (unsigned long)addArray.count, (unsigned long)[AFOPLCorresponding getDataFromDataBase].count); // 添加日志
     ///---
     if (addArray.count > 0 && [AFOPLCorresponding getDataFromDataBase].count == 0) {
         [AFOPLCorresponding cuttingImageSaveSqlite:addArray block:^(NSArray *itemArray) {
@@ -77,7 +78,12 @@
                 block(self.dataArray);
         }];
     }else if(addArray.count == 0 && [AFOPLCorresponding getAllDataFromDataBase].count > 0){
-        [self.dataArray addObjectsFromArrayAFOAbnormal:[AFOPLCorresponding getAllDataFromDataBase]];
+        NSArray *databaseArray = [AFOPLCorresponding getAllDataFromDataBase];
+        [self.dataArray addObjectsFromArrayAFOAbnormal:databaseArray];
+        // 添加日志打印从数据库加载的图片尺寸
+        for (AFOPLThumbnail *thumbnail in databaseArray) {
+            NSLog(@"AFOPLMainManager: Loaded from DB - Image Name: %@, Width: %ld, Height: %ld", thumbnail.image_name, (long)thumbnail.image_width, (long)thumbnail.image_hight);
+        }
         block(self.dataArray);
     }else if(addArray.count > 0 && [AFOPLCorresponding getDataFromDataBase].count > 0){
         [self.dataArray addObjectsFromArrayAFOAbnormal:[AFOPLCorresponding getAllDataFromDataBase]];

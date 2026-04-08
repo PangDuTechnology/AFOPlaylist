@@ -8,4 +8,5 @@
 #import <UIKit/UIKit.h>
 @interface AFOPLMainController : UIViewController
 @property (nonatomic, strong, readonly) UICollectionView             *collectionView;
+@property (nonatomic, assign) BOOL isInitialized; // 添加标志位
 @end

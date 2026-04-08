@@ -20,6 +20,7 @@
                          block:(void (^) (NSArray *itemArray))block{
     __block NSMutableArray *newArray = [[NSMutableArray alloc] init];
     [[AFOMediaForeignInterface shareInstance] mediaSeekFrameUseQueue:array vediopath:[NSFileManager documentSandbox] imagePath:[AFOPLMainFolderManager mediaImagesAddress] sqlite:[AFOPLMainFolderManager dataBaseAddress] block:^(BOOL isHave,NSString *createTime,NSString *vedioName, NSString *imageName, int width, int height) {
+        NSLog(@"AFOPLCorresponding+GCD: mediaSeekFrameUseQueue callback - Image Name: %@, Width: %d, Height: %d", imageName, width, height); // 添加调试日志
         [AFOPLSQLiteManager inserSQLiteDataBase:AFO_PLAYLIST_SCREENSHOTSVEDIOLIST isHave:isHave createTime:createTime vedioName:vedioName imageName:imageName width:width height:height block:^(BOOL isFinish) {
             if (isFinish) {
                 AFOPLThumbnail *detail = [[AFOPLThumbnail alloc] init];

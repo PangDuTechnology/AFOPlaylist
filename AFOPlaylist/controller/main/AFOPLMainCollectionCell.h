@@ -7,6 +7,9 @@
 //
 #import <UIKit/UIKit.h>
 @interface AFOPLMainCollectionCell : UICollectionViewCell
+typedef void(^AFOImageLoadedBlock)(NSIndexPath *indexPath);
+@property (nonatomic, copy) AFOImageLoadedBlock imageLoadedBlock; // 添加 block 属性
+@property (nonatomic, strong) NSIndexPath *indexPath; // 添加 indexPath 属性
 - (void)settingSubViews:(id)model;
 - (void)settingCellUnTouch:(BOOL)isTouch;
 - (void)showAllDeleteIcon:(BOOL)isShow;

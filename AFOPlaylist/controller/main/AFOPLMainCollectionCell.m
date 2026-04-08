@@ -8,6 +8,7 @@
 
 #import "AFOPLMainCollectionCell.h"
 #import <AFOGitHub/AFOGitHub.h>
+#import <AFOFoundation/AFOFoundation.h> // 导入 AFOFoundation，包含 WeakObject 宏
 #import "AFOPLMainFolderManager.h"
 #import "AFOPLThumbnail.h"
 @interface AFOPLMainCollectionCell ()
@@ -45,7 +46,26 @@
     AFOPLThumbnail *detail = model;
     NSString *path =[[AFOPLMainFolderManager mediaImagesCacheFolder] stringByAppendingString:@"/"];
     NSURL *imageUrl = [NSURL fileURLWithPath:[path stringByAppendingString:detail.image_name]];
-    [self.postersImageView sd_setImageWithURL:imageUrl];
+    WeakObject(self);
+    [self.postersImageView sd_setImageWithURL:imageUrl completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+        StrongObject(self);
+        if (image && self.imageLoadedBlock) {
+            // 通知 CollectionView 重新布局当前单元格
+            // 注意：这里无法直接获取 indexPath，需要在 cellForItemAtIndexPath 中传递
+            // 为了简化，暂时假设可以在 block 中传递 indexPath
+            // 更优雅的方案是在 cellForItemAtIndexPath 中设置一个 target-action 或 delegate
+            // 或者，如果只是简单地通知布局失效，可以直接在主线程调用 self.collectionView.collectionViewLayout.invalidateLayout;
+            // 但因为我们想精确到单个 cell，所以需要 indexPath
+            // 鉴于目前没有直接获取 indexPath 的方法，我们将使用更通用的通知
+            // 通知 AFOPLMainController 重新加载数据或者重新布局
+            // 为了避免强引用循环，使用 WeakObject(self) 和 StrongObject(self)
+            if (self.imageLoadedBlock && self.indexPath) {
+                self.imageLoadedBlock(self.indexPath);
+                [self setNeedsLayout];
+                [self layoutIfNeeded];
+            }
+        }
+    }];
     self.postersLB.text = detail.vedio_name;
     ///---
     self.models = model;
@@ -85,6 +105,8 @@
 - (UIImageView *)postersImageView{
     if (!_postersImageView) {
         _postersImageView = [[UIImageView alloc] init];
+        _postersImageView.contentMode = UIViewContentModeScaleAspectFit; // 设置内容模式
+        _postersImageView.clipsToBounds = YES; // 裁剪超出边界的内容
     }
     return _postersImageView;
 }
