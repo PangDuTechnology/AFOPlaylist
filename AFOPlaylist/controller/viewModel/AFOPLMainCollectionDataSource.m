@@ -31,13 +31,8 @@
     WeakObject(collectionView); // 避免循环引用
     cell.imageLoadedBlock = ^(NSIndexPath * _Nullable loadedIndexPath) {
         StrongObject(collectionView);
-        // 通知 collectionView 重新布局当前 cell
+        // 移除了 performBatchUpdates 和 invalidateLayout，依赖 cell 自身的布局更新
         if (collectionView && loadedIndexPath) {
-            // 只使特定 item 的布局失效
-            // [collectionView.collectionViewLayout invalidateLayoutWithContext:...] 是更精确的方式，但此处简化为全局失效
-            [collectionView performBatchUpdates:^{
-                [collectionView.collectionViewLayout invalidateLayout];
-            } completion:nil];
             // [collectionView reloadItemsAtIndexPaths:@[loadedIndexPath]]; // 也可以尝试刷新单个 item
         }
     };

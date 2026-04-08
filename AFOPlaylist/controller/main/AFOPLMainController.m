@@ -79,11 +79,7 @@
         StrongObject(self);
         [self.collectionDataSource settingImageData:array];
         dispatch_async(dispatch_get_main_queue(), ^{
-            [UIView performWithoutAnimation:^{
-                [self.collectionView reloadData];
-                [self.collectionView.collectionViewLayout invalidateLayout]; // 显式使布局失效
-                [self.collectionView layoutIfNeeded]; // 强制立即更新布局
-            }];
+            [self.collectionView reloadData];
         });
     }];
 }

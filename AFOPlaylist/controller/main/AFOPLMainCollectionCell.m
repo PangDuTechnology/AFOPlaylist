@@ -125,4 +125,14 @@
     }
     return _postersLB;
 }
+
+#pragma mark ------ layoutSubviews
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    self.postersImageView.frame = CGRectMake(0, 0, self.contentView.bounds.size.width, self.contentView.bounds.size.height - 20);
+    self.postersLB.frame = CGRectMake(0, CGRectGetHeight(self.postersImageView.frame), self.contentView.bounds.size.width, self.contentView.bounds.size.height - CGRectGetHeight(self.postersImageView.frame));
+    self.deleteButton.frame = self.postersImageView.frame;
+    NSLog(@"AFOPLMainCollectionCell: layoutSubviews - self.bounds: %@, postersImageView.frame: %@", NSStringFromCGRect(self.bounds), NSStringFromCGRect(self.postersImageView.frame));
+}
+
 @end
