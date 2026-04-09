@@ -1,5 +1,5 @@
 //
-//  AFOPlayListMainController.m
+//  AFOPLMainController.m
 //  AFOPlaylist
 //
 //  Created by xueguang xian on 2017/12/14.
@@ -19,28 +19,34 @@
 @property (nonnull, nonatomic, strong, readwrite) UICollectionView             *collectionView;
 @end
 @implementation AFOPLMainController
-#pragma mark ------ viewWillAppear
+#pragma mark - Lifecycle
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+#if DEBUG
     NSLog(@"AFOPLMainController: viewWillAppear called. Hiding TabBar.");
+#endif
     self.tabBarController.tabBar.hidden = YES;
 
     if (self.navigationController) {
-        NSLog(@"AFOPLMainController: navigationController exists. Forcing navigationBar visible.");
+#if DEBUG
+        NSLog(@"AFOPLMainController: navigationController exists.");
+#endif
+        // 确保导航栏是可见的，如果其父控制器或相关配置导致隐藏，此处可强制显示
         self.navigationController.navigationBar.hidden = NO;
         self.navigationController.navigationBar.alpha = 1.0;
         self.navigationController.navigationBar.translucent = NO;
-        self.navigationController.navigationBar.barTintColor = [UIColor blueColor]; // 设置一个醒目的背景色
-        self.navigationItem.title = @"播放列表"; // 再次设置标题
-        NSLog(@"AFOPLMainController: navigationBar hidden: %d", self.navigationController.navigationBar.hidden);
-        NSLog(@"AFOPLMainController: navigationBar alpha: %f", self.navigationController.navigationBar.alpha);
-        NSLog(@"AFOPLMainController: navigationBar frame: %@", NSStringFromCGRect(self.navigationController.navigationBar.frame));
+        // 标题设置应保持在 viewDidLoad 或初始化时
+        // self.navigationItem.title = @"播放列表";
+        // 移除诊断性背景色设置
+        // self.navigationController.navigationBar.barTintColor = [UIColor blueColor];
     } else {
+#if DEBUG
         NSLog(@"AFOPLMainController: navigationController is NIL. This might be the problem.");
+#endif
     }
 }
 
-#pragma mark ------ viewDidLoad
+#pragma mark - Initialization
 - (void)viewDidLoad {
     [super viewDidLoad];
     // self.view.backgroundColor = [UIColor redColor]; // 移除诊断用的背景色
@@ -49,33 +55,41 @@
     [self.view addSubview:self.collectionView];
     [self collectionViewDidSelectRowAtIndexPathExchange];
 }
-#pragma mark ------ viewDidLayoutSubviews
+#pragma mark - Layout
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     if (!self.isInitialized) {
         [self initializerInstance];
         [self addOperationButton];
         self.isInitialized = YES;
+        // 初次布局时强制刷新，避免视图问题
+        [self.collectionView.collectionViewLayout invalidateLayout];
+        [self.collectionView layoutIfNeeded];
+        [self.collectionView reloadData];
     }
-    [self.collectionView.collectionViewLayout invalidateLayout]; // 强制布局失效
-    [self.collectionView layoutIfNeeded]; // 强制立即更新布局
-    [self.collectionView reloadData]; // 强制重新加载数据以确保所有单元格重新配置
 }
-#pragma mark ------ 设置初始值
-- (void)initializerInstance{
+#pragma mark - Private Methods
+
+- (void)setupLayoutBlock {
     WeakObject(self);
     self.defaultLayout.block = ^CGFloat(CGFloat width, NSIndexPath *indexPath) {
         StrongObject(self);
         return [self vedioItemHeight:indexPath width:width];
     };
-    ///------
+}
+
+- (void)configureCollectionViewData {
     [self addCollectionViewData];
-    ///------
+}
+
+- (void)initializerInstance {
+    [self setupLayoutBlock];
+    [self configureCollectionViewData];
     // [self addPullToRefresh]; // 暂时注释掉下拉刷新
-    ///---
-    self.updateCollectionBlock = ^{
+    WeakObject(self);
+    self.updateCollectionBlock = ^{ // Block 应该在合适的时机被触发，这里只是初始化
         StrongObject(self);
-        [self addCollectionViewData];
+        [self configureCollectionViewData];
     };
 }
 #pragma mark ------ 下拉刷新
@@ -86,22 +100,26 @@
     //     [self.collectionView.pullToRefreshView stopAnimating];
     // }];
 }
-#pragma mark ------ 获取数据
-- (void)addCollectionViewData{
+#pragma mark - Data Handling
+
+- (void)addCollectionViewData {
     WeakObject(self);
     [self addCollectionViewData:^(NSArray *array) {
         StrongObject(self);
         [self.collectionDataSource settingImageData:array];
+        // 确保在主线程更新 UI
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.collectionView reloadData];
         });
     }];
 }
-#pragma mark ------ UICollectionViewDelegate
+#pragma mark - UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+#if DEBUG
     NSLog(@"AFOPLMainController: Original collectionView:didSelectItemAtIndexPath: called. Index Path: %@", indexPath);
+#endif
 }
-#pragma mark ------------ property
+#pragma mark - Accessors
 - (UICollectionView *)collectionView{
     if (!_collectionView) {
         _collectionView = [[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:self.defaultLayout];
@@ -127,7 +145,7 @@
     }
     return _defaultLayout;
 }
-#pragma mark ------ 是否可以旋转
+#pragma mark - Orientation
 - (BOOL)shouldAutorotate{
     return YES;
 }
@@ -135,44 +153,58 @@
 -(UIInterfaceOrientationMask)supportedInterfaceOrientations{
     return UIInterfaceOrientationMaskPortrait;
 }
-#pragma mark ------ didReceiveMemoryWarning
+#pragma mark - Memory Management
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-#pragma mark ------ dealloc
+#pragma mark - Deallocation
 - (void)dealloc{
+#if DEBUG
     NSLog(@"AFOPLMainController dealloc");
+#endif
 }
 
 
 #pragma mark ------ viewDidAppear
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+#if DEBUG
     NSLog(@"AFOPLMainController: viewDidAppear called.");
+#endif
     if (self.navigationController) {
+#if DEBUG
         NSLog(@"AFOPLMainController: viewDidAppear - navigationController exists.");
+#endif
+#if DEBUG
         NSLog(@"AFOPLMainController: viewDidAppear - navigationBar hidden: %d", self.navigationController.navigationBar.hidden);
         NSLog(@"AFOPLMainController: viewDidAppear - navigationBar alpha: %f", self.navigationController.navigationBar.alpha);
         NSLog(@"AFOPLMainController: viewDidAppear - navigationBar frame: %@", NSStringFromCGRect(self.navigationController.navigationBar.frame));
+#endif
         self.navigationController.navigationBar.hidden = NO; // 确保导航栏没有被隐藏
         self.navigationController.navigationBar.alpha = 1.0; // 确保导航栏完全可见
     } else {
+#if DEBUG
         NSLog(@"AFOPLMainController: viewDidAppear - navigationController is NIL.");
+#endif
     }
 }
 
 #pragma mark ------ viewDidDisappear
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
+#if DEBUG
     NSLog(@"AFOPLMainController: viewDidDisappear called. Showing TabBar.");
+#endif
     self.tabBarController.tabBar.hidden = NO;
 }
 
-#pragma mark ------ returnController
+#pragma mark - AFOTabRootControllerProviding
 - (UIViewController *)returnController {
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:self];
+#if DEBUG
     NSLog(@"AFOPLMainController: returnController called. Returning UINavigationController: %p with root: %p", navController, self);
+#endif
     return navController;
 }
 
