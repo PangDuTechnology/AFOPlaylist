@@ -24,13 +24,28 @@
     [super viewWillAppear:animated];
     NSLog(@"AFOPLMainController: viewWillAppear called. Hiding TabBar.");
     self.tabBarController.tabBar.hidden = YES;
+
+    if (self.navigationController) {
+        NSLog(@"AFOPLMainController: navigationController exists. Forcing navigationBar visible.");
+        self.navigationController.navigationBar.hidden = NO;
+        self.navigationController.navigationBar.alpha = 1.0;
+        self.navigationController.navigationBar.translucent = NO;
+        self.navigationController.navigationBar.barTintColor = [UIColor blueColor]; // 设置一个醒目的背景色
+        self.navigationItem.title = @"播放列表"; // 再次设置标题
+        NSLog(@"AFOPLMainController: navigationBar hidden: %d", self.navigationController.navigationBar.hidden);
+        NSLog(@"AFOPLMainController: navigationBar alpha: %f", self.navigationController.navigationBar.alpha);
+        NSLog(@"AFOPLMainController: navigationBar frame: %@", NSStringFromCGRect(self.navigationController.navigationBar.frame));
+    } else {
+        NSLog(@"AFOPLMainController: navigationController is NIL. This might be the problem.");
+    }
 }
 
 #pragma mark ------ viewDidLoad
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // self.view.backgroundColor = [UIColor redColor]; // 移除诊断用的背景色
     self.title = @"播放列表";
-    self.automaticallyAdjustsScrollViewInsets = NO;
+    // self.automaticallyAdjustsScrollViewInsets = NO; // 移除或注释掉此行，让系统自动调整布局
     [self.view addSubview:self.collectionView];
     [self collectionViewDidSelectRowAtIndexPathExchange];
 }
@@ -56,7 +71,7 @@
     ///------
     [self addCollectionViewData];
     ///------
-    [self addPullToRefresh];
+    // [self addPullToRefresh]; // 暂时注释掉下拉刷新
     ///---
     self.updateCollectionBlock = ^{
         StrongObject(self);
@@ -65,12 +80,11 @@
 }
 #pragma mark ------ 下拉刷新
 - (void)addPullToRefresh{
-    WeakObject(self);
-    [self.collectionView addPullToRefreshWithActionHandler:^{
-        StrongObject(self);
-        [self addCollectionViewData];
-        [self.collectionView.pullToRefreshView stopAnimating];
-    }];
+    // WeakObject(self);
+    // [self.collectionView addPullToRefreshWithActionHandler:^{
+    //     StrongObject(self);
+    //     [self.collectionView.pullToRefreshView stopAnimating];
+    // }];
 }
 #pragma mark ------ 获取数据
 - (void)addCollectionViewData{
@@ -90,7 +104,7 @@
 #pragma mark ------------ property
 - (UICollectionView *)collectionView{
     if (!_collectionView) {
-        _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 64, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) - 64) collectionViewLayout:self.defaultLayout];
+        _collectionView = [[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:self.defaultLayout];
         _collectionView.pagingEnabled = YES;
         _collectionView.backgroundColor = [UIColor whiteColor];
         _collectionView.delegate = self;
@@ -131,6 +145,23 @@
     NSLog(@"AFOPLMainController dealloc");
 }
 
+
+#pragma mark ------ viewDidAppear
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    NSLog(@"AFOPLMainController: viewDidAppear called.");
+    if (self.navigationController) {
+        NSLog(@"AFOPLMainController: viewDidAppear - navigationController exists.");
+        NSLog(@"AFOPLMainController: viewDidAppear - navigationBar hidden: %d", self.navigationController.navigationBar.hidden);
+        NSLog(@"AFOPLMainController: viewDidAppear - navigationBar alpha: %f", self.navigationController.navigationBar.alpha);
+        NSLog(@"AFOPLMainController: viewDidAppear - navigationBar frame: %@", NSStringFromCGRect(self.navigationController.navigationBar.frame));
+        self.navigationController.navigationBar.hidden = NO; // 确保导航栏没有被隐藏
+        self.navigationController.navigationBar.alpha = 1.0; // 确保导航栏完全可见
+    } else {
+        NSLog(@"AFOPLMainController: viewDidAppear - navigationController is NIL.");
+    }
+}
+
 #pragma mark ------ viewDidDisappear
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
@@ -141,6 +172,7 @@
 #pragma mark ------ returnController
 - (UIViewController *)returnController {
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:self];
+    NSLog(@"AFOPLMainController: returnController called. Returning UINavigationController: %p with root: %p", navController, self);
     return navController;
 }
 
