@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1499735A2F874E7E00417DF7 /* AFOPLMainEditorLogic.h in Headers */ = {isa = PBXBuildFile; fileRef = 149973582F874E7E00417DF7 /* AFOPLMainEditorLogic.h */; };
+		1499735B2F874E7E00417DF7 /* AFOPLMainEditorLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 149973592F874E7E00417DF7 /* AFOPLMainEditorLogic.m */; };
 		240487BE20084CB400D369FB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240487BC20084CB400D369FB /* AVFoundation.framework */; };
 		240487BF20084CB400D369FB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240487BD20084CB400D369FB /* AudioToolbox.framework */; };
 		240487C320084CCD00D369FB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240487C020084CCC00D369FB /* CoreGraphics.framework */; };
@@ -64,6 +66,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		149973582F874E7E00417DF7 /* AFOPLMainEditorLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFOPLMainEditorLogic.h; sourceTree = "<group>"; };
+		149973592F874E7E00417DF7 /* AFOPLMainEditorLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFOPLMainEditorLogic.m; sourceTree = "<group>"; };
 		240487B620084C8200D369FB /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		240487B820084CA300D369FB /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		240487BA20084CA900D369FB /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
@@ -282,6 +286,8 @@
 				24F428CB1FFDD61B009F3F32 /* AFOPLMainCollectionDataSource.m */,
 				24EDFA1B2004A7940071AF43 /* AFOPLCorresponding.h */,
 				24EDFA1C2004A7940071AF43 /* AFOPLCorresponding.m */,
+				149973582F874E7E00417DF7 /* AFOPLMainEditorLogic.h */,
+				149973592F874E7E00417DF7 /* AFOPLMainEditorLogic.m */,
 				DBE653DD2340966F0022B8DA /* category */,
 			);
 			path = viewModel;
@@ -362,6 +368,7 @@
 				24F428D11FFDD8C4009F3F32 /* AFOPLMainCollectionCell.h in Headers */,
 				2494B0C2200D9EC100B7816B /* AFOPLCorresponding+GCD.h in Headers */,
 				241D58DE2000A1CA0049CAF3 /* AFOPLMainFolderManager.h in Headers */,
+				1499735A2F874E7E00417DF7 /* AFOPLMainEditorLogic.h in Headers */,
 				2421EF0E21C0C6C200D44ED7 /* AFOPLMainController+Operation.h in Headers */,
 				2446ED1A2019818100FD5012 /* AFOPLMainController+AFOPLMainManager.h in Headers */,
 			);
@@ -474,6 +481,7 @@
 				2408BB522008A37E0049060F /* AFOPLSQLiteManager.m in Sources */,
 				24F928EF200CE175007ADAA4 /* AFOPLCorresponding+NSArray.m in Sources */,
 				2494B0C3200D9EC100B7816B /* AFOPLCorresponding+GCD.m in Sources */,
+				1499735B2F874E7E00417DF7 /* AFOPLMainEditorLogic.m in Sources */,
 				241D58DF2000A1CA0049CAF3 /* AFOPLMainFolderManager.m in Sources */,
 				2421EF0F21C0C6C200D44ED7 /* AFOPLMainController+Operation.m in Sources */,
 				24F428CD1FFDD61B009F3F32 /* AFOPLMainCollectionDataSource.m in Sources */,

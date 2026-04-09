@@ -23,7 +23,23 @@
 @end
 
 @implementation AFOPLMainCellDefaultLayout
-#pragma mark ------ 准备方法被自动调用，以保证layout实例的正确。
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        _itemCount = 2;
+        _spacingWidth = 0;
+        _lineWidth = 0;
+        _spacingLeft = 0;
+        _spacingRight = 0;
+        _spacingTop = 0;
+        _spacingBottom = 0;
+    }
+    return self;
+}
+
+#pragma mark - Lifecycle
+
 - (void)prepareLayout{
     [super prepareLayout];
     [self.maxDictionary removeAllObjects]; // 强制清空旧的 maxDictionary
@@ -40,7 +56,9 @@
         [self.attributesArray addObjectAFOAbnormal:attrs];
     }
 }
-#pragma mark ------ 返回collectionView的内容的尺寸
+
+#pragma mark - CollectionView Content Size
+
 - (CGSize)collectionViewContentSize{
     __block NSNumber *maxIndex = @0;
     //遍历字典，找出最长的那一列
@@ -50,21 +68,29 @@
         }
     }];
     CGFloat contentHeight = [self.maxDictionary[maxIndex] floatValue] + self.spacingBottom;
+#if DEBUG
     NSLog(@"AFOPLMainCellDefaultLayout: Content Size Height: %f", contentHeight); // 添加日志
+#endif
     //collectionView的contentSize.height就等于最长列的最大y值+下内边距
     return CGSizeMake(0, [self.maxDictionary[maxIndex] floatValue] + self.spacingBottom);
 }
+
+#pragma mark - Layout Attributes
+
 - (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath{
     ///------ 根据indexPath获取item的attributes
     UICollectionViewLayoutAttributes * attributes=[UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
     
     ///------ 获取collectionView的宽度
     CGFloat width =CGRectGetWidth(self.collectionView.frame);
+#if DEBUG
     NSLog(@"AFOPLMainCellDefaultLayout: CollectionView Frame Width: %f", width); // 添加日志
-    
+#endif
     ///------ item width = (collectionView的宽度 - 内边距与列间距) / 列数
     CGFloat itemWidth = (width - self.spacingLeft -self.spacingRight - self.spacingWidthTotal)/self.itemCount;
+#if DEBUG
     NSLog(@"AFOPLMainCellDefaultLayout: Calculated Item Width: %f", itemWidth); // 添加日志    
+#endif
     ///------ item hight
     CGFloat itemHeight = self.block(itemWidth, indexPath);
     
@@ -90,64 +116,69 @@
     
     return attributes;
 }
-#pragma mark ------ 返回rect中的所有的元素的布局属性
+
+#pragma mark - Layout Attributes for Elements in Rect
+
 - (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect{
     return self.attributesArray;
 }
 
-#pragma mark ------ 边界变化时强制重新布局
+#pragma mark - Invalidate Layout
+
 - (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds {
     return YES;
 }
-#pragma mark ------------ property
-#pragma mark ------
+
+#pragma mark - Properties
+
 - (CGFloat)spacingWidthTotal{
     return self.spacingCount * self.spacingWidth;
 }
-#pragma mark ------ spacingCount
+
 - (NSInteger)spacingCount{
     return self.itemCount - 1;
 }
-#pragma mark ------ itemCount
+
 - (NSInteger)itemCount{
-    return _itemCount = 2;
+    return _itemCount;
 }
-#pragma mark ------ spacing
+
 - (CGFloat)spacingWidth{
-    return _spacingWidth = 0;
+    return _spacingWidth;
 }
-#pragma mark ------ lineWidth
+
 - (CGFloat)lineWidth{
-    return _lineWidth = 0;
+    return _lineWidth;
 }
-#pragma mark ------ spacingLeft
+
 - (CGFloat)spacingLeft{
-    return _spacingLeft = 0;
+    return _spacingLeft;
 }
-#pragma mark ------ spacingRight
+
 - (CGFloat)spacingRight{
-    return _spacingRight = 0;
+    return _spacingRight;
 }
-#pragma mark ------ spacingTop
+
 - (CGFloat)spacingTop{
-    return _spacingTop = 0;
+    return _spacingTop;
 }
-#pragma mark ------ spacingBottom
+
 - (CGFloat)spacingBottom{
-    return _spacingBottom = 0;
+    return _spacingBottom;
 }
-#pragma mark ------ attributesArray
+
 - (NSMutableArray *)attributesArray{
     if (!_attributesArray) {
         _attributesArray = [[NSMutableArray alloc] init];
     }
     return _attributesArray;
 }
-#pragma mark ------ maxDictionary
+
 - (NSMutableDictionary *)maxDictionary{
     if (!_maxDictionary) {
         _maxDictionary = [[NSMutableDictionary alloc] init];
     }
     return _maxDictionary;
 }
+
 @end

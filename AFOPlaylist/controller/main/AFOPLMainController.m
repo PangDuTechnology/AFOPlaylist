@@ -60,20 +60,19 @@
     [super viewDidLayoutSubviews];
     if (!self.isInitialized) {
         [self initializerInstance];
-        [self addOperationButton];
+        [self.editorLogic setupEditButton];
         self.isInitialized = YES;
         // 初次布局时强制刷新，避免视图问题
         [self.collectionView.collectionViewLayout invalidateLayout];
         [self.collectionView layoutIfNeeded];
-        [self.collectionView reloadData];
     }
 }
 #pragma mark - Private Methods
 
 - (void)setupLayoutBlock {
-    WeakObject(self);
+    __weak typeof(self) weakSelf = self;
     self.defaultLayout.block = ^CGFloat(CGFloat width, NSIndexPath *indexPath) {
-        StrongObject(self);
+        __strong typeof(weakSelf) strongSelf = weakSelf;
         return [self vedioItemHeight:indexPath width:width];
     };
 }
@@ -85,27 +84,27 @@
 - (void)initializerInstance {
     [self setupLayoutBlock];
     [self configureCollectionViewData];
-    // [self addPullToRefresh]; // 暂时注释掉下拉刷新
-    WeakObject(self);
-    self.updateCollectionBlock = ^{ // Block 应该在合适的时机被触发，这里只是初始化
-        StrongObject(self);
+    [self addPullToRefresh]; 
+    __weak typeof(self) weakSelf = self;
+    self.editorLogic.updateCollectionBlock = ^{ // Block 应该在合适的时机被触发，这里只是初始化
+        __strong typeof(weakSelf) strongSelf = weakSelf;
         [self configureCollectionViewData];
     };
 }
 #pragma mark ------ 下拉刷新
 - (void)addPullToRefresh{
-    // WeakObject(self);
-    // [self.collectionView addPullToRefreshWithActionHandler:^{
-    //     StrongObject(self);
-    //     [self.collectionView.pullToRefreshView stopAnimating];
-    // }];
+     __weak typeof(self) weakSelf = self;
+     [self.collectionView addPullToRefreshWithActionHandler:^{
+         __strong typeof(weakSelf) strongSelf = weakSelf;
+         [self.collectionView.pullToRefreshView stopAnimating];
+     }];
 }
 #pragma mark - Data Handling
 
 - (void)addCollectionViewData {
-    WeakObject(self);
+    __weak typeof(self) weakSelf = self;
     [self addCollectionViewData:^(NSArray *array) {
-        StrongObject(self);
+        __strong typeof(weakSelf) strongSelf = weakSelf;
         [self.collectionDataSource settingImageData:array];
         // 确保在主线程更新 UI
         dispatch_async(dispatch_get_main_queue(), ^{
