@@ -36,6 +36,7 @@ Pod::Spec.new do |s|
   s.dependency "AFOUIKIT"
   s.dependency "AFOFFMpeg"
   s.dependency "AFOSQLite"
+  s.dependency "FMDB", "~> 2.7"
   s.dependency "AFOGitHub"
 
   s.test_spec 'Tests' do |test_spec|
