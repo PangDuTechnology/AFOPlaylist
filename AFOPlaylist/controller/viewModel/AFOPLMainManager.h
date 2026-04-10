@@ -8,12 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "AFOPLPlaylistRoutingDataSource.h"
+
 @protocol AFOPLMainManagerDelegate <NSObject>
 @optional
 - (void)mainManagerArray:(NSArray *)array
               indexArray:(NSArray *)indexArray;
 @end
-@interface AFOPLMainManager : NSObject
+@interface AFOPLMainManager : NSObject <AFOPLPlaylistRoutingDataSource>
 + (AFOPLMainManager *)mainManagerDelegate:(id)managerDelegate;
 + (void)deleteMovieRelatedContentLocally:(NSArray *)array
                                    block:(void (^)(BOOL isSucess))block;

@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.name         = "AFOPlaylist"
-  s.version      = "0.0.17"
+  s.version      = "0.0.19"
   s.summary      = "play list."
 
   # This description is used to generate tags and improve search results.
@@ -24,6 +24,7 @@ Pod::Spec.new do |s|
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.source_files  = "AFOPlaylist/**/*.{h,m}"
+  s.exclude_files = "AFOPlaylist/Tests/**/*"
   s.public_header_files = "AFOPlaylist/**/*.h"
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -36,4 +37,10 @@ Pod::Spec.new do |s|
   s.dependency "AFOFFMpeg"
   s.dependency "AFOSQLite"
   s.dependency "AFOGitHub"
+
+  s.test_spec 'Tests' do |test_spec|
+    test_spec.platform = :ios, '13.0'
+    test_spec.source_files = 'AFOPlaylist/Tests/**/*.{h,m}'
+    test_spec.frameworks = 'XCTest'
+  end
 end

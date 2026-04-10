@@ -10,6 +10,7 @@
 #import <AFOFoundation/AFOFoundation.h>
 #import <AFOGitHub/AFOGitHub.h>
 #import "AFOPLMainControllerCategory.h"
+#import "AFOPLMainListViewModel.h"
 #import "AFOPLMainCellDefaultLayout.h"
 #import "AFOPLMainCollectionDataSource.h"
 #import "AFOPLMainCollectionCell.h"
@@ -53,7 +54,6 @@
     self.title = @"播放列表";
     // self.automaticallyAdjustsScrollViewInsets = NO; // 移除或注释掉此行，让系统自动调整布局
     [self.view addSubview:self.collectionView];
-    [self collectionViewDidSelectRowAtIndexPathExchange];
 }
 #pragma mark - Layout
 - (void)viewDidLayoutSubviews {
@@ -113,10 +113,12 @@
     }];
 }
 #pragma mark - UICollectionViewDelegate
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
 #if DEBUG
-    NSLog(@"AFOPLMainController: Original collectionView:didSelectItemAtIndexPath: called. Index Path: %@", indexPath);
+    NSLog(@"AFOPLMainController: didSelectItemAtIndexPath: %@", indexPath);
 #endif
+    AFOPLMainListViewModel *listVM = [[AFOPLMainListViewModel alloc] initWithMainManager:self.mainManager];
+    [listVM openPlayerAtIndexPath:indexPath currentControllerClassName:NSStringFromClass([self class])];
 }
 #pragma mark - Accessors
 - (UICollectionView *)collectionView{
