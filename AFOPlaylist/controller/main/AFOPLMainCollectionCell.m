@@ -17,6 +17,7 @@
 @property (nonnull, nonatomic, strong) UILabel     *postersLB;
 @property (nonnull, nonatomic, strong) id           models;
 @property (nonatomic, assign)          BOOL         isTouch;
+@property (nonatomic, copy)            NSString    *currentImagePathToken;
 @end
 @implementation AFOPLMainCollectionCell
 #pragma mark ------------ init
@@ -45,10 +46,24 @@
 - (void)settingSubViews:(id)model{
     AFOPLThumbnail *detail = model;
     NSString *path =[[AFOPLMainFolderManager mediaImagesCacheFolder] stringByAppendingString:@"/"];
-    NSURL *imageUrl = [NSURL fileURLWithPath:[path stringByAppendingString:detail.image_name]];
+    NSString *imagePath = [path stringByAppendingString:detail.image_name ?: @""];
+    self.currentImagePathToken = imagePath;
+    self.postersImageView.image = [self placeholderPosterImage];
+    self.postersImageView.backgroundColor = [UIColor colorWithWhite:0.95 alpha:1.0];
     WeakObject(self);
-    [self.postersImageView sd_setImageWithURL:imageUrl completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+    dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0), ^{
+        UIImage *image = nil;
+        if (imagePath.length > 0) {
+            NSData *data = [NSData dataWithContentsOfFile:imagePath];
+            if (data.length > 0) {
+                image = [UIImage imageWithData:data];
+            }
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
         StrongObject(self);
+        if (![self.currentImagePathToken isEqualToString:imagePath]) {
+            return;
+        }
         if (image && self.imageLoadedBlock) {
             // 通知 CollectionView 重新布局当前单元格
             // 注意：这里无法直接获取 indexPath，需要在 cellForItemAtIndexPath 中传递
@@ -65,10 +80,21 @@
                 [self layoutIfNeeded];
             }
         }
-    }];
+            self.postersImageView.image = image ?: [self placeholderPosterImage];
+            self.postersImageView.backgroundColor = image ? [UIColor clearColor] : [UIColor colorWithWhite:0.95 alpha:1.0];
+        });
+    });
     self.postersLB.text = detail.vedio_name;
     ///---
     self.models = model;
+}
+
+- (void)prepareForReuse {
+    [super prepareForReuse];
+    self.currentImagePathToken = nil;
+    self.postersImageView.image = [self placeholderPosterImage];
+    self.postersImageView.backgroundColor = [UIColor colorWithWhite:0.95 alpha:1.0];
+    self.postersLB.text = @"";
 }
 #pragma mark ------
 - (void)deleteVedioItem:(id)sender{
@@ -122,8 +148,25 @@
 - (UILabel *)postersLB{
     if (!_postersLB) {
         _postersLB = [[UILabel alloc] init];
+        _postersLB.font = [UIFont systemFontOfSize:12];
+        _postersLB.textColor = [UIColor darkGrayColor];
+        _postersLB.numberOfLines = 1;
     }
     return _postersLB;
+}
+
+- (UIImage *)placeholderPosterImage {
+    static UIImage *placeholder = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        CGSize size = CGSizeMake(12.0, 8.0);
+        UIGraphicsBeginImageContextWithOptions(size, YES, 0);
+        [[UIColor colorWithWhite:0.90 alpha:1.0] setFill];
+        UIRectFill(CGRectMake(0, 0, size.width, size.height));
+        placeholder = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+    });
+    return placeholder;
 }
 
 #pragma mark ------ layoutSubviews
@@ -132,7 +175,6 @@
     self.postersImageView.frame = CGRectMake(0, 0, self.contentView.bounds.size.width, self.contentView.bounds.size.height - 20);
     self.postersLB.frame = CGRectMake(0, CGRectGetHeight(self.postersImageView.frame), self.contentView.bounds.size.width, self.contentView.bounds.size.height - CGRectGetHeight(self.postersImageView.frame));
     self.deleteButton.frame = self.postersImageView.frame;
-    NSLog(@"AFOPLMainCollectionCell: layoutSubviews - self.bounds: %@, postersImageView.frame: %@", NSStringFromCGRect(self.bounds), NSStringFromCGRect(self.postersImageView.frame));
 }
 
 @end

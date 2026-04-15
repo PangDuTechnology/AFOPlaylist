@@ -43,4 +43,18 @@
     }
 }
 
+- (void)syncListStateAfterReload {
+    NSUInteger count = 0;
+    id<AFOPLPlaylistRoutingDataSource> ds = self.routingDataSource;
+    if (ds && [ds respondsToSelector:@selector(playlistItemCount)]) {
+        count = [(id)ds playlistItemCount];
+    }
+    if (self.itemCount != count) {
+        _itemCount = count;
+        if (self.onListStateChange) {
+            self.onListStateChange(count);
+        }
+    }
+}
+
 @end

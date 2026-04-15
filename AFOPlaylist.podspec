@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.name         = "AFOPlaylist"
-  s.version      = "0.0.19"
+  s.version      = "0.0.20"
   s.summary      = "play list."
 
   # This description is used to generate tags and improve search results.
@@ -35,6 +35,7 @@ Pod::Spec.new do |s|
   s.dependency "AFORouter"
   s.dependency "AFOUIKIT"
   s.dependency "AFOFFMpeg"
+  s.dependency "AFOLANUpload"
   s.dependency "AFOSQLite"
   s.dependency "FMDB", "~> 2.7"
   s.dependency "AFOGitHub"

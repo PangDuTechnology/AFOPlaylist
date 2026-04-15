@@ -12,6 +12,7 @@
 @property (nonatomic, copy) NSString *stubPath;
 @property (nonatomic, copy) NSString *stubName;
 @property (nonatomic, assign) UIInterfaceOrientationMask stubMask;
+@property (nonatomic, assign) NSUInteger stubItemCount;
 @end
 
 @implementation AFOPLPlaylistRoutingDataSourceStub
@@ -26,6 +27,10 @@
 
 - (UIInterfaceOrientationMask)orientationMask:(NSIndexPath *)indexPath {
     return self.stubMask;
+}
+
+- (NSUInteger)playlistItemCount {
+    return self.stubItemCount;
 }
 
 @end
@@ -75,6 +80,19 @@
     vm.routePerformBlock = ^(NSDictionary *parameters) { called = YES; };
     [vm openPlayerAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:0] currentControllerClassName:@""];
     XCTAssertFalse(called);
+}
+
+- (void)testSyncListStateAfterReloadUpdatesItemCount {
+    AFOPLPlaylistRoutingDataSourceStub *stub = [[AFOPLPlaylistRoutingDataSourceStub alloc] init];
+    stub.stubItemCount = 3;
+    AFOPLMainListViewModel *vm = [[AFOPLMainListViewModel alloc] initWithRoutingDataSource:stub];
+    __block NSUInteger lastCount = NSNotFound;
+    vm.onListStateChange = ^(NSUInteger itemCount) {
+        lastCount = itemCount;
+    };
+    [vm syncListStateAfterReload];
+    XCTAssertEqual(lastCount, 3u);
+    XCTAssertEqual(vm.itemCount, 3u);
 }
 
 @end

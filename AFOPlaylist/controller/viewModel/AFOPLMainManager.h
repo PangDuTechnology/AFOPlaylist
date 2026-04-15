@@ -24,4 +24,8 @@
 - (NSString *)vedioAddressIndexPath:(NSIndexPath *)indexPath;
 - (NSString *)vedioNameIndexPath:(NSIndexPath *)indexPath;
 - (UIInterfaceOrientationMask)orientationMask:(NSIndexPath *)indexPath;
+
+/// 与 `AFOPLPlaylistRoutingDataSource` 可选方法对应，供编辑/ViewModel 使用。
+- (NSUInteger)playlistItemCount;
+- (NSArray *)playlistThumbnailItemsSnapshot;
 @end

@@ -11,22 +11,63 @@
 #import <AFOGitHub/AFOGitHub.h>
 #import "AFOPLMainControllerCategory.h"
 #import "AFOPLMainListViewModel.h"
+#import "AFOPLMainManager.h"
 #import "AFOPLMainCellDefaultLayout.h"
 #import "AFOPLMainCollectionDataSource.h"
 #import "AFOPLMainCollectionCell.h"
+#import <AFOLANUpload/AFOLANUpload.h>
+#import <TargetConditionals.h>
+#if TARGET_OS_SIMULATOR
+#import <AVKit/AVKit.h>
+#import <AVFoundation/AVFoundation.h>
+#endif
 @interface AFOPLMainController ()<UICollectionViewDelegate>
 @property (nonnull, nonatomic, strong) AFOPLMainCellDefaultLayout    *defaultLayout;
 @property (nonnull, nonatomic, strong) AFOPLMainCollectionDataSource *collectionDataSource;
 @property (nonnull, nonatomic, strong, readwrite) UICollectionView             *collectionView;
+@property (nonatomic, strong, nullable) AFOPLMainListViewModel *playlistListViewModel;
+@property (nonatomic, strong) AFOLANUploadServer *lanUploadServer;
+@property (nonatomic, strong) UIBarButtonItem *lanUploadBarButtonItem;
+@property (nonatomic, assign) BOOL isRefreshingThumbnails;
 @end
 @implementation AFOPLMainController
+#if TARGET_OS_SIMULATOR
+- (void)playVideoInSimulatorAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *videoPath = [self vedioPath:indexPath];
+    NSLog(@"AFOPLMainController(sim): try play indexPath=%@ path=%@", indexPath, videoPath);
+    if (videoPath.length == 0) {
+        NSLog(@"AFOPLMainController(sim): empty video path");
+        return;
+    }
+    if (![[NSFileManager defaultManager] fileExistsAtPath:videoPath]) {
+        NSLog(@"AFOPLMainController(sim): file not found at path=%@", videoPath);
+        return;
+    }
+    NSURL *videoURL = [NSURL fileURLWithPath:videoPath];
+    AVURLAsset *asset = [AVURLAsset URLAssetWithURL:videoURL options:nil];
+    AVAssetTrack *videoTrack = [asset tracksWithMediaType:AVMediaTypeVideo].firstObject;
+    if (videoTrack) {
+        CGSize naturalSize = videoTrack.naturalSize;
+        CGFloat bitrate = videoTrack.estimatedDataRate;
+        NSLog(@"AFOPLMainController(sim): asset size=%.0fx%.0f bitrate=%.0f", naturalSize.width, naturalSize.height, bitrate);
+    }
+
+    AVPlayerViewController *playerVC = [[AVPlayerViewController alloc] init];
+    playerVC.player = [AVPlayer playerWithURL:videoURL];
+    playerVC.videoGravity = AVLayerVideoGravityResizeAspect;
+    playerVC.title = [self vedioName:indexPath];
+    [self.navigationController pushViewController:playerVC animated:YES];
+    [playerVC.player play];
+}
+#endif
 #pragma mark - Lifecycle
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 #if DEBUG
-    NSLog(@"AFOPLMainController: viewWillAppear called. Hiding TabBar.");
+    NSLog(@"AFOPLMainController: viewWillAppear called. Showing TabBar.");
 #endif
-    self.tabBarController.tabBar.hidden = YES;
+    // 主页面应展示底部 TabBar，避免首页进入后整栏消失。
+    self.tabBarController.tabBar.hidden = NO;
 
     if (self.navigationController) {
 #if DEBUG
@@ -52,6 +93,7 @@
     [super viewDidLoad];
     // self.view.backgroundColor = [UIColor redColor]; // 移除诊断用的背景色
     self.title = @"播放列表";
+    [self setupLANUploadButton];
     // self.automaticallyAdjustsScrollViewInsets = NO; // 移除或注释掉此行，让系统自动调整布局
     [self.view addSubview:self.collectionView];
 }
@@ -84,6 +126,9 @@
 - (void)initializerInstance {
     [self setupLayoutBlock];
     [self configureCollectionViewData];
+    if (self.mainManager) {
+        self.playlistListViewModel = [[AFOPLMainListViewModel alloc] initWithMainManager:self.mainManager];
+    }
     [self addPullToRefresh]; 
     __weak typeof(self) weakSelf = self;
     self.editorLogic.updateCollectionBlock = ^{ // Block 应该在合适的时机被触发，这里只是初始化
@@ -96,19 +141,45 @@
      __weak typeof(self) weakSelf = self;
      [self.collectionView addPullToRefreshWithActionHandler:^{
          __strong typeof(weakSelf) strongSelf = weakSelf;
-         [self.collectionView.pullToRefreshView stopAnimating];
+         [strongSelf setThumbnailRefreshing:YES];
+         [strongSelf reloadCollectionDataWithCompletion:^{
+             [strongSelf setThumbnailRefreshing:NO];
+             [strongSelf.collectionView.pullToRefreshView stopAnimating];
+         }];
      }];
 }
 #pragma mark - Data Handling
 
 - (void)addCollectionViewData {
+    [self reloadCollectionDataWithCompletion:nil];
+}
+
+- (void)reloadCollectionDataWithCompletion:(void (^ _Nullable)(void))completion {
     __weak typeof(self) weakSelf = self;
     [self addCollectionViewData:^(NSArray *array) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
-        [self.collectionDataSource settingImageData:array];
-        // 确保在主线程更新 UI
+        if (!strongSelf) {
+            return;
+        }
+        [strongSelf.collectionDataSource settingImageData:array];
+        [strongSelf.playlistListViewModel syncListStateAfterReload];
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self.collectionView reloadData];
+            // reload 与结束下拉刷新（还原 inset）放在同一无动画块内，避免缩略图飞入；
+            // SVPullToRefresh 的 inset 已改为无动画应用（见 AFOGitHub），刷新头不再与动画上下文冲突。
+            [UIView performWithoutAnimation:^{
+                [strongSelf.collectionView reloadData];
+                [strongSelf.collectionView layoutIfNeeded];
+                if (completion) {
+                    completion();
+                } else if (strongSelf.isRefreshingThumbnails) {
+                    [strongSelf setThumbnailRefreshing:NO];
+                }
+                // 首次从空列表变为有内容时，再按 scrollView 宽度对齐刷新头，避免箭头/菊花在 width 曾为 0 时飘向角落。
+                SVPullToRefreshView *pull = strongSelf.collectionView.pullToRefreshView;
+                if (pull) {
+                    [pull relayoutUsingScrollViewBounds];
+                }
+            }];
         });
     }];
 }
@@ -117,8 +188,14 @@
 #if DEBUG
     NSLog(@"AFOPLMainController: didSelectItemAtIndexPath: %@", indexPath);
 #endif
-    AFOPLMainListViewModel *listVM = [[AFOPLMainListViewModel alloc] initWithMainManager:self.mainManager];
-    [listVM openPlayerAtIndexPath:indexPath currentControllerClassName:NSStringFromClass([self class])];
+#if TARGET_OS_SIMULATOR
+    [self playVideoInSimulatorAtIndexPath:indexPath];
+    return;
+#endif
+    if (!self.playlistListViewModel && self.mainManager) {
+        self.playlistListViewModel = [[AFOPLMainListViewModel alloc] initWithMainManager:self.mainManager];
+    }
+    [self.playlistListViewModel openPlayerAtIndexPath:indexPath currentControllerClassName:NSStringFromClass([self class])];
 }
 #pragma mark - Accessors
 - (UICollectionView *)collectionView{
@@ -161,6 +238,7 @@
 }
 #pragma mark - Deallocation
 - (void)dealloc{
+    [self.lanUploadServer stop];
 #if DEBUG
     NSLog(@"AFOPLMainController dealloc");
 #endif
@@ -198,6 +276,99 @@
     NSLog(@"AFOPLMainController: viewDidDisappear called. Showing TabBar.");
 #endif
     self.tabBarController.tabBar.hidden = NO;
+}
+
+#pragma mark - LAN Upload
+
+- (void)setupLANUploadButton {
+    self.lanUploadBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"局域网上传"
+                                                                    style:UIBarButtonItemStylePlain
+                                                                   target:self
+                                                                   action:@selector(toggleLANUpload:)];
+    self.navigationItem.leftBarButtonItem = self.lanUploadBarButtonItem;
+}
+
+- (void)toggleLANUpload:(id)sender {
+    if (!self.lanUploadServer) {
+        // 部分局域网会拦截 8080，优先改用不常被拦的端口；若仍失败则回退到随机端口。
+        self.lanUploadServer = [[AFOLANUploadServer alloc] initWithPort:18080];
+        // 播放列表当前只扫描 Documents 根目录，上传到子目录会被忽略。
+        self.lanUploadServer.uploadDirectoryPath = [NSFileManager documentSandbox];
+    }
+    __weak typeof(self) weakSelf = self;
+    self.lanUploadServer.logHandler = ^(NSString *message) {
+#if DEBUG
+        NSLog(@"%@", message);
+#endif
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (!strongSelf) {
+            return;
+        }
+        if ([message hasPrefix:@"AFOLANUpload saved:"]) {
+            [strongSelf setThumbnailRefreshing:YES];
+            [strongSelf addCollectionViewData];
+        }
+        [strongSelf updateLANUploadButtonTitle];
+    };
+
+    if (self.lanUploadServer.isRunning) {
+        [self.lanUploadServer stop];
+        [self updateLANUploadButtonTitle];
+        [self showLANUploadMessage:@"局域网上传已停止。"];
+        return;
+    }
+
+    NSError *error = nil;
+    BOOL started = [self.lanUploadServer start:&error];
+    if (!started && [error.domain isEqualToString:NSPOSIXErrorDomain]) {
+        // 端口占用/权限等导致启动失败时，回退到随机端口重试一次。
+        if (error.code == EADDRINUSE || error.code == EACCES) {
+            self.lanUploadServer = [[AFOLANUploadServer alloc] initWithPort:0];
+            self.lanUploadServer.uploadDirectoryPath = [NSFileManager documentSandbox];
+            self.lanUploadServer.logHandler = ^(NSString *message) {
+#if DEBUG
+                NSLog(@"%@", message);
+#endif
+                __strong typeof(weakSelf) strongSelf = weakSelf;
+                if (!strongSelf) {
+                    return;
+                }
+                if ([message hasPrefix:@"AFOLANUpload saved:"]) {
+                    [strongSelf setThumbnailRefreshing:YES];
+                    [strongSelf addCollectionViewData];
+                }
+                [strongSelf updateLANUploadButtonTitle];
+            };
+            error = nil;
+            started = [self.lanUploadServer start:&error];
+        }
+    }
+    if (!started) {
+        NSString *message = [NSString stringWithFormat:@"启动失败：%@", error.localizedDescription ?: @"未知错误"];
+        [self showLANUploadMessage:message];
+        return;
+    }
+
+    [self updateLANUploadButtonTitle];
+    NSString *tip = [NSString stringWithFormat:@"已启动。\n请在同一局域网浏览器打开：\n%@", self.lanUploadServer.serverURLString ?: @""];
+    [self showLANUploadMessage:tip];
+}
+
+- (void)updateLANUploadButtonTitle {
+    self.lanUploadBarButtonItem.title = self.lanUploadServer.isRunning ? @"停止上传" : @"局域网上传";
+}
+
+- (void)showLANUploadMessage:(NSString *)message {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"局域网上传"
+                                                                   message:message
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:@"知道了" style:UIAlertActionStyleCancel handler:nil]];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+- (void)setThumbnailRefreshing:(BOOL)refreshing {
+    self.isRefreshingThumbnails = refreshing;
+    self.navigationItem.prompt = refreshing ? @"正在生成封面..." : nil;
 }
 
 #pragma mark - AFOTabRootControllerProviding
