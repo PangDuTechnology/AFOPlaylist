@@ -16,6 +16,7 @@
 #import "AFOPLMainCollectionDataSource.h"
 #import "AFOPLMainCollectionCell.h"
 #import <AFOLANUpload/AFOLANUpload.h>
+#import "AFOPlayListNavigationController.h"
 #import <TargetConditionals.h>
 #if TARGET_OS_SIMULATOR
 #import <AVKit/AVKit.h>
@@ -368,7 +369,12 @@
 
 #pragma mark - AFOTabRootControllerProviding
 - (UIViewController *)returnController {
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:self];
+    AFOPlayListNavigationController *navController = [[AFOPlayListNavigationController alloc] initWithRootViewController:self];
+    navController.tabBarItem.title = @"播放列表";
+    if (@available(iOS 13.0, *)) {
+        navController.tabBarItem.image = [UIImage systemImageNamed:@"list.bullet.rectangle"];
+        navController.tabBarItem.selectedImage = [UIImage systemImageNamed:@"list.bullet.rectangle.fill"];
+    }
 #if DEBUG
     NSLog(@"AFOPLMainController: returnController called. Returning UINavigationController: %p with root: %p", navController, self);
 #endif
