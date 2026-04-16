@@ -174,11 +174,6 @@
                 } else if (strongSelf.isRefreshingThumbnails) {
                     [strongSelf setThumbnailRefreshing:NO];
                 }
-                // 首次从空列表变为有内容时，再按 scrollView 宽度对齐刷新头，避免箭头/菊花在 width 曾为 0 时飘向角落。
-                SVPullToRefreshView *pull = strongSelf.collectionView.pullToRefreshView;
-                if (pull) {
-                    [pull relayoutUsingScrollViewBounds];
-                }
             }];
         });
     }];
