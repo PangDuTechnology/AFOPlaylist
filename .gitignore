@@ -8,3 +8,6 @@ xcuserdata/
 Pods/
 Podfile.lock
 *.xcworkspace/
+
+# Xcode auto-generated workspace inside .xcodeproj
+*.xcodeproj/project.xcworkspace/
