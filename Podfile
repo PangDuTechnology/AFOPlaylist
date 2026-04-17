@@ -6,6 +6,7 @@ target 'AFOPlaylist' do
   pod 'AFOFoundation'
   pod 'AFOSchedulerCore'
   pod 'AFORouter'
+  pod 'AFOLANUpload'
   pod 'AFOSQLite'
   pod 'FMDB'
   pod 'AFOGitHub'
