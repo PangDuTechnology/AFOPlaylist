@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1499735A2F874E7E00417DF7 /* AFOPLMainEditorLogic.h in Headers */ = {isa = PBXBuildFile; fileRef = 149973582F874E7E00417DF7 /* AFOPLMainEditorLogic.h */; };
+		1499735B2F874E7E00417DF7 /* AFOPLMainEditorLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 149973592F874E7E00417DF7 /* AFOPLMainEditorLogic.m */; };
 		240487BE20084CB400D369FB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240487BC20084CB400D369FB /* AVFoundation.framework */; };
 		240487BF20084CB400D369FB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240487BD20084CB400D369FB /* AudioToolbox.framework */; };
 		240487C320084CCD00D369FB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240487C020084CCC00D369FB /* CoreGraphics.framework */; };
@@ -28,8 +30,9 @@
 		243EA14023331FFB00A15C48 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 240487B820084CA300D369FB /* libbz2.tbd */; };
 		243EA1412333200B00A15C48 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 240487BA20084CA900D369FB /* libiconv.tbd */; };
 		243EA1532333293400A15C48 /* AFOPlayListForeign.h in Headers */ = {isa = PBXBuildFile; fileRef = 243EA1522333293400A15C48 /* AFOPlayListForeign.h */; };
-		2446ED13201979DC00FD5012 /* AFOPLMainController+Aspects.h in Headers */ = {isa = PBXBuildFile; fileRef = 2446ED11201979DC00FD5012 /* AFOPLMainController+Aspects.h */; };
-		2446ED14201979DC00FD5012 /* AFOPLMainController+Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = 2446ED12201979DC00FD5012 /* AFOPLMainController+Aspects.m */; };
+		A1PLRT012008560700490701 /* AFOPLPlaylistRoutingDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = A1PLRT002008560700490700 /* AFOPLPlaylistRoutingDataSource.h */; };
+		A1PLVM032008560700490603 /* AFOPLMainListViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A1PLVM012008560700490601 /* AFOPLMainListViewModel.h */; };
+		A1PLVM042008560700490604 /* AFOPLMainListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A1PLVM022008560700490602 /* AFOPLMainListViewModel.m */; };
 		2446ED1A2019818100FD5012 /* AFOPLMainController+AFOPLMainManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 2446ED182019818100FD5012 /* AFOPLMainController+AFOPLMainManager.h */; };
 		2446ED1B2019818100FD5012 /* AFOPLMainController+AFOPLMainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2446ED192019818100FD5012 /* AFOPLMainController+AFOPLMainManager.m */; };
 		2459239D1FE132B00094C3E0 /* AFOPlayListNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2459239B1FE132B00094C3E0 /* AFOPlayListNavigationController.h */; };
@@ -64,6 +67,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		149973582F874E7E00417DF7 /* AFOPLMainEditorLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFOPLMainEditorLogic.h; sourceTree = "<group>"; };
+		149973592F874E7E00417DF7 /* AFOPLMainEditorLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFOPLMainEditorLogic.m; sourceTree = "<group>"; };
 		240487B620084C8200D369FB /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		240487B820084CA300D369FB /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		240487BA20084CA900D369FB /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
@@ -92,8 +97,9 @@
 		243EA13A23331FAC00A15C48 /* libAFOViews.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libAFOViews.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		243EA13C23331FBF00A15C48 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		243EA1522333293400A15C48 /* AFOPlayListForeign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFOPlayListForeign.h; sourceTree = "<group>"; };
-		2446ED11201979DC00FD5012 /* AFOPLMainController+Aspects.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AFOPLMainController+Aspects.h"; sourceTree = "<group>"; };
-		2446ED12201979DC00FD5012 /* AFOPLMainController+Aspects.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AFOPLMainController+Aspects.m"; sourceTree = "<group>"; };
+		A1PLRT002008560700490700 /* AFOPLPlaylistRoutingDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOPLPlaylistRoutingDataSource.h; sourceTree = "<group>"; };
+		A1PLVM012008560700490601 /* AFOPLMainListViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOPLMainListViewModel.h; sourceTree = "<group>"; };
+		A1PLVM022008560700490602 /* AFOPLMainListViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOPLMainListViewModel.m; sourceTree = "<group>"; };
 		2446ED182019818100FD5012 /* AFOPLMainController+AFOPLMainManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AFOPLMainController+AFOPLMainManager.h"; sourceTree = "<group>"; };
 		2446ED192019818100FD5012 /* AFOPLMainController+AFOPLMainManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AFOPLMainController+AFOPLMainManager.m"; sourceTree = "<group>"; };
 		2446ED262019B3FB00FD5012 /* AFOPLCorrespondingCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOPLCorrespondingCategory.h; sourceTree = "<group>"; };
@@ -265,8 +271,6 @@
 				2427228221C7E0B900E46946 /* AFOPLMainControllerCategory.h */,
 				2421EF0C21C0C6C200D44ED7 /* AFOPLMainController+Operation.h */,
 				2421EF0D21C0C6C200D44ED7 /* AFOPLMainController+Operation.m */,
-				2446ED11201979DC00FD5012 /* AFOPLMainController+Aspects.h */,
-				2446ED12201979DC00FD5012 /* AFOPLMainController+Aspects.m */,
 				2446ED182019818100FD5012 /* AFOPLMainController+AFOPLMainManager.h */,
 				2446ED192019818100FD5012 /* AFOPLMainController+AFOPLMainManager.m */,
 			);
@@ -278,10 +282,15 @@
 			children = (
 				24F428DA1FFDDF33009F3F32 /* AFOPLMainManager.h */,
 				24F428DB1FFDDF33009F3F32 /* AFOPLMainManager.m */,
+				A1PLRT002008560700490700 /* AFOPLPlaylistRoutingDataSource.h */,
+				A1PLVM012008560700490601 /* AFOPLMainListViewModel.h */,
+				A1PLVM022008560700490602 /* AFOPLMainListViewModel.m */,
 				24F428CA1FFDD61B009F3F32 /* AFOPLMainCollectionDataSource.h */,
 				24F428CB1FFDD61B009F3F32 /* AFOPLMainCollectionDataSource.m */,
 				24EDFA1B2004A7940071AF43 /* AFOPLCorresponding.h */,
 				24EDFA1C2004A7940071AF43 /* AFOPLCorresponding.m */,
+				149973582F874E7E00417DF7 /* AFOPLMainEditorLogic.h */,
+				149973592F874E7E00417DF7 /* AFOPLMainEditorLogic.m */,
 				DBE653DD2340966F0022B8DA /* category */,
 			);
 			path = viewModel;
@@ -354,7 +363,8 @@
 				2459239D1FE132B00094C3E0 /* AFOPlayListNavigationController.h in Headers */,
 				24E041201FE218A300BE0B5B /* AFOPLMainController.h in Headers */,
 				2424F6C4232CB981006FA89F /* AFOPLCorresponding+NSArray.h in Headers */,
-				2446ED13201979DC00FD5012 /* AFOPLMainController+Aspects.h in Headers */,
+				A1PLRT012008560700490701 /* AFOPLPlaylistRoutingDataSource.h in Headers */,
+				A1PLVM032008560700490603 /* AFOPLMainListViewModel.h in Headers */,
 				24F428DC1FFDDF33009F3F32 /* AFOPLMainManager.h in Headers */,
 				24F428CC1FFDD61B009F3F32 /* AFOPLMainCollectionDataSource.h in Headers */,
 				24F36E5B1FFDC76600224A3E /* AFODirectoryWatcher.h in Headers */,
@@ -362,6 +372,7 @@
 				24F428D11FFDD8C4009F3F32 /* AFOPLMainCollectionCell.h in Headers */,
 				2494B0C2200D9EC100B7816B /* AFOPLCorresponding+GCD.h in Headers */,
 				241D58DE2000A1CA0049CAF3 /* AFOPLMainFolderManager.h in Headers */,
+				1499735A2F874E7E00417DF7 /* AFOPLMainEditorLogic.h in Headers */,
 				2421EF0E21C0C6C200D44ED7 /* AFOPLMainController+Operation.h in Headers */,
 				2446ED1A2019818100FD5012 /* AFOPLMainController+AFOPLMainManager.h in Headers */,
 			);
@@ -462,7 +473,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2446ED14201979DC00FD5012 /* AFOPLMainController+Aspects.m in Sources */,
+				A1PLVM042008560700490604 /* AFOPLMainListViewModel.m in Sources */,
 				24F928EA200C8B65007ADAA4 /* AFOPLThumbnail.m in Sources */,
 				2459239E1FE132B00094C3E0 /* AFOPlayListNavigationController.m in Sources */,
 				2494B0BE200D993B00B7816B /* AFOPLCorresponding+SQLite.m in Sources */,
@@ -474,6 +485,7 @@
 				2408BB522008A37E0049060F /* AFOPLSQLiteManager.m in Sources */,
 				24F928EF200CE175007ADAA4 /* AFOPLCorresponding+NSArray.m in Sources */,
 				2494B0C3200D9EC100B7816B /* AFOPLCorresponding+GCD.m in Sources */,
+				1499735B2F874E7E00417DF7 /* AFOPLMainEditorLogic.m in Sources */,
 				241D58DF2000A1CA0049CAF3 /* AFOPLMainFolderManager.m in Sources */,
 				2421EF0F21C0C6C200D44ED7 /* AFOPLMainController+Operation.m in Sources */,
 				24F428CD1FFDD61B009F3F32 /* AFOPLMainCollectionDataSource.m in Sources */,
@@ -539,7 +551,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -593,7 +605,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -620,6 +632,7 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				LINK_WITH_STANDARD_LIBRARIES = NO;
@@ -655,6 +668,7 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				LINK_WITH_STANDARD_LIBRARIES = NO;

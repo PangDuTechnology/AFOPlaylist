@@ -18,6 +18,7 @@
 - (void)passingCurrentController:(UIViewController *)current
                   nextController:(NSString *)next
                       parameters:(NSDictionary *)paramenter{
+    NSLog(@"AFORouterActionContext: passingCurrentController called. Current controller: %p, Next controller: %@, Parameters: %@", current, next, paramenter);
     NSString *strAction = paramenter[@"action"];
     Class class = NSClassFromString(self.actionDic[strAction]);
     self.action = [[class alloc] init];

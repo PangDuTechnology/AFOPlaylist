@@ -26,6 +26,16 @@
 }
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     AFOPLMainCollectionCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([AFOPLMainCollectionCell class]) forIndexPath:indexPath];
+    cell.indexPath = indexPath; // 设置 cell 的 indexPath
+    // 设置 imageLoadedBlock，当图片加载完成后，通知 CollectionView 重新布局
+    WeakObject(collectionView); // 避免循环引用
+    cell.imageLoadedBlock = ^(NSIndexPath * _Nullable loadedIndexPath) {
+        StrongObject(collectionView);
+        // 移除了 performBatchUpdates 和 invalidateLayout，依赖 cell 自身的布局更新
+        if (collectionView && loadedIndexPath) {
+            // [collectionView reloadItemsAtIndexPaths:@[loadedIndexPath]]; // 也可以尝试刷新单个 item
+        }
+    };
     [cell settingSubViews:[self.dataArray objectAtIndexAFOAbnormal:indexPath.item]];
     return cell;
 }
