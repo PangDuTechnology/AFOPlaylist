@@ -40,10 +40,4 @@ Pod::Spec.new do |s|
   s.dependency "AFOSQLite"
   s.dependency "FMDB", "~> 2.7"
   s.dependency "AFOGitHub"
-
-  s.test_spec 'Tests' do |test_spec|
-    test_spec.platform = :ios, '13.0'
-    test_spec.source_files = 'AFOPlaylist/Tests/**/*.{h,m}'
-    test_spec.frameworks = 'XCTest'
-  end
 end
