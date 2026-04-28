@@ -30,6 +30,7 @@ Pod::Spec.new do |s|
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.requires_arc = true
+  s.static_framework = true
   s.dependency "AFOFoundation"
   s.dependency "AFOSchedulerCore"
   s.dependency "AFORouter"
