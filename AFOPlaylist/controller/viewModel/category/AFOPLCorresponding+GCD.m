@@ -10,10 +10,6 @@
 #import <AFOFoundation/AFOFoundation.h>
 #import <AVFoundation/AVFoundation.h>
 #import <UIKit/UIKit.h>
-#import <TargetConditionals.h>
-#if !TARGET_OS_SIMULATOR
-#import <AFOFFMpeg/AFOFFMpeg.h>
-#endif
 #import "AFOPLThumbnail.h"
 #import "AFOPLSQLiteManager.h"
 #import "AFOPLMainFolderManager.h"
@@ -51,10 +47,9 @@ static NSString *AFOPLResolvedVideoFileInDocuments(NSString *relativeName) {
 + (void)cuttingImageSaveSqlite:(NSArray *)array
                          block:(void (^) (NSArray *itemArray))block{
     __block NSMutableArray *newArray = [[NSMutableArray alloc] init];
-#if TARGET_OS_SIMULATOR
-    // 模拟器分支改为真实抽帧，保证播放列表可看到截图。
+    // 真机原先用 FFmpeg 抽帧；AFOMediaSeekFrame 在多数码流下因 key_frame 判断/失败路径无回调导致永远不走完，
+    // 列表 validDatabaseCount 一直为 0。统一改用 AVFoundation，与模拟器行为一致且稳定。
     dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0), ^{
-        NSString *videoRootPath = [NSFileManager documentSandbox];
         NSString *imageFolderPath = [AFOPLMainFolderManager mediaImagesCacheFolder];
         NSFileManager *fileManager = [NSFileManager defaultManager];
 
@@ -98,7 +93,8 @@ static NSString *AFOPLResolvedVideoFileInDocuments(NSString *relativeName) {
                 return;
             }
 
-            NSString *imageName = [self simulatorImageNameForVideoName:videoName];
+            // 与 Pods/AFOFFMpeg AFOMediaThumbnail imageName: 一致，保证与历史数据及 imageAddress: 解析一致。
+            NSString *imageName = [[NSString md5HexDigest:videoName] stringByAppendingString:@".jpg"];
             NSString *imagePath = [imageFolderPath stringByAppendingPathComponent:imageName];
             NSData *imageData = UIImageJPEGRepresentation(thumbnailImage, 0.85);
             if (imageData.length == 0) {
@@ -111,7 +107,7 @@ static NSString *AFOPLResolvedVideoFileInDocuments(NSString *relativeName) {
 
             NSInteger width = (NSInteger)CGImageGetWidth(thumbnailImage.CGImage);
             NSInteger height = (NSInteger)CGImageGetHeight(thumbnailImage.CGImage);
-            NSString *createTime = [self simulatorCreateTimeString];
+            NSString *createTime = [self thumbnailCreateTimeString];
 
             dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
             __block BOOL insertSuccess = NO;
@@ -146,40 +142,9 @@ static NSString *AFOPLResolvedVideoFileInDocuments(NSString *relativeName) {
             }
         });
     });
-    return;
-#else
-    [[AFOMediaForeignInterface shareInstance] mediaSeekFrameUseQueue:array vediopath:[NSFileManager documentSandbox] imagePath:[AFOPLMainFolderManager mediaImagesAddress] sqlite:[AFOPLMainFolderManager dataBaseAddress] block:^(BOOL isHave,NSString *createTime,NSString *vedioName, NSString *imageName, int width, int height) {
-        NSLog(@"AFOPLCorresponding+GCD: mediaSeekFrameUseQueue callback - Image Name: %@, Width: %d, Height: %d", imageName, width, height); // 添加调试日志
-        [AFOPLSQLiteManager inserSQLiteDataBase:AFO_PLAYLIST_SCREENSHOTSVEDIOLIST isHave:isHave createTime:createTime vedioName:vedioName imageName:imageName width:width height:height block:^(BOOL isFinish) {
-            if (isFinish) {
-                AFOPLThumbnail *detail = [[AFOPLThumbnail alloc] init];
-                detail.create_time =createTime;
-                detail.vedio_name = vedioName;
-                detail.image_name = imageName;
-                detail.image_width = width;
-                detail.image_hight = height;
-                [newArray addObjectAFOAbnormal:detail];
-                NSLog(@"成功插入数据!");
-            }
-        }];
-        block(newArray);
-    }];
-#endif
 }
 
-+ (NSString *)simulatorImageNameForVideoName:(NSString *)videoName {
-    NSString *normalizedName = [videoName stringByDeletingPathExtension];
-    if (normalizedName.length == 0) {
-        normalizedName = videoName ?: @"video";
-    }
-    NSString *baseName = [NSString stringWithFormat:@"%llx", (unsigned long long)normalizedName.hash];
-    if (baseName.length == 0) {
-        baseName = [NSString stringWithFormat:@"thumb_%@", @((long long)(NSDate.date.timeIntervalSince1970 * 1000))];
-    }
-    return [baseName stringByAppendingString:@".jpg"];
-}
-
-+ (NSString *)simulatorCreateTimeString {
++ (NSString *)thumbnailCreateTimeString {
     static NSDateFormatter *formatter = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{

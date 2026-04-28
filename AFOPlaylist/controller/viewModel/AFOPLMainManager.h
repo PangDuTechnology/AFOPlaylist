@@ -20,6 +20,8 @@
 + (void)deleteMovieRelatedContentLocally:(NSArray *)array
                                    block:(void (^)(BOOL isSucess))block;
 - (void)getThumbnailData:(void (^)(NSArray *array))block;
+/// 重新扫描磁盘视频列表后再执行 completion（内部会更新 nameArray）。
+- (void)refreshDirectoryListingWithCompletion:(void (^ _Nullable)(void))completion;
 - (CGFloat)thumbnailHight:(NSIndexPath *)indexPath width:(CGFloat)width;
 - (NSString *)vedioAddressIndexPath:(NSIndexPath *)indexPath;
 - (NSString *)vedioNameIndexPath:(NSIndexPath *)indexPath;

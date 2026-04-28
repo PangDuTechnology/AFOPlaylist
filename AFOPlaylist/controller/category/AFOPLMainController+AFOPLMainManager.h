@@ -9,7 +9,7 @@
 #import "AFOPLMainController.h"
 @class AFOPLMainManager;
 @interface AFOPLMainController (AFOPLMainManager)
-@property (nonnull, nonatomic, strong, readonly) AFOPLMainManager  *mainManager;
+@property (nonnull, nonatomic, strong) AFOPLMainManager  *mainManager;
 - (void)addCollectionViewData:(void (^_Nullable)(NSArray * _Nullable array))block;
 - (NSString *_Nullable)vedioPath:(NSIndexPath *_Nullable)indexPath;
 - (NSString *_Nullable)vedioName:(NSIndexPath *_Nullable)indexPath;

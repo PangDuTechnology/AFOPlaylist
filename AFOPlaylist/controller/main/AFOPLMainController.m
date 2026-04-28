@@ -8,11 +8,10 @@
 
 #import "AFOPLMainController.h"
 #import <AFOFoundation/AFOFoundation.h>
-#import <AFOGitHub/AFOGitHub.h>
+#import <AFOWaterfall/AFOWaterfallFlowLayout.h>
 #import "AFOPLMainControllerCategory.h"
 #import "AFOPLMainListViewModel.h"
 #import "AFOPLMainManager.h"
-#import "AFOPLMainCellDefaultLayout.h"
 #import "AFOPLMainCollectionDataSource.h"
 #import "AFOPLMainCollectionCell.h"
 #import <AFOLANUpload/AFOLANUpload.h>
@@ -22,14 +21,16 @@
 #import <AVKit/AVKit.h>
 #import <AVFoundation/AVFoundation.h>
 #endif
-@interface AFOPLMainController ()<UICollectionViewDelegate>
-@property (nonnull, nonatomic, strong) AFOPLMainCellDefaultLayout    *defaultLayout;
+@interface AFOPLMainController ()<UICollectionViewDelegate, AFOWaterfallLayoutDelegate>
+@property (nonnull, nonatomic, strong) AFOWaterfallFlowLayout    *defaultLayout;
 @property (nonnull, nonatomic, strong) AFOPLMainCollectionDataSource *collectionDataSource;
 @property (nonnull, nonatomic, strong, readwrite) UICollectionView             *collectionView;
 @property (nonatomic, strong, nullable) AFOPLMainListViewModel *playlistListViewModel;
 @property (nonatomic, strong) AFOLANUploadServer *lanUploadServer;
 @property (nonatomic, strong) UIBarButtonItem *lanUploadBarButtonItem;
+@property (nonatomic, strong, nullable) UIBarButtonItem *thumbnailActivityBarButtonItem;
 @property (nonatomic, assign) BOOL isRefreshingThumbnails;
+@property (nonatomic, strong) UIRefreshControl *playlistRefreshControl;
 @end
 @implementation AFOPLMainController
 #if TARGET_OS_SIMULATOR
@@ -112,42 +113,40 @@
 }
 #pragma mark - Private Methods
 
-- (void)setupLayoutBlock {
-    __weak typeof(self) weakSelf = self;
-    self.defaultLayout.block = ^CGFloat(CGFloat width, NSIndexPath *indexPath) {
-        __strong typeof(weakSelf) strongSelf = weakSelf;
-        return [self vedioItemHeight:indexPath width:width];
-    };
-}
-
 - (void)configureCollectionViewData {
     [self addCollectionViewData];
 }
 
 - (void)initializerInstance {
-    [self setupLayoutBlock];
     [self configureCollectionViewData];
     if (self.mainManager) {
         self.playlistListViewModel = [[AFOPLMainListViewModel alloc] initWithMainManager:self.mainManager];
     }
     [self addPullToRefresh]; 
     __weak typeof(self) weakSelf = self;
-    self.editorLogic.updateCollectionBlock = ^{ // Block 应该在合适的时机被触发，这里只是初始化
+    self.editorLogic.updateCollectionBlock = ^{
         __strong typeof(weakSelf) strongSelf = weakSelf;
-        [self configureCollectionViewData];
+        if (!strongSelf) {
+            return;
+        }
+        [strongSelf configureCollectionViewData];
     };
 }
-#pragma mark ------ 下拉刷新
-- (void)addPullToRefresh{
-     __weak typeof(self) weakSelf = self;
-     [self.collectionView addPullToRefreshWithActionHandler:^{
-         __strong typeof(weakSelf) strongSelf = weakSelf;
-         [strongSelf setThumbnailRefreshing:YES];
-         [strongSelf reloadCollectionDataWithCompletion:^{
-             [strongSelf setThumbnailRefreshing:NO];
-             [strongSelf.collectionView.pullToRefreshView stopAnimating];
-         }];
-     }];
+#pragma mark ------ 下拉刷新（UIRefreshControl）
+- (void)addPullToRefresh {
+    self.playlistRefreshControl = [[UIRefreshControl alloc] init];
+    [self.playlistRefreshControl addTarget:self action:@selector(afo_handlePlaylistPullRefresh) forControlEvents:UIControlEventValueChanged];
+    self.collectionView.refreshControl = self.playlistRefreshControl;
+}
+
+- (void)afo_handlePlaylistPullRefresh {
+    __weak typeof(self) weakSelf = self;
+    [self setThumbnailRefreshing:YES];
+    [self reloadCollectionDataWithCompletion:^{
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        [strongSelf setThumbnailRefreshing:NO];
+        [strongSelf.playlistRefreshControl endRefreshing];
+    }];
 }
 #pragma mark - Data Handling
 
@@ -156,29 +155,52 @@
 }
 
 - (void)reloadCollectionDataWithCompletion:(void (^ _Nullable)(void))completion {
+    if (!self.mainManager) {
+        self.mainManager = [AFOPLMainManager mainManagerDelegate:self];
+    }
     __weak typeof(self) weakSelf = self;
-    [self addCollectionViewData:^(NSArray *array) {
+    [self.mainManager refreshDirectoryListingWithCompletion:^{
         __strong typeof(weakSelf) strongSelf = weakSelf;
         if (!strongSelf) {
+            if (completion) {
+                completion();
+            }
             return;
         }
-        [strongSelf.collectionDataSource settingImageData:array];
-        [strongSelf.playlistListViewModel syncListStateAfterReload];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            // reload 与结束下拉刷新（还原 inset）放在同一无动画块内，避免缩略图飞入；
-            // SVPullToRefresh 的 inset 已改为无动画应用（见 AFOGitHub），刷新头不再与动画上下文冲突。
-            [UIView performWithoutAnimation:^{
-                [strongSelf.collectionView reloadData];
-                [strongSelf.collectionView layoutIfNeeded];
+        [strongSelf addCollectionViewData:^(NSArray *array) {
+            __strong typeof(weakSelf) strongSelf2 = weakSelf;
+            if (!strongSelf2) {
                 if (completion) {
                     completion();
-                } else if (strongSelf.isRefreshingThumbnails) {
-                    [strongSelf setThumbnailRefreshing:NO];
                 }
-            }];
-        });
+                return;
+            }
+            [strongSelf2.collectionDataSource settingImageData:array];
+            [strongSelf2.playlistListViewModel syncListStateAfterReload];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [UIView performWithoutAnimation:^{
+                    [strongSelf2.collectionView.collectionViewLayout invalidateLayout];
+                    [strongSelf2.collectionView reloadData];
+                    [strongSelf2.collectionView layoutIfNeeded];
+                    if (completion) {
+                        completion();
+                    } else if (strongSelf2.isRefreshingThumbnails) {
+                        [strongSelf2 setThumbnailRefreshing:NO];
+                    }
+                }];
+            });
+        }];
     }];
 }
+#pragma mark - UICollectionViewDelegate (AFOWaterfallLayoutDelegate)
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView
+                   layout:(UICollectionViewLayout *)layout
+   heightForItemAtIndexPath:(NSIndexPath *)indexPath
+                itemWidth:(CGFloat)itemWidth {
+    return [self vedioItemHeight:indexPath width:itemWidth];
+}
+
 #pragma mark - UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
 #if DEBUG
@@ -197,7 +219,7 @@
 - (UICollectionView *)collectionView{
     if (!_collectionView) {
         _collectionView = [[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:self.defaultLayout];
-        _collectionView.pagingEnabled = YES;
+        _collectionView.pagingEnabled = NO;
         _collectionView.backgroundColor = [UIColor whiteColor];
         _collectionView.delegate = self;
         _collectionView.dataSource = self.collectionDataSource;
@@ -213,9 +235,13 @@
     }
     return _collectionDataSource;
 }
-- (AFOPLMainCellDefaultLayout *)defaultLayout{
+- (AFOWaterfallFlowLayout *)defaultLayout{
     if (!_defaultLayout) {
-        _defaultLayout = [[AFOPLMainCellDefaultLayout alloc] init];
+        _defaultLayout = [[AFOWaterfallFlowLayout alloc] init];
+        _defaultLayout.defaultColumnCount = 2;
+        _defaultLayout.defaultColumnSpacing = 0;
+        _defaultLayout.defaultLineSpacing = 0;
+        _defaultLayout.defaultSectionInset = UIEdgeInsetsZero;
     }
     return _defaultLayout;
 }
@@ -364,7 +390,31 @@
 
 - (void)setThumbnailRefreshing:(BOOL)refreshing {
     self.isRefreshingThumbnails = refreshing;
-    self.navigationItem.prompt = refreshing ? @"正在生成封面..." : nil;
+    // 勿用 navigationItem.prompt：iOS 上会生成 _UINavigationBarModernPromptView，易在宽度为 0 时触发约束冲突。
+    if (refreshing) {
+        UIActivityIndicatorView *indicator;
+        if (@available(iOS 13.0, *)) {
+            indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleMedium];
+        } else {
+            indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+        }
+        indicator.hidesWhenStopped = NO;
+        [indicator startAnimating];
+        self.thumbnailActivityBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:indicator];
+        NSMutableArray<UIBarButtonItem *> *leftItems = [NSMutableArray array];
+        [leftItems addObject:self.thumbnailActivityBarButtonItem];
+        if (self.lanUploadBarButtonItem) {
+            [leftItems addObject:self.lanUploadBarButtonItem];
+        }
+        self.navigationItem.leftBarButtonItems = leftItems;
+    } else {
+        self.thumbnailActivityBarButtonItem = nil;
+        if (self.lanUploadBarButtonItem) {
+            self.navigationItem.leftBarButtonItems = @[self.lanUploadBarButtonItem];
+        } else {
+            self.navigationItem.leftBarButtonItems = nil;
+        }
+    }
 }
 
 #pragma mark - AFOTabRootControllerProviding

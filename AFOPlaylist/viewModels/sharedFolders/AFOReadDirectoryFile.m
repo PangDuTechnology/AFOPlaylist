@@ -34,6 +34,40 @@ static NSString * const kAFOPLANUploadSubfolder = @"AFOLANUpload";
 @property (nonatomic, weak) id<AFOReadDirectoryFileDelegate> delegate;
 @end
 
+static void AFOReadDirectoryFileFillVideoListFromDocuments(NSMutableArray *fileArray) {
+    [fileArray removeAllObjects];
+    NSString *documentsDirectoryPath = [NSFileManager documentSandbox];
+    NSArray *documentsDirectoryContents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:documentsDirectoryPath
+                                                                                              error:NULL];
+    NSFileManager *fm = [NSFileManager defaultManager];
+    for (NSString *curFileName in [documentsDirectoryContents objectEnumerator]) {
+        NSString *filePath = [documentsDirectoryPath stringByAppendingPathComponent:curFileName];
+        BOOL isDirectory;
+        [fm fileExistsAtPath:filePath isDirectory:&isDirectory];
+        if (!isDirectory && AFOPLIsSupportedVideoFileName(curFileName)){
+            [fileArray addObjectAFOAbnormal:curFileName];
+        }
+    }
+    NSString *lanUploadDir = [documentsDirectoryPath stringByAppendingPathComponent:kAFOPLANUploadSubfolder];
+    BOOL lanIsDir = NO;
+    if ([fm fileExistsAtPath:lanUploadDir isDirectory:&lanIsDir] && lanIsDir) {
+        NSArray<NSString *> *subItems = [fm contentsOfDirectoryAtPath:lanUploadDir error:NULL];
+        for (NSString *name in subItems) {
+            if ([name hasPrefix:@"."]) {
+                continue;
+            }
+            NSString *full = [lanUploadDir stringByAppendingPathComponent:name];
+            BOOL subIsDir = NO;
+            [fm fileExistsAtPath:full isDirectory:&subIsDir];
+            if (subIsDir || !AFOPLIsSupportedVideoFileName(name)) {
+                continue;
+            }
+            NSString *relative = [kAFOPLANUploadSubfolder stringByAppendingPathComponent:name];
+            [fileArray addObjectAFOAbnormal:relative];
+        }
+    }
+}
+
 @implementation AFOReadDirectoryFile
 #pragma mark ------------ init
 + (AFOReadDirectoryFile *)readDirectoryFiledelegate:(id)directoryDelegate{
@@ -53,41 +87,17 @@ static NSString * const kAFOPLANUploadSubfolder = @"AFOLANUpload";
 }
 #pragma mark ------------ DirectoryWatcherDelegate
 - (void)directoryDidChange:(AFODirectoryWatcher *)directoryWatcher {
-    [self.fileArray removeAllObjects];
-    NSString *documentsDirectoryPath = [NSFileManager documentSandbox];
-    NSArray *documentsDirectoryContents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:documentsDirectoryPath
-                                                                                              error:NULL];
-    dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        NSFileManager *fm = [NSFileManager defaultManager];
-        for (NSString* curFileName in [documentsDirectoryContents objectEnumerator]) {
-            NSString *filePath = [documentsDirectoryPath stringByAppendingPathComponent:curFileName];
-            BOOL isDirectory;
-            [fm fileExistsAtPath:filePath isDirectory:&isDirectory];
-            if (!isDirectory && AFOPLIsSupportedVideoFileName(curFileName)){
-                [self.fileArray addObjectAFOAbnormal:curFileName];
-            }
-        }
-        // AFOLANUpload 默认上传到 Documents/AFOLANUpload/，只扫根目录会漏掉子目录里的视频，导致列表无缩略图、播放路径对不上。
-        NSString *lanUploadDir = [documentsDirectoryPath stringByAppendingPathComponent:kAFOPLANUploadSubfolder];
-        BOOL lanIsDir = NO;
-        if ([fm fileExistsAtPath:lanUploadDir isDirectory:&lanIsDir] && lanIsDir) {
-            NSArray<NSString *> *subItems = [fm contentsOfDirectoryAtPath:lanUploadDir error:NULL];
-            for (NSString *name in subItems) {
-                if ([name hasPrefix:@"."]) {
-                    continue;
-                }
-                NSString *full = [lanUploadDir stringByAppendingPathComponent:name];
-                BOOL subIsDir = NO;
-                [fm fileExistsAtPath:full isDirectory:&subIsDir];
-                if (subIsDir || !AFOPLIsSupportedVideoFileName(name)) {
-                    continue;
-                }
-                NSString *relative = [kAFOPLANUploadSubfolder stringByAppendingPathComponent:name];
-                [self.fileArray addObjectAFOAbnormal:relative];
-            }
-        }
+    [self rescanApplyingDelegateWithCompletion:nil];
+}
+
+- (void)rescanApplyingDelegateWithCompletion:(void (^ _Nullable)(void))completion {
+    dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0), ^{
+        AFOReadDirectoryFileFillVideoListFromDocuments(self.fileArray);
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.delegate directoryFromDocument:self.fileArray];
+            if (completion) {
+                completion();
+            }
         });
     });
 }

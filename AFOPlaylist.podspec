@@ -40,4 +40,5 @@ Pod::Spec.new do |s|
   s.dependency "AFOSQLite"
   s.dependency "FMDB", "~> 2.7"
   s.dependency "AFOGitHub"
+  s.dependency "AFOWaterfall", "~> 0.1.0"
 end

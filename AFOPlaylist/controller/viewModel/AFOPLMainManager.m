@@ -117,6 +117,10 @@ static BOOL AFOPLIsSupportedVideoName(NSString *videoName) {
     }
 }
 
+- (void)refreshDirectoryListingWithCompletion:(void (^)(void))completion {
+    [self.directoryFile rescanApplyingDelegateWithCompletion:completion];
+}
+
 - (NSArray<AFOPLThumbnail *> *)validDatabaseThumbnails:(NSArray *)databaseArray {
     NSMutableArray<AFOPLThumbnail *> *result = [NSMutableArray array];
     [databaseArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {

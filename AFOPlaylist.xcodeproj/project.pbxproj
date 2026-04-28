@@ -56,8 +56,6 @@
 		24F428CD1FFDD61B009F3F32 /* AFOPLMainCollectionDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F428CB1FFDD61B009F3F32 /* AFOPLMainCollectionDataSource.m */; };
 		24F428D11FFDD8C4009F3F32 /* AFOPLMainCollectionCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 24F428CF1FFDD8C4009F3F32 /* AFOPLMainCollectionCell.h */; };
 		24F428D21FFDD8C4009F3F32 /* AFOPLMainCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F428D01FFDD8C4009F3F32 /* AFOPLMainCollectionCell.m */; };
-		24F428D61FFDDC98009F3F32 /* AFOPLMainCellDefaultLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 24F428D41FFDDC98009F3F32 /* AFOPLMainCellDefaultLayout.h */; };
-		24F428D71FFDDC98009F3F32 /* AFOPLMainCellDefaultLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F428D51FFDDC98009F3F32 /* AFOPLMainCellDefaultLayout.m */; };
 		24F428DC1FFDDF33009F3F32 /* AFOPLMainManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 24F428DA1FFDDF33009F3F32 /* AFOPLMainManager.h */; };
 		24F428DD1FFDDF33009F3F32 /* AFOPLMainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F428DB1FFDDF33009F3F32 /* AFOPLMainManager.m */; };
 		24F928E9200C8B65007ADAA4 /* AFOPLThumbnail.h in Headers */ = {isa = PBXBuildFile; fileRef = 24F928E7200C8B65007ADAA4 /* AFOPLThumbnail.h */; };
@@ -124,8 +122,6 @@
 		24F428CB1FFDD61B009F3F32 /* AFOPLMainCollectionDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOPLMainCollectionDataSource.m; sourceTree = "<group>"; };
 		24F428CF1FFDD8C4009F3F32 /* AFOPLMainCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOPLMainCollectionCell.h; sourceTree = "<group>"; };
 		24F428D01FFDD8C4009F3F32 /* AFOPLMainCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOPLMainCollectionCell.m; sourceTree = "<group>"; };
-		24F428D41FFDDC98009F3F32 /* AFOPLMainCellDefaultLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOPLMainCellDefaultLayout.h; sourceTree = "<group>"; };
-		24F428D51FFDDC98009F3F32 /* AFOPLMainCellDefaultLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOPLMainCellDefaultLayout.m; sourceTree = "<group>"; };
 		24F428DA1FFDDF33009F3F32 /* AFOPLMainManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOPLMainManager.h; sourceTree = "<group>"; };
 		24F428DB1FFDDF33009F3F32 /* AFOPLMainManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFOPLMainManager.m; sourceTree = "<group>"; };
 		24F928E7200C8B65007ADAA4 /* AFOPLThumbnail.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFOPLThumbnail.h; sourceTree = "<group>"; };
@@ -259,8 +255,6 @@
 				245B4EB021C3E95B007608AC /* AFOPLEditMenuView.m */,
 				24F428CF1FFDD8C4009F3F32 /* AFOPLMainCollectionCell.h */,
 				24F428D01FFDD8C4009F3F32 /* AFOPLMainCollectionCell.m */,
-				24F428D41FFDDC98009F3F32 /* AFOPLMainCellDefaultLayout.h */,
-				24F428D51FFDDC98009F3F32 /* AFOPLMainCellDefaultLayout.m */,
 			);
 			path = main;
 			sourceTree = "<group>";
@@ -354,7 +348,6 @@
 				240BAB391FE1222400D58435 /* AFOPlaylist.h in Headers */,
 				245B4EB121C3E95B007608AC /* AFOPLEditMenuView.h in Headers */,
 				24F36E5A1FFDC76600224A3E /* AFOReadDirectoryFile.h in Headers */,
-				24F428D61FFDDC98009F3F32 /* AFOPLMainCellDefaultLayout.h in Headers */,
 				2427228321C7E0B900E46946 /* AFOPLMainControllerCategory.h in Headers */,
 				24F928E9200C8B65007ADAA4 /* AFOPLThumbnail.h in Headers */,
 				243EA1532333293400A15C48 /* AFOPlayListForeign.h in Headers */,
@@ -490,7 +483,6 @@
 				2421EF0F21C0C6C200D44ED7 /* AFOPLMainController+Operation.m in Sources */,
 				24F428CD1FFDD61B009F3F32 /* AFOPLMainCollectionDataSource.m in Sources */,
 				24F428DD1FFDDF33009F3F32 /* AFOPLMainManager.m in Sources */,
-				24F428D71FFDDC98009F3F32 /* AFOPLMainCellDefaultLayout.m in Sources */,
 				245B4EB221C3E95B007608AC /* AFOPLEditMenuView.m in Sources */,
 				24F36E5D1FFDC76600224A3E /* AFOReadDirectoryFile.m in Sources */,
 				24E041211FE218A300BE0B5B /* AFOPLMainController.m in Sources */,
