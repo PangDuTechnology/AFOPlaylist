@@ -17,6 +17,7 @@
 
 static FMDatabaseQueue *AFOPLForeignDatabaseQueue(void) {
 #pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
     id api = [AFOFMDBForeignInterface performSelector:@selector(shareInstance)];
 #pragma clang diagnostic pop

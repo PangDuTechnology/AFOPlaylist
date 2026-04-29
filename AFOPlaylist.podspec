@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.name         = "AFOPlaylist"
-  s.version      = "0.1.1"
+  s.version      = "0.1.2"
   s.summary      = "play list."
 
   # This description is used to generate tags and improve search results.
