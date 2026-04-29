@@ -392,12 +392,8 @@
     self.isRefreshingThumbnails = refreshing;
     // 勿用 navigationItem.prompt：iOS 上会生成 _UINavigationBarModernPromptView，易在宽度为 0 时触发约束冲突。
     if (refreshing) {
-        UIActivityIndicatorView *indicator;
-        if (@available(iOS 13.0, *)) {
-            indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleMedium];
-        } else {
-            indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-        }
+        UIActivityIndicatorView *indicator =
+            [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleMedium];
         indicator.hidesWhenStopped = NO;
         [indicator startAnimating];
         self.thumbnailActivityBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:indicator];

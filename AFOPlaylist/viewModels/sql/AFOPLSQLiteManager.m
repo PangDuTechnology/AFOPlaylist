@@ -11,6 +11,10 @@
 #import <FMDB/FMDB.h>
 #import "AFOPLThumbnail.h"
 
+@interface AFOFMDBForeignInterface (AFOPLSQLiteManager)
++ (instancetype)shareInstance;
+@end
+
 static FMDatabaseQueue *AFOPLForeignDatabaseQueue(void) {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"

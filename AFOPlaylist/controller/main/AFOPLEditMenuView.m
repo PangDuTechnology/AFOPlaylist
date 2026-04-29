@@ -11,7 +11,7 @@
 #import <AFOGitHub/AFOGitHub.h>
 #define AFOPLEditMenuViewDeleteAllItem @"确认删除全部影片!"
 
-@interface AFOPLEditMenuView ()<UIAlertViewDelegate>
+@interface AFOPLEditMenuView ()
 @property (nonnull, nonatomic, strong) UIButton         *allSelectBT;
 @property (nonnull, nonatomic, strong) UIButton         *deleteBT;
 @property (nonnull, nonatomic, strong) NSMutableArray   *selectArray;
@@ -94,9 +94,29 @@
     if (self.selectArray.count < self.allVedioNumber) {
         strMessage = [NSString stringWithFormat:@"确认删除%lu个文件吗？",(unsigned long)self.selectArray.count];
     }
-    ///---
-    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"" message:strMessage delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确认", nil];
-    [alertView show];
+    UIViewController *presenter = nil;
+    for (UIResponder *r = self; r; r = r.nextResponder) {
+        if ([r isKindOfClass:[UIViewController class]]) {
+            presenter = (UIViewController *)r;
+            break;
+        }
+    }
+    if (!presenter) {
+        return;
+    }
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@""
+                                                                   message:strMessage
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    __weak typeof(self) weakSelf = self;
+    [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
+    [alert addAction:[UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(__unused UIAlertAction *action) {
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (!strongSelf) {
+            return;
+        }
+        strongSelf.deleteVedioBlock(strongSelf.selectArray);
+    }]];
+    [presenter presentViewController:alert animated:YES completion:nil];
 }
 - (void)showDeleteItemsCount:(NSInteger)vedioCount{
     if (vedioCount == 0) {
@@ -120,12 +140,6 @@
     [self settingButtonTitle];
     self.defaultBlock();
     self.frame = CGRectMake(0, AFO_SCREEN_HEIGHT, AFO_SCREEN_WIDTH, 40);
-}
-#pragma mark ------ delegate
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    if (buttonIndex) {
-        self.deleteVedioBlock(self.selectArray);
-    }
 }
 #pragma mark ------ attribute
 - (UIButton *)allSelectBT{

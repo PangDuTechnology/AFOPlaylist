@@ -70,7 +70,7 @@ static void AFOReadDirectoryFileFillVideoListFromDocuments(NSMutableArray *fileA
 
 @implementation AFOReadDirectoryFile
 #pragma mark ------------ init
-+ (AFOReadDirectoryFile *)readDirectoryFiledelegate:(id)directoryDelegate{
++ (instancetype)readDirectoryFiledelegate:(id)directoryDelegate{
     AFOReadDirectoryFile *directoryFile = NULL;
     if (directoryDelegate != NULL){
         AFOReadDirectoryFile *tempManager = [[AFOReadDirectoryFile alloc] init];

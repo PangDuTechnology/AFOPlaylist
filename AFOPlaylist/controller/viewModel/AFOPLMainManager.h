@@ -10,6 +10,8 @@
 #import <UIKit/UIKit.h>
 #import "AFOPLPlaylistRoutingDataSource.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @protocol AFOPLMainManagerDelegate <NSObject>
 @optional
 - (void)mainManagerArray:(NSArray *)array
@@ -31,3 +33,5 @@
 - (NSUInteger)playlistItemCount;
 - (NSArray *)playlistThumbnailItemsSnapshot;
 @end
+
+NS_ASSUME_NONNULL_END
