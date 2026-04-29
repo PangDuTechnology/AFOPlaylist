@@ -1,7 +1,7 @@
 platform :ios, '13.0'
 inhibit_all_warnings!
 target 'AFOPlaylist' do
-  pod 'AFOFFMpeg', :path => '../AFOFFMpeg'
+  pod 'AFOFFMpeg'
   pod 'AFOUIKIT'
   pod 'AFOFoundation'
   pod 'AFOSchedulerCore'
@@ -10,7 +10,7 @@ target 'AFOPlaylist' do
   pod 'AFOSQLite'
   pod 'FMDB'
   pod 'AFOGitHub'
-  pod 'AFOWaterfall', :path => '../AFOPlayer/AFOWaterfall'
+  pod 'AFOWaterfall'
 end
 
 post_install do |installer|
